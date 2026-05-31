@@ -1,0 +1,161 @@
+﻿@page "/admins"
+@inject ILogger<Administrators> Logger
+@inject UtilizadorService UtilizadorService
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+@using MontagemBelasPizzas.UI.Components.Shared
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager NavigationManager
+
+@if (isLoading)
+{
+    <!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+    <div class="loading text-center">
+    </div>
+}
+else if (!isAuthenticated)
+{
+    <Login />
+}
+else if (userRole == "Funcionario")
+{
+    <AccessDenied />
+}
+else if (userRole == "Administrador")
+{
+    <TableComponent TItem="Utilizador"
+                    Title="Administradores"
+                    ColumnHeaders="columnHeaders"
+                    Items="AdministratorsData"
+                    PropertySelectors="propertySelectors"
+                    OnAddClick="HandleAddClick"
+                    OnRemoveClick="HandleRemoveClick" />
+}
+
+
+@code {
+    // Validate authenticated User
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+    private bool isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+            }
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    // Get the Administrators
+    private List<string> columnHeaders = new List<string>
+    {
+        "Nome", "ID"
+    };
+
+    private List<Func<Utilizador, object>> propertySelectors = new List<Func<Utilizador, object>>
+    {
+        u => u.Nome,
+        u => u.Id
+    };
+
+    private List<Utilizador> AdministratorsData = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Retrieve administrators from the database
+            var allUtilizadores = await UtilizadorService.GetAllUtilizadores();
+            AdministratorsData = allUtilizadores
+                .Where(u => u.Tipo == TipoUtilizador.Administrador) // Filter by 'Administrador'
+                .ToList();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load administrators.");
+        }
+    }
+
+    private async void HandleAddClick()
+    {
+        var parameters = new DialogParameters
+        {
+            { "Administrator", new Utilizador() }
+        };
+
+        var options = new DialogOptions
+        {
+            BackgroundClass = "custom-dialog",
+            CloseButton = true,
+            MaxWidth = MaxWidth.Medium
+        };
+
+        var dialog = DialogService.Show<AddAdmin>("Adicionar Administrador", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled && result.Data is Utilizador newAdmin)
+        {
+            try
+            {
+                // Recarregar a lista de administradores
+                Logger.LogInformation(newAdmin.Nome + " " + newAdmin.Id);
+                var allUtilizadores = await UtilizadorService.GetAllUtilizadores();
+                AdministratorsData = allUtilizadores
+                    .Where(u => u.Tipo == TipoUtilizador.Administrador)
+                    .ToList();
+
+                StateHasChanged();
+
+                Snackbar.Add("Administrador adicionado com sucesso!", Severity.Success);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "Erro ao recarregar a lista de administradores.");
+            }
+        }
+    }
+
+
+    private async Task HandleRemoveClick(Utilizador administrador)
+    {
+        var parameters = new DialogParameters
+        {
+            { "ContentText", $"Tem a certeza que deseja remover o administrador {administrador.Nome}?" },
+            { "ButtonText", "Remover" },
+            { "Color", Color.Error }
+        };
+
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small };
+        var dialog = DialogService.Show<ConfirmationPopUp>("Confirmação", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            try
+            {
+                await UtilizadorService.DeleteUtilizador(administrador.Id);
+                AdministratorsData.Remove(administrador);
+                Logger.LogInformation($"Removed: {administrador.Nome}");
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, $"Failed to remove administrator: {administrador.Nome}");
+            }
+        }
+    }
+}

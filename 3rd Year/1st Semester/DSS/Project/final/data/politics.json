@@ -1,0 +1,47 @@
+[
+  {
+    "subjectId": 14309,
+    "politic": "limit",
+    "number": 33,
+    "students": []
+  },
+  {
+    "subjectId": 14313,
+    "politic": "group",
+    "number": 0,
+    "students": [
+      ["77399", "104100", "99890"],
+      ["100109", "104268", "104608"]
+    ]
+  },
+  {
+    "subjectId": 14310,
+    "politic": "limit",
+    "number": 31,
+    "students": []
+  },
+  {
+    "subjectId": 14311,
+    "politic": "group",
+    "number": 0,
+    "students": [
+      ["77399", "104268", "104608"],
+      ["99890", "100109", "104100"]
+    ]
+  },
+  {
+    "subjectId": 14298,
+    "politic": "limit",
+    "number": 80,
+    "students": []
+  },
+  {
+    "subjectId": 14312,
+    "politic": "group",
+    "number": 0,
+    "students": [
+      ["104608", "104268", "99890", "77399"],
+      ["104100", "100109"]
+    ]
+  }
+]

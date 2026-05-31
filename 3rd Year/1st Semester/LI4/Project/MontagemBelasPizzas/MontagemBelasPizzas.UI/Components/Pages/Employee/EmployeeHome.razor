@@ -1,0 +1,335 @@
+﻿@page "/employee-home"
+@inject ILogger<EmployeeHome> Logger
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager NavigationManager
+@inject UtilizadorService UtilizadorService
+@inject ProdutoService ProdutoService
+@inject LinhaDeMontagemService LinhaDeMontagemService
+@using System.Security.Claims
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+
+@if (isLoading)
+{
+    <!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+    <div class="loading text-center">
+    </div>
+}
+else if (!isAuthenticated)
+{
+    <Login />
+}
+else if (userRole == "Administrador")
+{
+    <AccessDenied />
+}
+else if (userRole == "Funcionario")
+{
+    <div class="p-8 mt-15 max-w-[95%] mx-auto">
+        <div class="grid grid-cols-[60%_38%] gap-6">
+
+            <!-- Área Pessoal -->
+            <div class="bg-white p-6 rounded-lg" style="border-radius: 50px;">
+                <h2 class="text-center text-[#7B351C] font-semibold text-lg mb-2" style="font-family: 'Poppins', sans-serif; letter-spacing: 2px;"> Área Pessoal </h2>
+                <hr class="mb-4" style="border: 1px solid #C9C9C9; width: 100%; margin: auto;">
+
+                @if (isLoading)
+                {
+                    <p class="text-center">Carregando informações...</p>
+                }
+                else if (utilizador is not null)
+                {
+                    <div class="flex items-center space-x-6">
+                        <div class="flex justify-center items-center w-48 h-48 border-2 border-[#006837] overflow-hidden" style="border-radius: 60px;">
+                            @if (!string.IsNullOrEmpty(utilizador.ImagemURL))
+                            {
+                                <img src="@utilizador.ImagemURL" alt="Foto do utilizador" style="width: 100%; height: 100%; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <i class="bi bi-person text-[#006837]" style="font-size: 3rem;"></i>
+                            }
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="bg-[#F8F8F8] px-6 py-2 rounded-full shadow-sm text-[#7B351C] font-medium mb-4"
+                                 style="width: 100%; font-family: 'Poppins', sans-serif;">
+                                Nome: @utilizador.Nome
+                            </div>
+
+                            <div class="bg-[#F8F8F8] px-6 py-2 rounded-full shadow-sm flex items-center justify-between text-[#7B351C] font-medium mb-4"
+                                 style="width: 100%; font-family: 'Poppins', sans-serif;">
+                                <span>Data de Nascimento: @utilizador.DataDeNascimento?.ToString("dd/MM/yyyy")</span>
+                                <i class="bi bi-calendar-event text-[#7B351C]"></i>
+                            </div>
+
+                            <div class="bg-[#F8F8F8] px-6 py-2 rounded-full shadow-sm text-[#7B351C] font-medium"
+                                 style="width: 100%; font-family: 'Poppins', sans-serif;">
+                                NIF: @utilizador.NIF
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p class="text-center text-red-500">Não foi possível carregar as informações do utilizador.</p>
+                }
+            </div>
+
+            <!-- Métricas -->
+            <div class="grid grid-cols-2 gap-6 items-center">
+                <!-- Gráfico de Progresso -->
+                <div class="bg-white p-6 rounded-lg text-center flex flex-col items-center justify-center overflow-hidden" style="height: 225px;">
+                    @if (utilizador != null)
+                    {
+                        <MudChart class="mt-5" ChartType="ChartType.Pie" ChartOptions="options1" InputData="chartData" InputLabels="chartLabels" Width="125px" Height="125px" />
+                    }
+                    else
+                    {
+                        <p class="text-[#006837] mt-4" style="font-family: 'Poppins', sans-serif;">Sem dados disponíveis</p>
+                    }
+                </div>
+
+                <div class="flex flex-col justify-between" style="height: 225px;">
+                    <!-- Pizzas realizadas -->
+                    <div class="bg-white px-4 py-2 rounded-lg text-center flex flex-col justify-center items-center" style="height: 50px;">
+                        <p class="text-xl text-[#006837] m-0" style="font-family: 'Poppins', sans-serif;">@utilizador?.QuantidadeDeProdutosRealizados</p>
+                        <p class="text-sm text-[#006837] m-0" style="font-family: 'Poppins', sans-serif;">Pizzas realizadas</p>
+                    </div>
+
+                    <!-- Pizzas rejeitadas -->
+                    <div class="bg-white px-4 py-2 rounded-lg text-center flex flex-col justify-center items-center" style="height: 50px;">
+                        <p class="text-xl text-[#006837] m-0" style="font-family: 'Poppins', sans-serif;">@utilizador?.QuantidadeDeProdutosRejeitados</p>
+                        <p class="text-sm text-[#006837] m-0" style="font-family: 'Poppins', sans-serif;">Pizzas rejeitadas</p>
+                    </div>
+
+                    <!-- Tempo médio -->
+                    <div class="bg-white px-4 py-2 rounded-lg text-center flex flex-col justify-center items-center" style="height: 50px;">
+                        <p class="text-xl text-[#006837] m-0" style="font-family: 'Poppins', sans-serif;">@utilizador?.TempoMedioPorProduto.ToString("hh\\:mm\\:ss")</p>
+                        <p class="text-sm text-[#006837] m-0" style="font-family: 'Poppins', sans-serif;">Tempo Médio</p>
+                    </div>
+                </div>
+
+                <!-- Data de Criação -->
+                <div class="bg-white px-4 py-3 rounded-lg text-center flex flex-col justify-center items-center col-span-2" style="height: 50px;">
+                    <p class="font-bold text-lg text-[#006837] m-0" style="font-family: 'Poppins', sans-serif;">@utilizador?.DataDeCriacao.ToString("dd/MM/yyyy")</p>
+                    <p class="text-sm text-[#006837] m-0" style="font-family: 'Poppins', sans-serif;">Data de criação</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex items-center space-x-2 mb-6 mt-6">
+            <!-- Search -->
+            <div class="flex bg-white rounded-full shadow-md px-4 py-2 w-1/2 justify-between">
+                <div class="flex-column align-content-lg-center">
+                    <i class="bi bi-search text-brown-500 mr-2" style="color: #7B351C;"></i>
+                    <input type="text" placeholder="Pesquisar" class="outline-none"
+                           style="width: 300px; color: #7B351C;" @bind="SearchTerm" @bind:event="oninput" />
+                </div>
+                <select class="outline-none" style="color: #7B351C;" @bind="SelectedSearchColumn">
+                    @for (var i = 0; i < columnHeaders.Count; i++)
+                    {
+                        <option value="@i">@columnHeaders[i]</option>
+                    }
+                </select>
+            </div>
+            <!-- Order Dropdown -->
+            <div class="flex items-center bg-white rounded-full shadow-md px-4 py-2">
+                <i class="bi bi-sort-down text-brown-500 mr-2" style="color: #7B351C;"></i>
+                <select class="bg-transparent text-brown-500 outline-none cursor-pointer" style="color: #7B351C;" @bind="SelectedOrderColumn">
+                    <option value="">Ordenar por...</option>
+                    @for (var i = 0; i < columnHeaders.Count; i++)
+                    {
+                        <option value="@i">@columnHeaders[i]</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="p-4 shadow bg-white" style="border-radius: 20px;">
+            <div class="flex justify-between items-center mb-4">
+                <div class="fs-3" style="font-weight: 900; color: #7B351C">
+                    Histórico
+                </div>
+            </div>
+
+            <table class="table-auto justify-end w-full">
+                <thead>
+                    <tr class="border-top">
+                        <th class="px-4 py-4 text-left font-semibold" style="width: 80px; min-width: 80px; color: #7B351C">Imagem</th>
+                        @foreach (var header in columnHeaders)
+                        {
+                            <th class="px-4 py-4 text-left font-semibold" style=" color: #7B351C">@header</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (FilteredItems != null && FilteredItems.Any())
+                    {
+                        @foreach (var item in FilteredItems)
+                        {
+                            <tr class="border-top">
+                                <!-- Coluna de Imagem -->
+                                <td class="px-4 py-4" style="width: 60px; min-width: 60px;">
+                                    <img src="@item.UrlImagem" alt="Imagem" class="w-10 h-10 object-cover" />
+                                </td>
+                                <!-- Coluna Nome -->
+                                <td class="px-4 py-4" style="color: #7B351C">
+                                    @item.Nome
+                                </td>
+                                <!-- Coluna ID -->
+                                <td class="px-4 py-4" style="color: #7B351C">
+                                    @item.LinhaDeMontagem.Id
+                                </td>
+                                <!-- Coluna Satisfação -->
+                                <td class="px-4 py-4" style="color: #7B351C">
+                                    @item.LinhaDeMontagem.Satisfacao
+                                </td>
+                                <!-- Coluna Tempo de Realização -->
+                                <td class="px-4 py-4" style="color: #7B351C">
+                                    @item.TempoDeRealizacao
+                                </td>
+                                <!-- Coluna Data de Realização -->
+                                <td class="px-4 py-4" style="color: #7B351C">
+                                    @item.LinhaDeMontagem.DataDeInicio.ToString("dd/MM/yyyy")
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td class="border px-4 py-2 text-center" colspan="@columnHeaders.Count + 1">
+                                Nenhum dado disponível.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+}
+
+
+@code {
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+    private int userId;
+    private bool isLoading = true;
+    private Utilizador? utilizador;
+    private List<LinhaDeHistorico>? Historico;
+    private double[] chartData;
+    private string[] chartLabels;
+    private ChartOptions options1 = new ChartOptions();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                userId = int.Parse(user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "1");
+                utilizador = await UtilizadorService.GetUtilizadorById(userId);
+
+                await LoadHistoricoAsync();
+
+                chartData = utilizador != null
+                ? new double[] { utilizador.QuantidadeDeProdutosRealizados, utilizador.QuantidadeDeProdutosRejeitados }
+                : new double[] { 0, 0 };
+
+                chartLabels = new string[] { "Pizzas Realizadas", "Pizzas Rejeitadas" };
+
+                options1.ChartPalette = new[] { "#7FA979", "#FC5825" };
+
+            }
+            isLoading = false;
+
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadHistoricoAsync()
+    {
+        try
+        {
+
+            var linhas = await LinhaDeMontagemService.GetLinhasDeMontagemByFuncionarioId(userId);
+
+            Historico = new List<LinhaDeHistorico>();
+
+            foreach (var linhaDeMontagem in linhas)
+            {
+                var produto = await ProdutoService.GetProdutoById(linhaDeMontagem.IdProduto);
+
+                if (produto != null)
+                {
+                    Historico.Add(new LinhaDeHistorico
+                        {
+                            UrlImagem = produto.ImagemURL,
+                            Nome = produto.Nome,
+                            TempoDeRealizacao = linhaDeMontagem.DataDeFim.HasValue
+                                ? (linhaDeMontagem.DataDeFim.Value - linhaDeMontagem.DataDeInicio).ToString(@"hh\:mm\:ss")
+                                : "00:00:00",
+                            LinhaDeMontagem = linhaDeMontagem
+                        });
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[ERROR] Erro ao carregar dados: {ex.Message}");
+        }
+    }
+
+
+    public class LinhaDeHistorico
+    {
+        public string UrlImagem { get; set; } = string.Empty;
+        public string Nome { get; set; } = string.Empty;
+        public string TempoDeRealizacao { get; set; } = string.Empty;
+        public LinhaDeMontagem LinhaDeMontagem { get; set; } = new();
+    }
+
+    private List<LinhaDeMontagem> LinhasDeMontagemData = new();
+
+    private string SearchTerm { get; set; } = string.Empty;
+    private int SelectedSearchColumn { get; set; } = 0;
+    private int? SelectedOrderColumn { get; set; } = null;
+
+    private List<string> columnHeaders = new List<string>
+    {
+       "Nome", "ID", "Satisfação", "Tempo de Realização", "Data de Realização"
+    };
+
+    private List<LinhaDeHistorico>? FilteredItems => Historico?
+    .Where(item =>
+        string.IsNullOrEmpty(SearchTerm) ||
+        item.Nome.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase) || // Pesquisa pelo nome
+        item.LinhaDeMontagem.Id.ToString().Contains(SearchTerm, StringComparison.OrdinalIgnoreCase) || // Pesquisa pelo ID
+        item.LinhaDeMontagem.Satisfacao.ToString().Contains(SearchTerm, StringComparison.OrdinalIgnoreCase) || // Pesquisa pela satisfação
+        item.TempoDeRealizacao.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase) || // Pesquisa pelo tempo de realização
+        item.LinhaDeMontagem.DataDeInicio.ToString("dd/MM/yyyy").Contains(SearchTerm, StringComparison.OrdinalIgnoreCase) // Pesquisa pela data
+    )
+    .OrderBy(item =>
+    {
+        return SelectedOrderColumn switch
+        {
+            0 => item.Nome,
+            1 => item.LinhaDeMontagem.Id.ToString(),
+            2 => item.LinhaDeMontagem.Satisfacao.ToString(),
+            3 => item.TempoDeRealizacao,
+            4 => item.LinhaDeMontagem.DataDeInicio.ToString("dd/MM/yyyy"),
+            _ => item.Nome
+        };
+    })
+    .ToList();
+}

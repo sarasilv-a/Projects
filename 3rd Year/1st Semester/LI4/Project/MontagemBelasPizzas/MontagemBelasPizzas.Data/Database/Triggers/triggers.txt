@@ -1,0 +1,113 @@
+-- Trigger para quando uma linha de montagem for inserida
+CREATE TRIGGER trg_AfterLinhaDeMontagemInsert
+ON LinhaDeMontagem
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @IdProduto INT, @IdFuncionario INT, @Estado BIT;
+
+    -- Obter o IdProduto, IdFuncionario e Estado da linha de montagem inserida
+    SELECT @IdProduto = IdProduto, @IdFuncionario = IdFuncionario, @Estado = Estado
+    FROM INSERTED;
+
+    -- 1. Atualizar a quantidade em stock do produto (se completado)
+    IF @Estado = 1
+    BEGIN
+        UPDATE Produto
+        SET QuantidadeEmStock = QuantidadeEmStock + 1,
+            QuantidadeDeRealizacoes = QuantidadeDeRealizacoes + 1
+        WHERE Id = @IdProduto;
+
+        -- Atualizar a quantidade de produtos realizados do funcionário
+        UPDATE Utilizador
+        SET QuantidadeDeProdutosRealizados = QuantidadeDeProdutosRealizados + 1
+        WHERE Id = @IdFuncionario;
+    END
+    ELSE IF @Estado = 0
+    BEGIN
+        -- Atualizar a quantidade de rejeições do produto
+        UPDATE Produto
+        SET QuantidadeDeRejeicoes = QuantidadeDeRejeicoes + 1
+        WHERE Id = @IdProduto;
+
+        -- Atualizar a quantidade de produtos rejeitados do funcionário
+        UPDATE Utilizador
+        SET QuantidadeDeProdutosRejeitados = QuantidadeDeProdutosRejeitados + 1
+        WHERE Id = @IdFuncionario;
+    END
+
+    -- 2. Atualizar a quantidade de ingredientes (decrementar)
+    -- Obter os ingredientes associados ao produto
+    DECLARE @IdIngrediente INT, @Quantidade INT;
+    DECLARE ingrediente_cursor CURSOR FOR
+    SELECT IdIngrediente, Ordem
+    FROM Montagem
+    WHERE IdProduto = @IdProduto;
+
+    OPEN ingrediente_cursor;
+    FETCH NEXT FROM ingrediente_cursor INTO @IdIngrediente, @Quantidade;
+
+    -- Decrementar a quantidade dos ingredientes associados
+    WHILE @@FETCH_STATUS = 0
+    BEGIN
+        UPDATE Ingrediente
+        SET QuantidadeEmStock = QuantidadeEmStock - 1
+        WHERE Id = @IdIngrediente;
+
+        FETCH NEXT FROM ingrediente_cursor INTO @IdIngrediente, @Quantidade;
+    END
+
+    CLOSE ingrediente_cursor;
+    DEALLOCATE ingrediente_cursor;
+END;
+GO
+
+-- Trigger para quando uma venda for inserida
+CREATE TRIGGER trg_AfterVendaInsert
+ON Venda
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @IdProduto INT, @IdOperacao INT, @Quantidade INT;
+
+    -- Obter o IdProduto e IdOperacao da venda inserida
+    SELECT @IdProduto = IdProduto, @IdOperacao = IdOperacao
+    FROM INSERTED;
+
+    -- Obter a quantidade da operação associada
+    SELECT @Quantidade = Quantidade
+    FROM Operacao
+    WHERE Id = @IdOperacao;
+
+    -- 1. Atualizar a quantidade de vendas do produto e reduzir o stock
+    UPDATE Produto
+    SET QuantidadeDeVendas = QuantidadeDeVendas + @Quantidade,
+        QuantidadeEmStock = QuantidadeEmStock - @Quantidade
+    WHERE Id = @IdProduto;
+END;
+GO
+
+
+-- Trigger para quando uma compra for inserida
+CREATE TRIGGER trg_AfterCompraInsert
+ON Compra
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @IdIngrediente INT, @IdOperacao INT, @Quantidade INT;
+
+    -- Obter o IdIngrediente e IdOperacao da compra inserida
+    SELECT @IdIngrediente = IdIngrediente, @IdOperacao = IdOperacao
+    FROM INSERTED;
+
+    -- Obter a quantidade da operação associada
+    SELECT @Quantidade = Quantidade
+    FROM Operacao
+    WHERE Id = @IdOperacao;
+
+    -- Incrementar a quantidade em stock do ingrediente
+    UPDATE Ingrediente
+    SET QuantidadeEmStock = QuantidadeEmStock + @Quantidade
+    WHERE Id = @IdIngrediente;
+END;
+GO

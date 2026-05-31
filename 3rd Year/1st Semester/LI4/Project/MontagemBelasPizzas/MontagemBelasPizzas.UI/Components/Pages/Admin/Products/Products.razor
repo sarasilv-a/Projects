@@ -1,0 +1,269 @@
+﻿@page "/admin-products"
+@inject ILogger<Products> Logger
+@inject ProdutoService ProdutoService
+@inject MontagemService MontagemService
+@inject IDialogService DialogService
+@using MontagemBelasPizzas.UI.Components.Shared
+@using System.Security.Claims
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager NavigationManager
+@inject ISnackbar Snackbar
+
+
+@if (isLoading)
+{
+    <!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+    <div class="loading text-center">
+    </div>
+}
+else if (!isAuthenticated)
+{
+    <Login />
+}
+else if (userRole == "Funcionario")
+{
+    <AccessDenied />
+}
+else if (userRole == "Administrador")
+{
+    <TableComponent TItem="Produto"
+                    Title="Produtos"
+                    ColumnHeaders="columnHeaders"
+                    Items="ProductsData"
+                    PropertySelectors="propertySelectors"
+                    ImageSelector="p => p.ImagemURL"
+                    OnAddClick="HandleAddClick"
+                    OnEditClick="HandleEditClick"
+                    OnRemoveClick="HandleRemoveClick" />
+}
+
+@code {
+    // Validate authenticated User
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+    private int userId;
+    private bool isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                userId = int.Parse(user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "1");
+            }
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    // Get the Products
+    private List<string> columnHeaders = new List<string>
+    {
+        "Nome", "Categoria", "ID", "Preço", "Inventário", "Realizações", "Vendas", "Rejeições", "Satisfação", "Média de tempo"
+    };
+
+    private List<Func<Produto, object>> propertySelectors = new List<Func<Produto, object>>
+    {
+        p => p.Nome,
+        p => p.Categoria,
+        p => p.Id,
+        p => $"{p.Preco}€",
+        p => p.QuantidadeEmStock,
+        p => p.QuantidadeDeRealizacoes,
+        p => p.QuantidadeDeVendas,
+        p => p.QuantidadeDeRejeicoes,
+        p => $"{p.MediaDeSatisfacao}%",
+        p => p.MediaDoTempoDeMontagem.ToString("hh\\:mm\\:ss")
+    };
+
+    private List<Produto> ProductsData = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var produtos = await ProdutoService.GetAllProdutos();
+            ProductsData = produtos.ToList();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load products.");
+        }
+    }
+
+    private async void HandleAddClick()
+    {
+        var parameters = new DialogParameters
+        {
+            { "Product", new Produto() }
+        };
+
+        var options = new DialogOptions
+        {
+            BackgroundClass = "custom-dialog",
+            CloseButton = true,
+            MaxWidth = MaxWidth.Medium
+        };
+
+        var dialog = DialogService.Show<AddProducts>("Adicionar Produto", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled && result.Data is not null)
+        {
+            try
+            {
+                var productData = (dynamic)result.Data;
+                var newProduct = productData.Product as Produto;
+                var montagens = productData.SelectedMontagens as List<Montagem>;
+
+                if (newProduct != null)
+                {
+                    newProduct.IdAdministrador = userId;
+                    await ProdutoService.CreateProduto(newProduct);
+                    
+                    var savedProduct = (await ProdutoService.GetAllProdutos())
+                        .FirstOrDefault(p => p.Nome == newProduct.Nome && p.Categoria == newProduct.Categoria);
+
+                    if (savedProduct != null && montagens != null)
+                    {
+                        // Save the montagens with the product's ID
+                        foreach (var montagem in montagens)
+                        {
+                            montagem.IdProduto = savedProduct.Id;
+                            await MontagemService.CreateMontagem(montagem);
+                        }
+                    }
+
+                    // Reload all products after successful addition
+                    var produtos = await ProdutoService.GetAllProdutos();
+                    ProductsData = produtos.ToList();
+
+                    StateHasChanged();
+
+                    Snackbar.Add("Produto e montagem adicionados com sucesso!", Severity.Success);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "Erro ao adicionar produto e montagem.");
+                Snackbar.Add("Erro ao adicionar produto e montagem.", Severity.Error);
+            }
+        }
+
+    }
+
+
+    private async void HandleEditClick(Produto produto)
+{
+    // Retrieve the current montagens associated with the product
+    var montagens = (await MontagemService.GetMontagensByProdutoId(produto.Id)).ToList();
+    
+    foreach (var montagem in montagens)
+    {
+        Logger.LogInformation(montagem.ToString());
+    }
+
+    // Pass the product and its montagens to the edit dialog
+    var parameters = new DialogParameters
+    {
+        { "Product", produto },
+        { "SelectedMontagens", montagens }
+    };
+
+    var options = new DialogOptions
+    {
+        BackgroundClass = "custom-dialog",
+        CloseButton = true,
+        MaxWidth = MaxWidth.Medium
+    };
+
+    var dialog = DialogService.Show<AddProducts>("Editar Produto", parameters, options);
+    var result = await dialog.Result;
+
+    if (!result.Canceled && result.Data is not null)
+    {
+        try
+        {
+            var productData = (dynamic)result.Data;
+            var updatedProduct = productData.Product as Produto;
+            var updatedMontagens = productData.SelectedMontagens as List<Montagem>;
+
+            if (updatedProduct != null)
+            {
+                updatedProduct.IdAdministrador = userId;
+                await ProdutoService.UpdateProduto(updatedProduct);
+
+                // Remove existing montagens for the product
+                var existingMontagens = await MontagemService.GetMontagensByProdutoId(updatedProduct.Id);
+                foreach (var montagem in existingMontagens)
+                {
+                    await MontagemService.DeleteMontagem(montagem.Id);
+                }
+
+                // Add updated montagens
+                if (updatedMontagens != null)
+                {
+                    foreach (var mon in updatedMontagens)
+                    {
+                        mon.IdProduto = updatedProduct.Id;
+                        await MontagemService.CreateMontagem(mon);
+                    }
+                }
+
+                // Reload all products after successful update
+                var produtos = await ProdutoService.GetAllProdutos();
+                ProductsData = produtos.ToList();
+
+                StateHasChanged();
+
+                Snackbar.Add("Produto e montagem atualizados com sucesso!", Severity.Success);
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Erro ao atualizar produto e montagem.");
+            Snackbar.Add("Erro ao atualizar produto e montagem.", Severity.Error);
+        }
+    }
+}
+
+
+    private async Task HandleRemoveClick(Produto produto)
+    {
+        var parameters = new DialogParameters
+        {
+            { "ContentText", $"Tem a certeza que deseja remover o produto {produto.Nome}?" },
+            { "ButtonText", "Remover" },
+            { "Color", Color.Error }
+        };
+
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small };
+        var dialog = DialogService.Show<ConfirmationPopUp>("Confirmação", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            try
+            {
+                await ProdutoService.DeleteProduto(produto.Id);
+                ProductsData.Remove(produto);
+                Logger.LogInformation($"Removed: {produto.Nome}");
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, $"Failed to remove product: {produto.Nome}");
+            }
+        }
+    }
+}

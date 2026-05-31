@@ -1,0 +1,93 @@
+-- Procedure para obter produto por ID
+CREATE PROCEDURE spProduto_GetById
+    @Id INT
+AS
+BEGIN
+    SELECT *
+    FROM Produto
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para obter todos os produtos
+CREATE PROCEDURE spProduto_GetAll
+AS
+BEGIN
+    SELECT *
+    FROM Produto;
+END;
+GO
+
+-- Procedure para inserir um novo produto
+CREATE PROCEDURE spProduto_Insert
+    @Nome NVARCHAR(45),
+    @Categoria NVARCHAR(15),
+    @Preco DECIMAL(4,2),
+    @QuantidadeDeRealizacoes INT,
+    @QuantidadeDeVendas INT,
+    @QuantidadeDeRejeicoes INT,
+    @MediaDeSatisfacao DECIMAL(4,2),
+    @MediaDoTempoDeMontagem TIME,
+    @QuantidadeEmStock INT,
+    @ImagemURL NVARCHAR(90),
+    @IdAdministrador INT
+AS
+BEGIN
+    INSERT INTO Produto (Nome, Categoria, Preco, QuantidadeDeRealizacoes, QuantidadeDeVendas, QuantidadeDeRejeicoes, MediaDeSatisfacao, MediaDoTempoDeMontagem, QuantidadeEmStock, ImagemURL, IdAdministrador)
+    VALUES (@Nome, @Categoria, @Preco, @QuantidadeDeRealizacoes, @QuantidadeDeVendas, @QuantidadeDeRejeicoes, @MediaDeSatisfacao, @MediaDoTempoDeMontagem, @QuantidadeEmStock, @ImagemURL, @IdAdministrador);
+
+    SELECT SCOPE_IDENTITY() AS NovoId;
+END;
+GO
+
+-- Procedure para atualizar produto existente
+CREATE PROCEDURE spProduto_Update
+    @Id INT,
+    @Nome NVARCHAR(45),
+    @Categoria NVARCHAR(15),
+    @Preco DECIMAL(4,2),
+    @QuantidadeDeRealizacoes INT,
+    @QuantidadeDeVendas INT,
+    @QuantidadeDeRejeicoes INT,
+    @MediaDeSatisfacao DECIMAL(4,2),
+    @MediaDoTempoDeMontagem TIME,
+    @QuantidadeEmStock INT,
+    @ImagemURL NVARCHAR(90),
+    @IdAdministrador INT
+AS
+BEGIN
+    UPDATE Produto
+    SET Nome = @Nome,
+        Categoria = @Categoria,
+        Preco = @Preco,
+        QuantidadeDeRealizacoes = @QuantidadeDeRealizacoes,
+        QuantidadeDeVendas = @QuantidadeDeVendas,
+        QuantidadeDeRejeicoes = @QuantidadeDeRejeicoes,
+        MediaDeSatisfacao = @MediaDeSatisfacao,
+        MediaDoTempoDeMontagem = @MediaDoTempoDeMontagem,
+        QuantidadeEmStock = @QuantidadeEmStock,
+        ImagemURL = @ImagemURL,
+        IdAdministrador = @IdAdministrador
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para apagar produto
+CREATE PROCEDURE spProduto_Delete
+    @Id INT
+AS
+BEGIN
+    DELETE FROM Produto
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para obter os 3 produtos mais vendidos
+CREATE PROCEDURE spProduto_GetTop3MaisVendidos
+AS
+BEGIN
+    SELECT TOP 3 *
+    FROM Produto
+    ORDER BY QuantidadeDeVendas DESC
+END;
+GO

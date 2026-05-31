@@ -1,0 +1,134 @@
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/
+
+Results for URL: http://localhost:5173/login
+
+ • Error: The language specified in the lang attribute of the document element does not appear to be well-formed.
+   ├── WCAG2AA.Principle3.Guideline3_1.3_1_1.H57.3.Lang
+   ├──
+   └── [no context]
+
+ • Error: This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.35:1. Recommendation:  change text colour to #767676.
+   ├── WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail
+   ├── #app > div > div > div:nth-child(1) > div > p
+   └── <p class="text-center text-[#A9a9a9] mb-8">Login to your Swap account</p>
+
+2 Errors
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/
+
+Results for URL: http://localhost:5173/login
+
+ • Error: This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.35:1. Recommendation:  change text colour to #767676.
+   ├── WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail
+   ├── #app > div > div > div:nth-child(1) > div > p
+   └── <p class="text-center text-[#A9a9a9] mb-8">Login to your Swap account</p>
+
+1 Errors
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/register
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/register
+
+Results for URL: http://localhost:5173/register
+
+ • Error: This passwordinput element does not have a name available to an accessibility API. Valid names are: label element, title undefined, aria-label undefined, aria-labelledby undefined.
+   ├── WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputPassword.Name
+   ├── #confirmPassword
+   └── <input type="password" id="confirmPassword" placeholder="Confirm password" class="w-full p-3 rounded border text-sm border-[rgba(0,13,128,0.5)]">
+
+ • Error: This form field should be labelled in some way. Use the label element (either with a "for" attribute or wrapped around the form field), or "title", "aria-label" or "aria-labelledby" attributes as appropriate.
+   ├── WCAG2AA.Principle1.Guideline1_3.1_3_1.F68
+   ├── #confirmPassword
+   └── <input type="password" id="confirmPassword" placeholder="Confirm password" class="w-full p-3 rounded border text-sm border-[rgba(0,13,128,0.5)]">
+
+2 Errors
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/register
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/register
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/recover-password
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/recover-password
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/students/schedule
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/students/schedule
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/director/dashboard
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/director/dashboard
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/director/schedules
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/director/schedules
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/director/shifts
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/director/shifts
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/director/students
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/director/students
+
+No issues found!
+
+PS C:\Users\ferna\Documents\LEI\trabalho-pr-tico-gp25_15\SWAP> pa11y http://localhost:5173/student/profile
+
+Welcome to Pa11y
+
+ > Running Pa11y on URL http://localhost:5173/student/profile
+
+No issues found!

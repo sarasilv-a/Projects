@@ -1,0 +1,219 @@
+﻿@page "/employees"
+@inject ILogger<Employees> Logger
+@inject UtilizadorService UtilizadorService
+@inject ISnackbar Snackbar
+@using MontagemBelasPizzas.UI.Components.Shared
+@using Microsoft.AspNetCore.Components.Authorization
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager NavigationManager
+@inject IDialogService DialogService
+
+@if (isLoading)
+{
+<!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+<div class="loading text-center">
+</div>
+}
+else if (!isAuthenticated)
+{
+    <Login/>
+}
+else if (userRole == "Funcionario")
+{
+    <AccessDenied />
+}
+else if (userRole == "Administrador")
+{
+    <TableComponent TItem="Utilizador"
+                    Title="Funcionários"
+                    ColumnHeaders="columnHeaders"
+                    Items="FuncionariosData"
+                    PropertySelectors="propertySelectors"
+                    OnAddClick="HandleAddClick"
+                    OnEditClick="HandleEditClick"
+                    OnRemoveClick="HandleRemoveClick" />
+}
+
+
+@code {
+    // Validate authenticated User
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+    private bool isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+            }
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    // Get the Employees 
+    private List<string> columnHeaders = new List<string>
+    {
+        "Nome", "ID", "Data de Registo", "Produtos Realizados", "Produtos Rejeitados", "Satisfação", "Tempo Médio"
+    };
+
+    private List<Func<Utilizador, object>> propertySelectors = new List<Func<Utilizador, object>>
+    {
+        u => u.Nome,
+        u => u.Id,
+        u => u.DataDeCriacao.ToString("yyyy-MM-dd"),
+        u => u.QuantidadeDeProdutosRealizados,
+        u => u.QuantidadeDeProdutosRejeitados,
+        u => u.MediaDeSatisfacao, // Format satisfaction as a percentage
+        u => u.TempoMedioPorProduto.ToString(@"hh\:mm\:ss") // Format TimeSpan
+    };
+
+    private List<Utilizador> FuncionariosData = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Retrieve employees from the database
+            var allUtilizadores = await UtilizadorService.GetAllUtilizadores();
+            FuncionariosData = allUtilizadores
+                .Where(u => u.Tipo == TipoUtilizador.Funcionario) // Filter by 'Funcionario'
+                .ToList();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load employees.");
+        }
+    }
+
+    private async void HandleAddClick()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions { BackgroundClass = "custom-dialog", CloseButton = true, MaxWidth = MaxWidth.Medium};
+
+        var dialog = DialogService.Show<AddEmployee>("Adicionar Funcionário", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled && result.Data is Utilizador newEmployee)
+        {
+            try
+            {
+                newEmployee.Tipo = TipoUtilizador.Funcionario;
+                await UtilizadorService.AddUtilizador(newEmployee);
+                
+                var allUtilizadores = await UtilizadorService.GetAllUtilizadores();
+                FuncionariosData = allUtilizadores
+                    .Where(u => u.Tipo == TipoUtilizador.Funcionario)
+                    .ToList();
+
+                Logger.LogInformation($"Added: {newEmployee.Nome}");
+                
+                Snackbar.Add(
+                    $"Funcionário '{newEmployee.Nome}' adicionado com sucesso!",
+                    Severity.Success,
+                    config =>
+                    {
+                        config.ShowCloseIcon = false;
+                        config.SnackbarTypeClass = "snackbar-container custom-snackbar custom-snackbar-success";
+                        config.Icon = Icons.Material.Filled.CheckCircle;
+                    });
+                
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "Failed to add employee.");
+            }
+        }
+    }
+
+    private async void HandleEditClick(Utilizador selectedEmployee)
+    {
+        // Pass the selected employee's data as parameters to the dialog
+        var parameters = new DialogParameters
+        {
+            { "Employee", selectedEmployee }
+        };
+
+        var options = new DialogOptions { BackgroundClass = "custom-dialog", CloseButton = true, MaxWidth = MaxWidth.Medium };
+
+        var dialog = DialogService.Show<AddEmployee>("Editar Funcionário", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled && result.Data is Utilizador updatedEmployee)
+        {
+            try
+            {
+                Console.WriteLine($"Updated Data: {updatedEmployee.DataDeNascimento}");
+                await UtilizadorService.UpdateUtilizador(updatedEmployee);
+                
+                var index = FuncionariosData.FindIndex(e => e.Id == updatedEmployee.Id);
+                if (index != -1)
+                {
+                    FuncionariosData[index] = updatedEmployee;
+                }
+
+                Logger.LogInformation($"Updated: {updatedEmployee.Nome}");
+
+                Snackbar.Add(
+                    $"Funcionário '{updatedEmployee.Nome}' atualizado com sucesso!",
+                    Severity.Success,
+                    config =>
+                    {
+                        config.ShowCloseIcon = false;
+                        config.SnackbarTypeClass = "snackbar-container custom-snackbar custom-snackbar-success";
+                        config.Icon = Icons.Material.Filled.CheckCircle;
+                    });
+
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "Failed to update employee.");
+                Snackbar.Add("Erro ao atualizar funcionário.", Severity.Error);
+            }
+        }
+    }
+
+
+    private async Task HandleRemoveClick(Utilizador utilizador)
+    {
+        var parameters = new DialogParameters
+        {
+            { "ContentText", $"Tem a certeza que deseja remover o funcionário {utilizador.Nome}?" },
+            { "ButtonText", "Remover" },
+            { "Color", Color.Error }
+        };
+
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small };
+        var dialog = DialogService.Show<ConfirmationPopUp>("Tens a certeza?", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            try
+            {
+                await UtilizadorService.DeleteUtilizador(utilizador.Id);
+                FuncionariosData.Remove(utilizador);
+                Logger.LogInformation($"Removed: {utilizador.Nome}");
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, $"Failed to remove employee: {utilizador.Nome}");
+            }
+        }
+    }
+    
+}

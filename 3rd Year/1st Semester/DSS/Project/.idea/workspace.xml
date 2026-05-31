@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f4704b6-33e3-4930-8f6a-4bdc3b44e996" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/final/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/final/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapDL/Conn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapDL/CourseDirectorDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapDL/CurricularUnitDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapDL/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapDL/RoomDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapDL/ShiftDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapDL/SlotDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapDL/StudentDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/CourseDirector/CourseDirectorManagementFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/CourseDirector/ICourseDirectorManagement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/CurricularUnit/CurricularUnit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/MainFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Room/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Shift/IShiftManagement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Shift/Shift.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Shift/ShiftManagementFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Slot/Slot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Student/IStudentManagement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Student/Status/Associate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Student/Status/Athlete.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Student/Status/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Student/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapLN/Student/StudentManagementFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapUI/CourseDirectorMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapUI/InputMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapUI/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapUI/StudentMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/SwapUI/UserInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/DSS2425-Grupo-34-1.0-SNAPSHOT.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/DSS2425-Grupo-34-1.0-SNAPSHOT.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/DSS2425-Grupo-34-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/DSS2425-Grupo-34" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/DSS2425-Grupo-34.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Conn.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CourseDirectorDAO.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CurricularUnitDAO.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Database.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Main.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/RoomDAO.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ShiftDAO.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SlotDAO.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StudentDAO.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/final/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/final/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/final/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/final/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/mysql-connector-java-8.0.22.jar" beforeDir="false" afterPath="$PROJECT_DIR$/final/libs/mysql-connector-java-8.0.22.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapDL/Conn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapDL/CourseDirectorDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapDL/CurricularUnitDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapDL/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapDL/RoomDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapDL/ShiftDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapDL/SlotDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapDL/StudentDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/CourseDirector/CourseDirectorManagementFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/CourseDirector/ICourseDirectorManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/CurricularUnit/CurricularUnit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/MainFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Room/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Shift/IShiftManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Shift/Shift.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Shift/ShiftManagementFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Slot/Slot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Student/IStudentManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Student/Status/Associate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Student/Status/Athlete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Student/Status/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Student/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapLN/Student/StudentManagementFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapUI/CourseDirectorMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapUI/InputMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapUI/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapUI/StudentMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SwapUI/UserInterface.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DSS2425-Grupo-34" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DSS2425-Grupo-34" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2onI4Kbxuz9Tof9SQ5rrlbGftZU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.DSS2425-Grupo-34 [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ferna/Desktop/DSS2425-Grupo-34&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ferna\Desktop\DSS2425-Grupo-34\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ferna\Desktop\DSS2425-Grupo-34\final" />
+      <recent name="C:\Users\ferna\Desktop\DSS2425-Grupo-34" />
+      <recent name="C:\Users\ferna\Desktop\DSS2425-Grupo-34\libs" />
+      <recent name="C:\Users\ferna\Desktop\DSS2425-Grupo-34\src" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f4704b6-33e3-4930-8f6a-4bdc3b44e996" name="Changes" comment="" />
+      <created>1731498720334</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731498720334</updated>
+      <workItem from="1731498721396" duration="2616000" />
+      <workItem from="1731665332699" duration="18771000" />
+      <workItem from="1731755865808" duration="7203000" />
+      <workItem from="1731858731518" duration="6541000" />
+      <workItem from="1731882535530" duration="2828000" />
+      <workItem from="1732032595751" duration="717000" />
+      <workItem from="1732098206047" duration="6942000" />
+      <workItem from="1732115845544" duration="1203000" />
+      <workItem from="1732141390614" duration="631000" />
+      <workItem from="1732182913459" duration="702000" />
+      <workItem from="1732486380556" duration="1586000" />
+      <workItem from="1732548058404" duration="1687000" />
+      <workItem from="1732876703444" duration="499000" />
+      <workItem from="1732968126414" duration="3466000" />
+      <workItem from="1732980174676" duration="16000" />
+      <workItem from="1732980317332" duration="874000" />
+      <workItem from="1733063773861" duration="931000" />
+      <workItem from="1733070054942" duration="13000" />
+      <workItem from="1733073469808" duration="530000" />
+      <workItem from="1733234066812" duration="221000" />
+      <workItem from="1733588076881" duration="1278000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

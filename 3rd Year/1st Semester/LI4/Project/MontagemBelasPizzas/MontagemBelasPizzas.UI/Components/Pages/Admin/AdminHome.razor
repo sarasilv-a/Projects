@@ -1,0 +1,372 @@
+﻿@page "/admin-home"
+@using Microsoft.AspNetCore.Components.Authorization
+@inject ProdutoService ProdutoService
+@inject IngredienteService IngredienteService
+@inject OperacaoService OperacaoService
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager NavigationManager
+@using System.Security.Claims
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+
+@if (isLoading)
+{
+<!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+<div class="loading text-center">
+
+    
+</div>
+}
+else if (!isAuthenticated)
+{
+    <AccessDenied/>
+}
+else if (userRole == "Funcionario")
+{
+    <AccessDenied />
+}
+else if (userRole == "Administrador")
+{
+    <div class="p-6">
+        <div class="flex items-center space-x-2 mb-6 mt-4">
+            <!-- Search -->
+            <div class="flex bg-white rounded-full shadow-md px-4 py-2 w-1/2 justify-between">
+                <div class="flex-column align-content-lg-center">
+                    <i class="bi bi-search text-brown-500 mr-2" style="color: #7B351C;"></i>
+                    <input type="text" placeholder="Pesquisar" class="outline-none"
+                           style="width: 300px; color: #7B351C;" @bind="SearchTerm" @bind:event="oninput"/>
+                </div>
+                <select class="outline-none" style="color: #7B351C;" @bind="SelectedSearchColumn">
+                    @for (var i = 0; i < columnHeaders.Count; i++)
+                    {
+                        <option value="@i">@columnHeaders[i]</option>
+                    }
+                </select>
+            </div>
+            <!-- Order Dropdown -->
+            <div class="flex items-center bg-white rounded-full shadow-md px-4 py-2">
+                <i class="bi bi-sort-down text-brown-500 mr-2" style="color: #7B351C;"></i>
+                <select class="bg-transparent text-brown-500 outline-none cursor-pointer" style="color: #7B351C;" @bind="SelectedOrderColumn">
+                    <option value="">Ordenar por...</option>
+                    @for (var i = 0; i < columnHeaders.Count; i++)
+                    {
+                        <option value="@i">@columnHeaders[i]</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- Metrics Section -->
+        <div class="flex justify-center mt-16">
+            <div class="text-white text-center p-1 shadow" style="background-color: #FC5825; border-radius: 20px; width: 300px">
+                <div class="font-bold">Custo Total:</div>
+                <div>@TotalCost.ToString("C")</div>
+            </div>
+            <div class="text-white text-center p-1 mx-5 shadow" style="background-color: #7FA979; border-radius: 20px; width: 300px">
+                <div class="font-bold">Receita Total:</div>
+                <div>@TotalRevenue.ToString("C")</div>
+            </div>
+            <div class="text-white text-center p-1 shadow" style="background-color: #FFB253; border-radius: 20px; width: 300px">
+                <div class="font-bold">Margem de Lucro:</div>
+                <div>@ProfitMargin.ToString("C")</div>
+            </div>
+        </div>
+
+
+        <!-- Graphs Section -->
+        <div class="flex space-x-6 mt-12">
+            <div class="flex-1 p-4 bg-white shadow" style="border-radius: 20px">
+                <h2 class="text-lg font-semibold mb-4" style="color: #7B351C">Histórico de Compras e Vendas</h2>
+                <div>
+                    <MudChart ChartType="ChartType.Line" ChartSeries="@Series1" XAxisLabels="@XAxisLabels1" Width="100%" Height="350" ChartOptions="options1"></MudChart>
+                </div>
+            </div>
+            <div class="flex-1 p-4 bg-white shadow" style="border-radius: 20px">
+                <h2 class="text-lg font-semibold mb-4" style="color: #7B351C">Produtos Mais Vendidos</h2>
+                <MudChart ChartType="ChartType.Bar" ChartSeries="@Series2" @bind-SelectedIndex="Index" XAxisLabels="@XAxisLabels2" Width="100%" Height="350px" ChartOptions="options2"></MudChart>
+            </div>
+        </div>
+
+        <!-- Historico Section -->
+        <div class="p-4 shadow bg-white mt-12" style="border-radius: 20px;">
+            <div class="flex justify-between items-center mb-4">
+                <div class="fs-3" style="font-weight: 900; color: #7B351C">
+                    Histórico
+                </div>
+            </div>
+
+            <table class="table-auto justify-end w-full">
+                <thead>
+                <tr class="border-top">
+                    @foreach (var header in columnHeaders)
+                    {
+                        <th class="px-4 py-4 text-left font-semibold" style=" color: #7B351C">@header</th>
+                    }
+                </tr>
+                </thead>
+                <tbody>
+                @if (FilteredItems != null && FilteredItems.Any())
+                {
+                    @foreach (var item in FilteredItems)
+                    {
+                        <tr class="border-top">
+                            <!-- Coluna Tipo -->
+                            <td class="px-4 py-4" style="color: #7B351C">
+                                @item.Type
+                            </td>
+                            <!-- Coluna Nome -->
+                            <td class="px-4 py-4" style="color: #7B351C">
+                                @item.Name
+                            </td>
+                            <!-- Coluna ID -->
+                            <td class="px-4 py-4" style="color: #7B351C">
+                                @item.Id
+                            </td>
+                            <!-- Coluna Data -->
+                            <td class="px-4 py-4" style="color: #7B351C">
+                                @item.Date
+                            </td>
+                            <!-- Coluna Quantidade -->
+                            <td class="px-4 py-4" style="color: #7B351C">
+                                @item.Quantity
+                            </td>
+                            <!-- Coluna Preço -->
+                            <td class="px-4 py-4" style="color: #7B351C">
+                                @item.Price
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td class="border px-4 py-2 text-center" colspan="@columnHeaders.Count + 1">
+                            Nenhum dado disponível.
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+
+@code {
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userRole;
+    private int userId;
+    private bool isLoading = true;
+    private List<LinhaDeHistorico>? Historico;
+
+    private decimal TotalCost;
+    private decimal TotalRevenue;
+    private decimal ProfitMargin;
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                userId = int.Parse(user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "1");
+
+                await LoadHistoricoAsync();
+            }
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadHistoricoAsync()
+    {
+        try
+        {
+
+            var compras = await OperacaoService.GetAllCompras();
+            var vendas = await OperacaoService.GetAllVendas();
+
+            Historico = new List<LinhaDeHistorico>();
+
+            foreach (var compra in compras)
+            {
+                var ingrediente = await IngredienteService.GetIngredienteById(compra.IdIngrediente);
+
+                if (ingrediente != null)
+                {
+                    Historico.Add(new LinhaDeHistorico
+                        {
+                            Type = "Ingrediente",
+                            Name = ingrediente.Nome,
+                            Id = compra.IdIngrediente.ToString(),
+                            Date = compra.DataDaOperacao.ToString("dd-MM-yyyy"),
+                            Quantity = compra.Quantidade.ToString(),
+                            Price = compra.ValorTotal.ToString()
+                        });
+
+                    TotalCost += compra.ValorTotal;
+                }
+            }
+
+            foreach (var venda in vendas)
+            {
+                var produto = await ProdutoService.GetProdutoById(venda.IdProduto);
+
+                if (produto != null)
+                {
+                    Historico.Add(new LinhaDeHistorico
+                        {
+                            Type = "Produto",
+                            Name = produto.Nome,
+                            Id = venda.IdProduto.ToString(),
+                            Date = venda.DataDaOperacao.ToString("dd-MM-yyyy"),
+                            Quantity = venda.Quantidade.ToString(),
+                            Price = venda.ValorTotal.ToString()
+                        });
+                    TotalRevenue += venda.ValorTotal;
+                }
+            }
+            ProfitMargin = TotalCost - TotalRevenue;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[ERROR] Erro ao carregar dados: {ex.Message}");
+        }
+    }
+
+    public class LinhaDeHistorico
+    {
+        public string Type { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Id { get; set; } = string.Empty;
+        public string Date { get; set; } = string.Empty;
+        public string Quantity { get; set; } = string.Empty;
+        public string Price { get; set; } = string.Empty;
+    }
+
+    private string SearchTerm { get; set; } = string.Empty;
+    private int SelectedSearchColumn { get; set; } = 0;
+    private int? SelectedOrderColumn { get; set; } = null;
+    
+    private List<string> columnHeaders = new List<string>
+    {
+        "Tipo", "Nome", "ID", "Data", "Quantidade", "Preço"
+    };
+
+    private List<LinhaDeHistorico>? FilteredItems => Historico?
+    .Where(item =>
+        string.IsNullOrEmpty(SearchTerm) || 
+        (SelectedSearchColumn switch
+        {
+            0 => item.Type.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase), // Pesquisa na coluna Tipo
+            1 => item.Name.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase), // Pesquisa na coluna Nome
+            2 => item.Id.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase), // Pesquisa na coluna ID
+            3 => item.Date.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase), // Pesquisa na coluna Data
+            4 => item.Quantity.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase), // Pesquisa na coluna Quantidade
+            5 => item.Price.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase), // Pesquisa na coluna Preço
+            _ => false // Nenhuma correspondência
+        })
+    )
+    .OrderBy(item =>
+    {
+        return SelectedOrderColumn switch
+        {
+            0 => item.Type, // Ordena pelo tipo (Ingrediente ou Produto)
+            1 => item.Name, // Ordena pelo nome
+            2 => int.TryParse(item.Id, out var id) ? id.ToString("D10") : "0000000000", // Ordena pelo ID como string numérica
+            3 => item.Date, // Ordena pela data
+            4 => int.TryParse(item.Quantity, out var qty) ? qty.ToString("D10") : "0000000000", // Ordena quantidade como string numérica
+            5 => decimal.TryParse(item.Price, out var price) ? price.ToString("0000000000.00") : "0000000000.00", // Ordena preço como string numérica formatada
+            _ => item.Name
+        };
+    })
+    .ToList();
+
+
+    private ChartOptions options1 = new ChartOptions();
+    public List<ChartSeries> Series1 { get; set; } = new List<ChartSeries>();
+    public List<ChartSeries> Series2 = new List<ChartSeries>();
+    public string[] XAxisLabels2 = new string[7];
+    
+    public string[] XAxisLabels1 = { "Jan", "Feb", "Mar", "Abr", "Mai", "Jun", "Jul", "Aug", "Set", "Out", "Nov", "Dez" };
+    
+    private ChartOptions options2 = new ChartOptions();
+    private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.
+
+    protected override async Task OnInitializedAsync()
+    {
+        options1.InterpolationOption = InterpolationOption.NaturalSpline;
+        options1.YAxisFormat = "0";
+        options1.ChartPalette = new[] { "#FFB253", "#7FA979" };
+
+        options2.YAxisFormat = "0";
+        options2.ChartPalette = new[] { "#FC5825" };
+        options2.ShowLabels = false;
+        options2.ShowLegendLabels = false;
+        options2.ShowLegend = false;
+        options2.ShowToolTips = false;
+
+        try
+        {
+            var topProducts = await OperacaoService.GetTop5MostSoldProducts();
+
+
+            var productNames = new List<string> { "" };
+            var quantities = new List<double> { 0.0 };
+
+            foreach (var (produto, quantidadeVendida) in topProducts)
+            {
+                productNames.Add(produto.Nome);
+                quantities.Add(quantidadeVendida);
+            }
+
+            while (productNames.Count < 6)
+            {
+                productNames.Add("");
+                quantities.Add(0.0);
+            }
+
+            productNames.Add("");
+            quantities.Add(0.0);
+
+            XAxisLabels2 = productNames.ToArray();
+            Series2 = new List<ChartSeries>
+            {
+                new ChartSeries
+                {
+                    Name = "Top 5 Produtos Mais Vendidos",
+                    Data = quantities.ToArray()
+                }
+            };
+
+            // Fetch data
+            var salesPerMonth = await OperacaoService.GetSalesPerMonth();
+            var buysPerMonth = await OperacaoService.GetBuysPerMonth();
+
+            // Populate chart series
+            Series1 = new List<ChartSeries>
+            {
+                new ChartSeries
+                {
+                    Name = "Compras",
+                    Data = buysPerMonth.Select(b => (double)b).ToArray()
+                },
+                new ChartSeries
+                {
+                    Name = "Vendas",
+                    Data = salesPerMonth.Select(s => (double)s).ToArray()
+                }
+            };
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching monthly data: {ex.Message}");
+        }
+    }
+}

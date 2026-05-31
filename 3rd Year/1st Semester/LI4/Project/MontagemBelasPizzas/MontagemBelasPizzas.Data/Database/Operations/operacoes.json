@@ -1,0 +1,12 @@
+[
+  {
+    "Tipo": "compra",
+    "Id": 1,
+    "Quantidade": 50
+  },
+  {
+    "Tipo": "venda",
+    "Id": 2,
+    "Quantidade": 20
+  }
+]

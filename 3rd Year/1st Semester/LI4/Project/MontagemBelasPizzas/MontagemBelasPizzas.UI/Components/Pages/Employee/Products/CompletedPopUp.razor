@@ -1,0 +1,44 @@
+﻿<MudDialog MaxWidth="MaxWidth.Medium" Style="width: 500px; border-radius: 20px;">
+    <DialogContent>
+        <div class="text-center p-6">
+            <div class="px-6 py-3" style="background-color: #FFFFFF; display: inline-block; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); width: 90%;">
+                <MudText Typo="Typo.h5" Class="fw-bold" Style="color: #6c3e2c; font-family: 'Poppins', sans-serif; font-size: 1.5rem; text-align: center;">
+                    @Title
+                </MudText>
+            </div>
+
+            <div class="d-flex flex-column align-center my-4">
+                <MudRating @bind-SelectedValue="selectedVal" HoveredValueChanged="HandleHoveredValueChanged" Size="Size.Medium" />
+            </div>
+
+            <div class="my-4">
+                <img src="@ImageURL" alt="@Title" class="rounded-full" style="width: 150px; height: 150px; object-fit: cover; margin: auto;" />
+            </div>
+
+            <div class="mt-10">
+                <MudButton OnClick="ReturnActiveVal" Variant="Variant.Text" Style="color: #6c3e2c; font-size: .8rem; text-align: center; text-decoration: underline;">
+                    @ReturnText
+                </MudButton>
+            </div>
+        </div>
+    </DialogContent>
+</MudDialog>
+
+@code {
+    [CascadingParameter] private IMudDialogInstance MudDialog { get; set; } = default!;
+    [Parameter] public string Title { get; set; } = "Pizza Concluída";
+    [Parameter] public string ImageURL { get; set; } = "Images/logo/logo.png";
+    [Parameter] public int Rating { get; set; } = 5;
+    [Parameter] public string ReturnText { get; set; } = "Voltar para a Linha de Montagem";
+    [Parameter] public string ReturnURL { get; set; } = "/employee-products";
+
+    private int selectedVal = 0;
+    private int? activeVal;
+
+    private void HandleHoveredValueChanged(int? val) => activeVal = val;
+
+    private void ReturnActiveVal()
+    {
+        MudDialog.Close(DialogResult.Ok(activeVal ?? selectedVal));
+    }
+}

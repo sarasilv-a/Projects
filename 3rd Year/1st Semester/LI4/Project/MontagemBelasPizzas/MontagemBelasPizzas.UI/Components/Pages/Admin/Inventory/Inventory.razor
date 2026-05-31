@@ -1,0 +1,352 @@
+﻿@page "/inventory"
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@using MontagemBelasPizzas.Data.Entities
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager NavigationManager
+@inject MontagemBelasPizzas.Business.Services.Produtos.OperacaoService OperacaoService
+@inject MontagemBelasPizzas.Business.Services.Produtos.ProdutoService ProdutoService
+@inject MontagemBelasPizzas.Business.Services.Produtos.IngredienteService IngredienteService
+@inject ISnackbar Snackbar
+@using MudBlazor
+@using System.Text.Json
+@using System.IO
+@using System.Security.Claims
+
+
+@if (isLoading)
+{
+    <!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+    <div class="loading text-center">
+    </div>
+}
+else if (!isAuthenticated)
+{
+    <Login />
+}
+else if (userRole == "Funcionario")
+{
+    <AccessDenied />
+}
+else if (userRole == "Administrador")
+{
+    <div class="p-8" style="margin-top: 6rem">
+        <div class="flex justify-between">
+            <div class="fs-3" style="font-weight: 900; color: #7B351C">Compras e Vendas</div>
+            <!-- Add File Button -->
+            <div class="flex justify-end mb-4">
+                <button class="text-white px-6 py-2 shadow rounded" style="background-color: #FC5825"
+                        @onclick="() => ShowCard = true">
+                    + Adicionar ficheiro
+                </button>
+            </div>
+        </div>
+
+        <!-- Tables Container -->
+        <div class="flex justify-between mt-2">
+            <!-- Latest Purchases Table -->
+            <div class="flex-1 p-4 mr-2 border shadow bg-white" style="border-radius: 20px">
+                <h2 class="text-lg font-semibold mb-4" style="color: #7B351C;">Últimas Compras</h2>
+                <table class="table-auto w-full border-collapse">
+                    <thead>
+                    <tr class="border-t">
+                        <th class=" px-4 py-4 text-left" style="color: #7B351C">Nome</th>
+                        <th class="px-4 py-4 text-left" style="color: #7B351C">ID</th>
+                        <th class="px-4 py-4 text-left" style="color: #7B351C">Quantidade</th>
+                        <th class="px-4 py-4 text-left" style="color: #7B351C">Preço</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var purchase in Purchases)
+                    {
+                        <tr class="border-t">
+                            <td class="px-4 py-4" style="color: #7B351C">@purchase.IdIngrediente</td>
+                            <td class="px-4 py-4" style="color: #7B351C">@purchase.Id</td>
+                            <td class="px-4 py-4" style="color: #7B351C">@purchase.Quantidade</td>
+                            <td class="px-4 py-4" style="color: #7B351C">@purchase.ValorTotal.ToString("C")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Latest Sales Table -->
+            <div class="flex-1 p-4 ml-2 border shadow bg-white" style="border-radius: 20px">
+                <h2 class="text-lg font-semibold mb-4" style="color: #7B351C">Últimas Vendas</h2>
+                <table class="table-auto w-full border-collapse">
+                    <thead>
+                    <tr class="border-t">
+                        <th class="px-4 py-4 text-left" style="color: #7B351C">Nome</th>
+                        <th class="px-4 py-4 text-left" style="color: #7B351C">ID</th>
+                        <th class="px-4 py-4 text-left" style="color: #7B351C">Quantidade</th>
+                        <th class="px-4 py-4 text-left" style="color: #7B351C">Preço</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var sale in Sales)
+                    {
+                        <tr class="border-t">
+                            <td class="px-4 py-4" style="color: #7B351C">@sale.IdProduto</td>
+                            <td class="px-4 py-4" style="color: #7B351C">@sale.Id</td>
+                            <td class="px-4 py-4" style="color: #7B351C">@sale.Quantidade</td>
+                            <td class="px-4 py-4" style="color: #7B351C">@sale.ValorTotal.ToString("C")</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Card -->
+    @if (ShowCard)
+    {
+        <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div class="relative bg-white p-8 rounded-lg shadow-lg" style="width: 500px">
+                <!-- Botão Fechar com ícone do Bootstrap -->
+                <button class="btn-close position-absolute top-0 end-0 m-3" @onclick="() => ShowCard = false" aria-label="Close"></button>
+
+                <!-- Conteúdo do Card -->
+                <div class="text-center">
+                    <MudStack Style="width: 100%; border-radius: 20px">
+                        <MudFileUpload T="IReadOnlyList<IBrowserFile>"
+                                       @ref="@_fileUpload"
+                                       @bind-Files="_model.Files"
+                                       OnFilesChanged="OnInputFileChanged"
+                                       AppendMultipleFiles
+                                       Hidden="@false"
+                                       InputClass="absolute mud-width-full mud-height-full overflow-hidden z-10"
+                                       InputStyle="opacity:0"
+                                       tabindex="-1"
+                                       @ondrop="@ClearDragClass"
+                                       @ondragenter="@SetDragClass"
+                                       @ondragleave="@ClearDragClass"
+                                       @ondragend="@ClearDragClass">
+                            <ActivatorContent>
+                                <MudPaper Height="300px"
+                                          Outlined="true"
+                                          Class="@_dragClass">
+                                    <MudText Typo="Typo.h6">
+                                        Drag and drop files here or click
+                                    </MudText>
+                                    @foreach (var file in _fileNames)
+                                    {
+                                        <MudChip T="string"
+                                                 Color="Color.Dark"
+                                                 Text="@file"
+                                                 tabindex="-1" />
+                                    }
+                                </MudPaper>
+                            </ActivatorContent>
+                        </MudFileUpload>
+
+                        <MudToolBar Gutters="@false"
+                                    Class="relative d-flex justify-end gap-4">
+                            <MudButton Color="Color.Primary"
+                                       OnClick="@OpenFilePickerAsync"
+                                       Variant="Variant.Filled">
+                                Open file picker
+                            </MudButton>
+                            <MudButton Color="Color.Primary"
+                                       Disabled="@(!_fileNames.Any())"
+                                       OnClick="@Upload"
+                                       Variant="Variant.Filled">
+                                Upload
+                            </MudButton>
+                            <MudButton Color="Color.Error"
+                                       Disabled="@(!_fileNames.Any())"
+                                       OnClick="@ClearAsync"
+                                       Variant="Variant.Filled">
+                                Clear
+                            </MudButton>
+                        </MudToolBar>
+                    </MudStack>
+                </div>
+            </div>
+        </div>
+    
+    }
+
+}
+
+
+@code {
+    // Validate authenticated User
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+    private int userId;
+    private bool isLoading = true;
+    private List<Compra> Purchases = new();
+    private List<Venda> Sales = new();
+    private bool ShowCard { get; set; } = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                userId = int.Parse(user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "1");
+            }
+            isLoading = false;
+
+            try
+            {
+                // Obter as compras e vendas utilizando os serviços
+                Purchases = (await OperacaoService.GetAllCompras()).ToList();
+                Sales = (await OperacaoService.GetAllVendas()).ToList();
+            }
+            catch (Exception ex)
+            {
+                Snackbar.Add($"Erro ao carregar dados: {ex.Message}", Severity.Error);
+            }
+
+            StateHasChanged();
+        }
+    }
+
+#nullable enable
+    private const string DefaultDragClass = "relative rounded-lg border-2 border-dashed pa-4 mt-4 mud-width-full mud-height-full";
+    private string _dragClass = DefaultDragClass;
+    private readonly List<string> _fileNames = new();
+    private MudFileUpload<IReadOnlyList<IBrowserFile>>? _fileUpload;
+    public class Model
+    {
+        public IReadOnlyList<IBrowserFile>? Files { get; set; } = new List<IBrowserFile>();
+    }
+
+    private Model _model = new();
+
+    private async Task ClearAsync()
+    {
+        await (_fileUpload?.ClearAsync() ?? Task.CompletedTask);
+        _fileNames.Clear();
+        ClearDragClass();
+    }
+
+    private Task OpenFilePickerAsync()
+        => _fileUpload?.OpenFilePickerAsync() ?? Task.CompletedTask;
+
+    private void OnInputFileChanged(InputFileChangeEventArgs e)
+    {
+        ClearDragClass();
+        var files = e.GetMultipleFiles();
+        foreach (var file in files)
+        {
+            _fileNames.Add(file.Name);
+            Console.WriteLine(file.Name);
+        }
+    }
+
+    private void Upload()
+    {
+        _ = ProcessUploadedFile(); // Chama o processamento do ficheiro
+    }
+
+
+    private void SetDragClass()
+        => _dragClass = $"{DefaultDragClass} mud-border-primary";
+
+    private void ClearDragClass()
+        => _dragClass = DefaultDragClass;
+
+    private async Task ProcessUploadedFile()
+    {
+        try
+        {
+            // Obter o conteúdo do ficheiro carregado
+            foreach (var file in _model?.Files ?? Enumerable.Empty<IBrowserFile>())
+            {
+                using var stream = file.OpenReadStream();
+                using var reader = new StreamReader(stream);
+                var content = await reader.ReadToEndAsync();
+                Console.WriteLine(content);
+
+                // Converter o JSON em uma lista de objetos
+                var operations = JsonSerializer.Deserialize<List<UploadedOperation>>(content);
+
+                if (operations != null)
+                {
+                    Console.WriteLine("operations");
+                    // Validar e processar as operações
+                    await ProcessOperations(operations);
+                }
+            }
+
+            Snackbar.Add("Ficheiro processado com sucesso!", Severity.Success);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Erro ao processar o ficheiro: {ex.Message}", Severity.Error);
+        }
+    }
+
+    public class UploadedOperation
+    {
+        public string Tipo { get; set; } = string.Empty; // "compra" ou "venda"
+        public int Id { get; set; } // IdIngrediente (para compras) ou IdProduto (para vendas)
+        public int Quantidade { get; set; }
+    }
+
+    private async Task ProcessOperations(IEnumerable<UploadedOperation> operations)
+    {
+        foreach (var operation in operations)
+        {
+            if (operation.Quantidade <= 0)
+            {
+                Snackbar.Add($"Operação inválida: Quantidade deve ser maior que zero. Tipo: {operation.Tipo}, Id: {operation.Id}", Severity.Warning);
+                continue;
+            }
+
+            try
+            {
+                decimal valorUnitario = 0;
+
+                if (operation.Tipo.Equals("compra", StringComparison.OrdinalIgnoreCase))
+                {
+                    // Obter o preço do ingrediente
+                    var ingrediente = await IngredienteService.GetIngredienteById(operation.Id);
+                    if (ingrediente == null)
+                    {
+                        Snackbar.Add($"Ingrediente não encontrado: Id {operation.Id}", Severity.Error);
+                        continue;
+                    }
+
+                    valorUnitario = ingrediente.Preco;
+                    await OperacaoService.AddCompra(operation.Id, operation.Quantidade, userId, valorUnitario);
+                    Snackbar.Add($"Compra inserida com sucesso: IdIngrediente {operation.Id}, Quantidade {operation.Quantidade}, Preço Unitário {valorUnitario.ToString("C")}", Severity.Success);
+                }
+                else if (operation.Tipo.Equals("venda", StringComparison.OrdinalIgnoreCase))
+                {
+                    // Obter o preço do produto
+                    var produto = await ProdutoService.GetProdutoById(operation.Id);
+                    if (produto == null)
+                    {
+                        Snackbar.Add($"Produto não encontrado: Id {operation.Id}", Severity.Error);
+                        continue;
+                    }
+
+                    valorUnitario = produto.Preco;
+                    var qtProduto = produto.QuantidadeEmStock;
+                    await OperacaoService.AddVenda(operation.Id, operation.Quantidade, userId, valorUnitario, qtProduto);
+                    Snackbar.Add($"Venda inserida com sucesso: IdProduto {operation.Id}, Quantidade {operation.Quantidade}, Preço Unitário {valorUnitario.ToString("C")}", Severity.Success);
+                }
+                else
+                {
+                    Snackbar.Add($"Tipo de operação desconhecido: {operation.Tipo}", Severity.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Snackbar.Add($"Erro ao inserir operação: Tipo {operation.Tipo}, Id {operation.Id}. Detalhes: {ex.Message}", Severity.Error);
+            }
+        }
+    }
+}

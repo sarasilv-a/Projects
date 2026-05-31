@@ -1,0 +1,194 @@
+﻿@page "/employee-products"
+@using MontagemBelasPizzas.Data.Entities.Produtos
+@using MontagemBelasPizzas.UI.Components.Shared
+@using MontagemBelasPizzas.UI.Components.Pages.Employee.Products
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@using System.Security.Claims
+@inject IDialogService DialogService
+@inject ProdutoService ProdutoService
+@inject MontagemService MontagemService
+@inject IngredienteService IngredienteService
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthProvider
+
+
+@if (isLoading)
+{
+    <!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+    <div class="loading text-center">
+    </div>
+}
+else if (!isAuthenticated)
+{
+    <Login />
+}
+else if (userRole == "Administrador")
+{
+    <AccessDenied />
+}
+else if (userRole == "Funcionario")
+{
+
+    <div class="mx-15 p-8">
+
+        <h1 class="text-2xl font-bold mb-6">Mais Vendidos</h1>
+
+        <!-- Top 3 Most Sold Products -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            @if (TopProdutos != null && TopProdutos.Any())
+            {
+                @foreach (var product in TopProdutos)
+                {
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-transform duration-300 transform hover:scale-105 flex flex-col items-center justify-center"
+                         @onclick="() => OpenConfirmationDialog(product)">
+                        <div class="w-full flex flex-col items-center justify-center">
+                            <h2 class="text-base text-gray-700 mt-8 mb-2">@product.Nome</h2>
+                            <img src="@product.ImagemURL" alt="@product.Nome" class="w-3/5 h-3/5 object-contain mb-8">
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="col-span-full text-gray-500">Nenhum produto disponível.</p>
+            }
+        </div>
+
+        <!-- Search and Order Section -->
+        <div class="flex items-center space-x-2 mb-6">
+            <div class="flex items-center bg-white rounded-full shadow-md px-4 py-2 w-1/2">
+                <i class="bi bi-search text-brown-500 mr-2"></i>
+                <input type="text" placeholder="Pesquisar" class="flex-grow text-brown-500 outline-none placeholder:text-brown-500 bg-transparent" @bind="SearchTerm" @bind:event="oninput" />
+            </div>
+
+            <div class="flex items-center bg-white rounded-full shadow-md px-4 py-2">
+                <i class="bi bi-sort-down text-brown-500 mr-2"></i>
+                <select class="bg-transparent text-brown-500 outline-none cursor-pointer" @bind="SelectedOrderColumn">
+                    <option value="" disabled selected hidden>Ordenar</option>
+                    <option value="0">Nome</option>
+                    <option value="1">Categoria</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            @if (FilteredProducts != null && FilteredProducts.Any())
+            {
+                @foreach (var product in FilteredProducts)
+                {
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-transform duration-300 transform hover:scale-105 flex flex-col items-center justify-center"
+                         @onclick="() => OpenConfirmationDialog(product)">
+                        <div class="w-full flex flex-col items-center justify-center">
+                            <h2 class="text-base text-gray-700 mt-8 mb-2">@product.Nome</h2>
+                            <img src="@product.ImagemURL" alt="@product.Nome" class="w-3/5 h-3/5 object-contain mb-8">
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="col-span-full text-center text-gray-500">Nenhum produto disponível.</p>
+            }
+        </div>
+    </div>
+}
+
+
+@code {
+    // Validate authenticated User
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+    private int userId;
+    private bool isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                userId = int.Parse(user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "1");
+            }
+            isLoading = false;
+
+            StateHasChanged();
+        }
+    }
+
+    private List<Produto> ProductsData = new();
+    private List<Produto> TopProdutos = new();
+    private string SearchTerm { get; set; } = string.Empty;
+    private string SelectedOrderColumn { get; set; } = string.Empty;
+
+    private List<Produto>? FilteredProducts => ProductsData?
+        .Where(product =>
+            string.IsNullOrEmpty(SearchTerm) ||
+            product.Nome.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase) ||
+            product.Categoria.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase))
+        .OrderBy(product =>
+            SelectedOrderColumn == "0" ? product.Nome :
+            SelectedOrderColumn == "1" ? product.Categoria : null)
+        .ToList();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var produtos = await ProdutoService.GetAllProdutos();
+            ProductsData = produtos.ToList();
+            var topprodutos = await ProdutoService.GetTop3MaisVendidos();
+            TopProdutos = topprodutos.ToList();
+        }
+        catch
+        {
+        }
+    }
+
+    private async Task OpenConfirmationDialog(Produto produto)
+    {
+        try
+        {
+            var montagens = await MontagemService.GetMontagensByProdutoId(produto.Id);
+            var listaIngredientes = new List<Ingrediente>();
+
+            foreach (var montagem in montagens)
+            {
+                var ingrediente = await IngredienteService.GetIngredienteById(montagem.IdIngrediente);
+                if (ingrediente != null)
+                {
+                    listaIngredientes.Add(ingrediente);
+                }
+            }
+
+            var parameters = new DialogParameters
+            {
+                { "Produto", produto },
+                { "Ingredientes", listaIngredientes }
+            };
+
+            var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Medium };
+            var dialog = await DialogService.ShowAsync<IngredientsPopUp>(produto.Nome, parameters, options);
+            var result = await dialog.Result;
+
+            if (!result.Canceled)
+            {
+                NavigationManager.NavigateTo($"/assembly-line?produtoId={produto.Id}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao abrir o popup para {produto.Nome}: {ex.Message}");
+        }
+    }
+
+
+}

@@ -1,0 +1,67 @@
+﻿<MudDialog MaxWidth="MaxWidth.Medium" Style="width: 600px; border-radius: 20px; background-color: #F5F5F5;">
+    <DialogContent>
+
+        <MudPaper Class="p-4 my-4" Elevation="1" Style="border-radius: 20px;">
+            <MudText Class="mb-2 fs-3" Color="Color.Primary" style="font-weight: 600">Ingredientes</MudText>
+            <MudList T="Ingrediente">
+                @foreach (var ingrediente in Ingredientes)
+                {
+                    <div Class="border-t">
+                        <MudListItem T="Ingrediente">
+                            <div class="d-flex flex-row space-x-4">
+                                <div class="rounded-full" style="background-color: #FFE9BA">
+                                    <MudListItemIcon>
+                                        <img src="@ingrediente.ImagemURL" alt="@ingrediente.Nome" style="width: 60px; height: 60px; object-fit: contain;"/>
+                                    </MudListItemIcon>
+                                </div>
+                                
+                                <div class="flex-column d-flex">
+                                    <MudListItemText>
+                                        <MudText Typo="Typo.h6" Style="color: #7B351C">@ingrediente.Nome</MudText>
+                                        <div class="flex flex-row space-x-4">
+                                            <MudText Typo="Typo.subtitle1" Style="color: #7B351C">Stock: @ingrediente.QuantidadeEmStock</MudText>
+                                            @if (ingrediente.QuantidadeEmStock <= 0)
+                                            {
+                                                <MudListItemIcon>
+                                                    <MudIcon Icon="@Icons.Material.Filled.Warning" Color="Color.Error"/>
+                                                </MudListItemIcon>
+                                            }
+                                        </div>
+                                        
+                                    </MudListItemText>
+                                </div>
+                            </div>
+                        </MudListItem>
+                    </div>
+                    
+                }
+            </MudList>
+        </MudPaper>
+
+        @if (Ingredientes.Any(i => i.QuantidadeEmStock <= 0))
+        {
+            <MudText Typo="Typo.body2" Color="Color.Error" Class="mt-4">
+                <MudIcon Icon="@Icons.Material.Filled.Warning" /> Não tem ingredientes suficientes em stock
+            </MudText>
+        }
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="IniciarMontagem" Disabled="@(Ingredientes.Any(i => i.QuantidadeEmStock <= 0))" Color="Color.Secondary" Style="border-radius: 20px;">Iniciar Montagem</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] private IMudDialogInstance MudDialog { get; set; } = default!;
+    [Parameter] public Produto Produto { get; set; } = default!;
+    [Parameter] public List<Ingrediente> Ingredientes { get; set; } = new();
+
+    private void Cancel() => MudDialog.Cancel();
+
+    private void IniciarMontagem()
+    {
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+}
+
+
+

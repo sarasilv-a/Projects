@@ -1,0 +1,3303 @@
+{
+    "students": [
+      {
+        "id": "1",
+        "email": "a104000@uminho.pt",
+        "number": "a104000",
+        "name": "Ana Silva",
+        "password": "ana2025",
+        "interests": "Desenvolvimento Web, Inteligência Artificial",
+        "goals": "Criar uma aplicação própria",
+        "quote": "Aprender é a única coisa que a mente nunca se cansa.",
+        "age": 20,
+        "year": 2,
+        "city": "Braga",
+        "occupation": "Estudante",
+        "education": "Licenciatura em Engenharia Informática",
+        "challenges": "Falta de motivação em épocas de exames",
+        "solutions": "Estabelecer rotinas de estudo",
+        "status": "Atleta"
+      },
+      {
+        "id": "2",
+        "email": "a104001@uminho.pt",
+        "number": "a104001",
+        "name": "Bruno Gonçalves",
+        "password": "bg123",
+        "interests": "Redes, Segurança Informática",
+        "goals": "Conseguir certificações técnicas",
+        "quote": "Não é o mais forte que sobrevive, mas o que melhor se adapta.",
+        "age": 22,
+        "year": 3,
+        "city": "Guimarães",
+        "occupation": "Trabalhador-Estudante",
+        "education": "Engenharia de Computadores",
+        "challenges": "Gerir o tempo entre trabalho e estudo",
+        "solutions": "Estabelecer prioridades semanais",
+        "status": "Trabalhador"
+      },
+      {
+        "id": "3",
+        "email": "a104002@uminho.pt",
+        "number": "a104002",
+        "name": "Carla Mendes",
+        "password": "carla456",
+        "interests": "UX/UI, Design Gráfico",
+        "goals": "Melhorar o portefólio",
+        "quote": "Design é inteligência feita visível.",
+        "age": 19,
+        "year": 1,
+        "city": "Viana do Castelo",
+        "occupation": "Estudante",
+        "education": "Licenciatura em Design e Multimédia",
+        "challenges": "Dificuldade com programação",
+        "solutions": "Estudar com colegas de informática",
+        "status": "Dirigente"
+      },
+      {
+        "id": "4",
+        "email": "a104003@uminho.pt",
+        "number": "a104003",
+        "name": "David Rocha",
+        "password": "david789",
+        "interests": "Computação Gráfica, Jogos",
+        "goals": "Criar um jogo em Unity",
+        "quote": "Só falha quem tenta.",
+        "age": 21,
+        "year": 2,
+        "city": "Porto",
+        "occupation": "Estudante",
+        "education": "Licenciatura em Engenharia Informática",
+        "challenges": "Gestão de tempo em grupo",
+        "solutions": "Comunicação constante com a equipa",
+        "status": "Sem Estatuto"
+      },
+      {
+        "id": "5",
+        "email": "a104004@uminho.pt",
+        "number": "a104004",
+        "name": "Eva Correia",
+        "password": "evaabc",
+        "interests": "Ciência de Dados",
+        "goals": "Aprender Python e Machine Learning",
+        "quote": "Os dados falam, precisamos é de os ouvir.",
+        "age": 23,
+        "year": 3,
+        "city": "Aveiro",
+        "occupation": "Estudante",
+        "education": "Engenharia de Dados",
+        "challenges": "Falta de exemplos práticos nas aulas",
+        "solutions": "Praticar com datasets reais",
+        "status": "Necessidades Especiais"
+      },
+      {
+        "id": "6",
+        "email": "a104005@uminho.pt",
+        "number": "a104005",
+        "name": "Filipe Araújo",
+        "password": "filipe999",
+        "interests": "Segurança e Criptografia",
+        "goals": "Estágio no estrangeiro",
+        "quote": "Conhecimento é poder.",
+        "age": 20,
+        "year": 2,
+        "city": "Lisboa",
+        "occupation": "Estudante",
+        "education": "Engenharia Informática",
+        "challenges": "Barreiras financeiras",
+        "solutions": "Procurar bolsas de estudo",
+        "status": "Dirigente"
+      },
+      {
+        "id": "7",
+        "email": "a104006@uminho.pt",
+        "number": "a104006",
+        "name": "Gabriela Lopes",
+        "password": "gabriela101",
+        "interests": "Educação Tecnológica",
+        "goals": "Ajudar a ensinar programação a crianças",
+        "quote": "Ensinar é aprender duas vezes.",
+        "age": 24,
+        "year": 3,
+        "city": "Coimbra",
+        "occupation": "Voluntária em projetos sociais",
+        "education": "Engenharia Informática",
+        "challenges": "Falta de motivação dos colegas",
+        "solutions": "Ser um exemplo positivo",
+        "status": "Trabalhador"
+      },
+      {
+        "id": "8",
+        "email": "a104007@uminho.pt",
+        "number": "a104007",
+        "name": "Henrique Batista",
+        "password": "henrique22",
+        "interests": "Desenvolvimento Mobile",
+        "goals": "Publicar uma app na Play Store",
+        "quote": "Grandes coisas nunca vieram da zona de conforto.",
+        "age": 21,
+        "year": 2,
+        "city": "Faro",
+        "occupation": "Estudante",
+        "education": "Engenharia de Software",
+        "challenges": "Falta de foco",
+        "solutions": "Bloquear redes sociais durante o estudo",
+        "status": "Sem Estatuto"
+      },
+      {
+        "id": "9",
+        "email": "a104008@uminho.pt",
+        "number": "a104008",
+        "name": "Isabel Teixeira",
+        "password": "isabel88",
+        "interests": "Bases de Dados, Análise de Sistemas",
+        "goals": "Ser analista numa grande empresa",
+        "quote": "A organização vence a pressa.",
+        "age": 22,
+        "year": 3,
+        "city": "Leiria",
+        "occupation": "Estudante",
+        "education": "Informática de Gestão",
+        "challenges": "Trabalhar sob pressão",
+        "solutions": "Dividir tarefas em blocos pequenos",
+        "status": "Sem Estatuto"
+      },
+      {
+        "id": "10",
+        "email": "a104009@uminho.pt",
+        "number": "a104009",
+        "name": "João Pinto",
+        "password": "joao1234",
+        "interests": "Inteligência Artificial, Robótica",
+        "goals": "Participar numa competição internacional",
+        "quote": "O futuro é construído com o que aprendes hoje.",
+        "age": 20,
+        "year": 1,
+        "city": "Setúbal",
+        "occupation": "Estudante",
+        "education": "Engenharia Informática",
+        "challenges": "Falta de tempo para projetos paralelos",
+        "solutions": "Planeamento semanal detalhado",
+        "status": "Sem Estatuto"
+      }
+    ],
+    "subjects": [
+      { "id": "1", "name": "Álgebra Linear para Engenharia", "shortname": "AL", "year": 1, "semester": 1 },
+      { "id": "2", "name": "Cálculo para Engenharia", "shortname": "Calc", "year": 1, "semester": 1 },
+      { "id": "3", "name": "Laboratórios de Informática I", "shortname": "LI1", "year": 1, "semester": 1 },
+      { "id": "4", "name": "Programação Funcional", "shortname": "PF", "year": 1, "semester": 1 },
+      { "id": "5", "name": "Tópicos de Matemática Discreta", "shortname": "TMD", "year": 1, "semester": 1 },
+      
+      { "id": "6", "name": "Análise Matemática para Engenharia", "shortname": "AM", "year": 1, "semester": 2 },
+      { "id": "7", "name": "Elementos de Probabilidades e Teoria de Números", "shortname": "EPTN", "year": 1, "semester": 2 },
+      { "id": "8", "name": "Laboratórios de Informática II", "shortname": "LI2", "year": 1, "semester": 2 },
+      { "id": "9", "name": "Lógica", "shortname": "Log", "year": 1, "semester": 2 },
+      { "id": "10", "name": "Programação Imperativa", "shortname": "PI", "year": 1, "semester": 2 },
+      { "id": "11", "name": "Sistemas de Computação", "shortname": "SC", "year": 1, "semester": 2 },
+  
+      { "id": "12", "name": "Algoritmos e Complexidade", "shortname": "AlgC", "year": 2, "semester": 1 },
+      { "id": "13", "name": "Arquitetura de Computadores", "shortname": "ArqC", "year": 2, "semester": 1 },
+      { "id": "14", "name": "Estatística Aplicada", "shortname": "EA", "year": 2, "semester": 1 },
+      { "id": "15", "name": "Física Moderna", "shortname": "FM", "year": 2, "semester": 1 },
+      { "id": "16", "name": "Fundamentos de Comunicação de Dados", "shortname": "FCD", "year": 2, "semester": 1 },
+      { "id": "17", "name": "Laboratórios de Informática III", "shortname": "LI3", "year": 2, "semester": 1 },
+  
+      { "id": "18", "name": "Bases de Dados", "shortname": "BD", "year": 2, "semester": 2 },
+      { "id": "19", "name": "Investigação Operacional", "shortname": "IO", "year": 2, "semester": 2 },
+      { "id": "20", "name": "Métodos Numéricos e Otimização Não Linear", "shortname": "MNONL", "year": 2, "semester": 2 },
+      { "id": "21", "name": "Programação Orientada aos Objetos", "shortname": "POO", "year": 2, "semester": 2 },
+      { "id": "22", "name": "Redes de Computadores", "shortname": "RC", "year": 2, "semester": 2 },
+      { "id": "23", "name": "Sistemas Operativos", "shortname": "SO", "year": 2, "semester": 2 },
+  
+      { "id": "24", "name": "Cálculo de Programas", "shortname": "CP", "year": 3, "semester": 1 },
+      { "id": "25", "name": "Comunicações por Computador", "shortname": "CC", "year": 3, "semester": 1 },
+      { "id": "26", "name": "Desenvolvimento de Sistemas de Software", "shortname": "DSS", "year": 3, "semester": 1 },
+      { "id": "27", "name": "Inteligência Artificial", "shortname": "IA", "year": 3, "semester": 1 },
+      { "id": "28", "name": "Laboratórios de Informática IV", "shortname": "LI4", "year": 3, "semester": 1 },
+      { "id": "29", "name": "Sistemas Distribuídos", "shortname": "SD", "year": 3, "semester": 1 },
+  
+      { "id": "30", "name": "Aprendizagem e Decisão Inteligentes", "shortname": "ADI", "year": 3, "semester": 2 },
+      { "id": "31", "name": "Computação Gráfica", "shortname": "CG", "year": 3, "semester": 2 },
+      { "id": "32", "name": "Interface Pessoa-Máquina", "shortname": "IPM", "year": 3, "semester": 2 },
+      { "id": "33", "name": "Processamento de Linguagens", "shortname": "PL", "year": 3, "semester": 2 },
+      { "id": "34", "name": "Segurança de Sistemas Informáticos", "shortname": "SSI", "year": 3, "semester": 2 }
+    ],
+    "shifts": [
+      {
+        "id": "1",
+        "name": "S1-T1",
+        "type": "T",
+        "building": "B3",
+        "room": "101",
+        "day": 5,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 1,
+        "subjectId": 1
+      },
+      {
+        "id": "2",
+        "name": "S1-T2",
+        "type": "T",
+        "building": "B2",
+        "room": "401",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 1
+      },
+      {
+        "id": "3",
+        "name": "S1-TP1",
+        "type": "TP",
+        "building": "B4",
+        "room": "302",
+        "day": 5,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 25,
+        "subjectId": 1
+      },
+      {
+        "id": "4",
+        "name": "S1-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "201",
+        "day": 2,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 30,
+        "subjectId": 1
+      },
+      {
+        "id": "5",
+        "name": "S1-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "102",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 30,
+        "subjectId": 1
+      },
+      {
+        "id": "6",
+        "name": "S1-TP4",
+        "type": "TP",
+        "building": "B3",
+        "room": "101",
+        "day": 2,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 1
+      },
+      {
+        "id": "7",
+        "name": "S2-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "401",
+        "day": 3,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 1,
+        "subjectId": 2
+      },
+      {
+        "id": "8",
+        "name": "S2-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "401",
+        "day": 4,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 2
+      },
+      {
+        "id": "9",
+        "name": "S2-TP1",
+        "type": "TP",
+        "building": "B3",
+        "room": "301",
+        "day": 3,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 25,
+        "subjectId": 2
+      },
+      {
+        "id": "10",
+        "name": "S2-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "202",
+        "day": 5,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 25,
+        "subjectId": 2
+      },
+      {
+        "id": "11",
+        "name": "S2-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "302",
+        "day": 3,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 25,
+        "subjectId": 2
+      },
+      {
+        "id": "12",
+        "name": "S2-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "102",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 30,
+        "subjectId": 2
+      },
+      {
+        "id": "13",
+        "name": "S3-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "402",
+        "day": 5,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 1,
+        "subjectId": 3
+      },
+      {
+        "id": "14",
+        "name": "S3-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "101",
+        "day": 1,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 3
+      },
+      {
+        "id": "15",
+        "name": "S3-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "302",
+        "day": 5,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 30,
+        "subjectId": 3
+      },
+      {
+        "id": "16",
+        "name": "S3-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "302",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 25,
+        "subjectId": 3
+      },
+      {
+        "id": "17",
+        "name": "S3-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "201",
+        "day": 2,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 3
+      },
+      {
+        "id": "18",
+        "name": "S3-TP4",
+        "type": "TP",
+        "building": "B3",
+        "room": "401",
+        "day": 1,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 3
+      },
+      {
+        "id": "19",
+        "name": "S4-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "402",
+        "day": 1,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 1,
+        "subjectId": 4
+      },
+      {
+        "id": "20",
+        "name": "S4-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "302",
+        "day": 3,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 4
+      },
+      {
+        "id": "21",
+        "name": "S4-TP1",
+        "type": "TP",
+        "building": "B1",
+        "room": "201",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 25,
+        "subjectId": 4
+      },
+      {
+        "id": "22",
+        "name": "S4-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "101",
+        "day": 4,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 25,
+        "subjectId": 4
+      },
+      {
+        "id": "23",
+        "name": "S4-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "201",
+        "day": 3,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 30,
+        "subjectId": 4
+      },
+      {
+        "id": "24",
+        "name": "S4-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "301",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 20,
+        "subjectId": 4
+      },
+      {
+        "id": "25",
+        "name": "S5-T1",
+        "type": "T",
+        "building": "B2",
+        "room": "402",
+        "day": 2,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 1,
+        "subjectId": 5
+      },
+      {
+        "id": "26",
+        "name": "S5-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "401",
+        "day": 4,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 20,
+        "subjectId": 5
+      },
+      {
+        "id": "27",
+        "name": "S5-TP1",
+        "type": "TP",
+        "building": "B3",
+        "room": "201",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 30,
+        "subjectId": 5
+      },
+      {
+        "id": "28",
+        "name": "S5-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "102",
+        "day": 2,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 25,
+        "subjectId": 5
+      },
+      {
+        "id": "29",
+        "name": "S5-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "101",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 25,
+        "subjectId": 5
+      },
+      {
+        "id": "30",
+        "name": "S5-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "401",
+        "day": 5,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 30,
+        "subjectId": 5
+      },
+      {
+        "id": "31",
+        "name": "S6-T1",
+        "type": "T",
+        "building": "B3",
+        "room": "301",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 1,
+        "subjectId": 6
+      },
+      {
+        "id": "32",
+        "name": "S6-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "202",
+        "day": 1,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 20,
+        "subjectId": 6
+      },
+      {
+        "id": "33",
+        "name": "S6-TP1",
+        "type": "TP",
+        "building": "B3",
+        "room": "401",
+        "day": 4,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 30,
+        "subjectId": 6
+      },
+      {
+        "id": "34",
+        "name": "S6-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "401",
+        "day": 3,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 6
+      },
+      {
+        "id": "35",
+        "name": "S6-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "402",
+        "day": 3,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 6
+      },
+      {
+        "id": "36",
+        "name": "S6-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "402",
+        "day": 2,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 25,
+        "subjectId": 6
+      },
+      {
+        "id": "37",
+        "name": "S7-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "401",
+        "day": 1,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 1,
+        "subjectId": 7
+      },
+      {
+        "id": "38",
+        "name": "S7-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "201",
+        "day": 3,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 7
+      },
+      {
+        "id": "39",
+        "name": "S7-TP1",
+        "type": "TP",
+        "building": "B1",
+        "room": "102",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 30,
+        "subjectId": 7
+      },
+      {
+        "id": "40",
+        "name": "S7-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "301",
+        "day": 5,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 7
+      },
+      {
+        "id": "41",
+        "name": "S7-TP3",
+        "type": "TP",
+        "building": "B2",
+        "room": "302",
+        "day": 4,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 30,
+        "subjectId": 7
+      },
+      {
+        "id": "42",
+        "name": "S7-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "102",
+        "day": 2,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 30,
+        "subjectId": 7
+      },
+      {
+        "id": "43",
+        "name": "S8-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "402",
+        "day": 3,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 1,
+        "subjectId": 8
+      },
+      {
+        "id": "44",
+        "name": "S8-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "301",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 8
+      },
+      {
+        "id": "45",
+        "name": "S8-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "402",
+        "day": 1,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 30,
+        "subjectId": 8
+      },
+      {
+        "id": "46",
+        "name": "S8-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "302",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 8
+      },
+      {
+        "id": "47",
+        "name": "S8-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "201",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 8
+      },
+      {
+        "id": "48",
+        "name": "S8-TP4",
+        "type": "TP",
+        "building": "B4",
+        "room": "301",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 25,
+        "subjectId": 8
+      },
+      {
+        "id": "49",
+        "name": "S9-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "401",
+        "day": 4,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 1,
+        "subjectId": 9
+      },
+      {
+        "id": "50",
+        "name": "S9-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "101",
+        "day": 3,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 20,
+        "subjectId": 9
+      },
+      {
+        "id": "51",
+        "name": "S9-TP1",
+        "type": "TP",
+        "building": "B4",
+        "room": "301",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 25,
+        "subjectId": 9
+      },
+      {
+        "id": "52",
+        "name": "S9-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "402",
+        "day": 1,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 25,
+        "subjectId": 9
+      },
+      {
+        "id": "53",
+        "name": "S9-TP3",
+        "type": "TP",
+        "building": "B2",
+        "room": "201",
+        "day": 2,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 30,
+        "subjectId": 9
+      },
+      {
+        "id": "54",
+        "name": "S9-TP4",
+        "type": "TP",
+        "building": "B4",
+        "room": "102",
+        "day": 5,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 9
+      },
+      {
+        "id": "55",
+        "name": "S10-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "202",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 1,
+        "subjectId": 10
+      },
+      {
+        "id": "56",
+        "name": "S10-T2",
+        "type": "T",
+        "building": "B1",
+        "room": "201",
+        "day": 5,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 10
+      },
+      {
+        "id": "57",
+        "name": "S10-TP1",
+        "type": "TP",
+        "building": "B4",
+        "room": "301",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 30,
+        "subjectId": 10
+      },
+      {
+        "id": "58",
+        "name": "S10-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "301",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 10
+      },
+      {
+        "id": "59",
+        "name": "S10-TP3",
+        "type": "TP",
+        "building": "B1",
+        "room": "102",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 30,
+        "subjectId": 10
+      },
+      {
+        "id": "60",
+        "name": "S10-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "401",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 20,
+        "subjectId": 10
+      },
+      {
+        "id": "61",
+        "name": "S11-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "302",
+        "day": 5,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 1,
+        "subjectId": 11
+      },
+      {
+        "id": "62",
+        "name": "S11-T2",
+        "type": "T",
+        "building": "B1",
+        "room": "402",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 11
+      },
+      {
+        "id": "63",
+        "name": "S11-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "201",
+        "day": 3,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 20,
+        "subjectId": 11
+      },
+      {
+        "id": "64",
+        "name": "S11-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "102",
+        "day": 2,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 11
+      },
+      {
+        "id": "65",
+        "name": "S11-TP3",
+        "type": "TP",
+        "building": "B2",
+        "room": "302",
+        "day": 3,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 11
+      },
+      {
+        "id": "66",
+        "name": "S11-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "102",
+        "day": 1,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 25,
+        "subjectId": 11
+      },
+      {
+        "id": "67",
+        "name": "S12-T1",
+        "type": "T",
+        "building": "B2",
+        "room": "101",
+        "day": 2,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 1,
+        "subjectId": 12
+      },
+      {
+        "id": "68",
+        "name": "S12-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "301",
+        "day": 2,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 12
+      },
+      {
+        "id": "69",
+        "name": "S12-TP1",
+        "type": "TP",
+        "building": "B4",
+        "room": "201",
+        "day": 4,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 12
+      },
+      {
+        "id": "70",
+        "name": "S12-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "401",
+        "day": 3,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 12
+      },
+      {
+        "id": "71",
+        "name": "S12-TP3",
+        "type": "TP",
+        "building": "B1",
+        "room": "201",
+        "day": 2,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 30,
+        "subjectId": 12
+      },
+      {
+        "id": "72",
+        "name": "S12-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "101",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 20,
+        "subjectId": 12
+      },
+      {
+        "id": "73",
+        "name": "S13-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "401",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 1,
+        "subjectId": 13
+      },
+      {
+        "id": "74",
+        "name": "S13-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "302",
+        "day": 2,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 13
+      },
+      {
+        "id": "75",
+        "name": "S13-TP1",
+        "type": "TP",
+        "building": "B1",
+        "room": "201",
+        "day": 4,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 25,
+        "subjectId": 13
+      },
+      {
+        "id": "76",
+        "name": "S13-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "202",
+        "day": 3,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 30,
+        "subjectId": 13
+      },
+      {
+        "id": "77",
+        "name": "S13-TP3",
+        "type": "TP",
+        "building": "B2",
+        "room": "302",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 30,
+        "subjectId": 13
+      },
+      {
+        "id": "78",
+        "name": "S13-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "302",
+        "day": 5,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 25,
+        "subjectId": 13
+      },
+      {
+        "id": "79",
+        "name": "S14-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "301",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 1,
+        "subjectId": 14
+      },
+      {
+        "id": "80",
+        "name": "S14-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "302",
+        "day": 5,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 14
+      },
+      {
+        "id": "81",
+        "name": "S14-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "102",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 25,
+        "subjectId": 14
+      },
+      {
+        "id": "82",
+        "name": "S14-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "401",
+        "day": 1,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 30,
+        "subjectId": 14
+      },
+      {
+        "id": "83",
+        "name": "S14-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "402",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 14
+      },
+      {
+        "id": "84",
+        "name": "S14-TP4",
+        "type": "TP",
+        "building": "B3",
+        "room": "402",
+        "day": 1,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 30,
+        "subjectId": 14
+      },
+      {
+        "id": "85",
+        "name": "S15-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "301",
+        "day": 1,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 1,
+        "subjectId": 15
+      },
+      {
+        "id": "86",
+        "name": "S15-T2",
+        "type": "T",
+        "building": "B1",
+        "room": "301",
+        "day": 2,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 15
+      },
+      {
+        "id": "87",
+        "name": "S15-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "202",
+        "day": 4,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 25,
+        "subjectId": 15
+      },
+      {
+        "id": "88",
+        "name": "S15-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "301",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 25,
+        "subjectId": 15
+      },
+      {
+        "id": "89",
+        "name": "S15-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "202",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 30,
+        "subjectId": 15
+      },
+      {
+        "id": "90",
+        "name": "S15-TP4",
+        "type": "TP",
+        "building": "B4",
+        "room": "102",
+        "day": 3,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 30,
+        "subjectId": 15
+      },
+      {
+        "id": "91",
+        "name": "S16-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "102",
+        "day": 2,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 1,
+        "subjectId": 16
+      },
+      {
+        "id": "92",
+        "name": "S16-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "401",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 16
+      },
+      {
+        "id": "93",
+        "name": "S16-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "301",
+        "day": 3,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 16
+      },
+      {
+        "id": "94",
+        "name": "S16-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "202",
+        "day": 2,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 30,
+        "subjectId": 16
+      },
+      {
+        "id": "95",
+        "name": "S16-TP3",
+        "type": "TP",
+        "building": "B1",
+        "room": "102",
+        "day": 5,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 16
+      },
+      {
+        "id": "96",
+        "name": "S16-TP4",
+        "type": "TP",
+        "building": "B4",
+        "room": "402",
+        "day": 5,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 16
+      },
+      {
+        "id": "97",
+        "name": "S17-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "401",
+        "day": 2,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 1,
+        "subjectId": 17
+      },
+      {
+        "id": "98",
+        "name": "S17-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "102",
+        "day": 1,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 17
+      },
+      {
+        "id": "99",
+        "name": "S17-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "202",
+        "day": 2,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 25,
+        "subjectId": 17
+      },
+      {
+        "id": "100",
+        "name": "S17-TP2",
+        "type": "TP",
+        "building": "B1",
+        "room": "202",
+        "day": 5,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 30,
+        "subjectId": 17
+      },
+      {
+        "id": "101",
+        "name": "S17-TP3",
+        "type": "TP",
+        "building": "B1",
+        "room": "302",
+        "day": 3,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 25,
+        "subjectId": 17
+      },
+      {
+        "id": "102",
+        "name": "S17-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "301",
+        "day": 5,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 25,
+        "subjectId": 17
+      },
+      {
+        "id": "103",
+        "name": "S18-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "302",
+        "day": 3,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 1,
+        "subjectId": 18
+      },
+      {
+        "id": "104",
+        "name": "S18-T2",
+        "type": "T",
+        "building": "B2",
+        "room": "301",
+        "day": 5,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 18
+      },
+      {
+        "id": "105",
+        "name": "S18-TP1",
+        "type": "TP",
+        "building": "B3",
+        "room": "401",
+        "day": 3,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 30,
+        "subjectId": 18
+      },
+      {
+        "id": "106",
+        "name": "S18-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "401",
+        "day": 1,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 25,
+        "subjectId": 18
+      },
+      {
+        "id": "107",
+        "name": "S18-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "201",
+        "day": 5,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 18
+      },
+      {
+        "id": "108",
+        "name": "S18-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "301",
+        "day": 1,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 20,
+        "subjectId": 18
+      },
+      {
+        "id": "109",
+        "name": "S19-T1",
+        "type": "T",
+        "building": "B2",
+        "room": "101",
+        "day": 1,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 1,
+        "subjectId": 19
+      },
+      {
+        "id": "110",
+        "name": "S19-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "402",
+        "day": 3,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 19
+      },
+      {
+        "id": "111",
+        "name": "S19-TP1",
+        "type": "TP",
+        "building": "B1",
+        "room": "402",
+        "day": 2,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 25,
+        "subjectId": 19
+      },
+      {
+        "id": "112",
+        "name": "S19-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "301",
+        "day": 4,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 19
+      },
+      {
+        "id": "113",
+        "name": "S19-TP3",
+        "type": "TP",
+        "building": "B1",
+        "room": "301",
+        "day": 4,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 19
+      },
+      {
+        "id": "114",
+        "name": "S19-TP4",
+        "type": "TP",
+        "building": "B4",
+        "room": "302",
+        "day": 5,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 30,
+        "subjectId": 19
+      },
+      {
+        "id": "115",
+        "name": "S20-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "101",
+        "day": 3,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 1,
+        "subjectId": 20
+      },
+      {
+        "id": "116",
+        "name": "S20-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "202",
+        "day": 5,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 20
+      },
+      {
+        "id": "117",
+        "name": "S20-TP1",
+        "type": "TP",
+        "building": "B3",
+        "room": "302",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 25,
+        "subjectId": 20
+      },
+      {
+        "id": "118",
+        "name": "S20-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "301",
+        "day": 3,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 20
+      },
+      {
+        "id": "119",
+        "name": "S20-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "402",
+        "day": 2,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 30,
+        "subjectId": 20
+      },
+      {
+        "id": "120",
+        "name": "S20-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "201",
+        "day": 2,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 20
+      },
+      {
+        "id": "121",
+        "name": "S21-T1",
+        "type": "T",
+        "building": "B3",
+        "room": "101",
+        "day": 2,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 1,
+        "subjectId": 21
+      },
+      {
+        "id": "122",
+        "name": "S21-T2",
+        "type": "T",
+        "building": "B1",
+        "room": "202",
+        "day": 3,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 21
+      },
+      {
+        "id": "123",
+        "name": "S21-TP1",
+        "type": "TP",
+        "building": "B1",
+        "room": "301",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 25,
+        "subjectId": 21
+      },
+      {
+        "id": "124",
+        "name": "S21-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "102",
+        "day": 2,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 30,
+        "subjectId": 21
+      },
+      {
+        "id": "125",
+        "name": "S21-TP3",
+        "type": "TP",
+        "building": "B2",
+        "room": "102",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 30,
+        "subjectId": 21
+      },
+      {
+        "id": "126",
+        "name": "S21-TP4",
+        "type": "TP",
+        "building": "B4",
+        "room": "201",
+        "day": 5,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 30,
+        "subjectId": 21
+      },
+      {
+        "id": "127",
+        "name": "S22-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "101",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 1,
+        "subjectId": 22
+      },
+      {
+        "id": "128",
+        "name": "S22-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "402",
+        "day": 1,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 22
+      },
+      {
+        "id": "129",
+        "name": "S22-TP1",
+        "type": "TP",
+        "building": "B1",
+        "room": "402",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 22
+      },
+      {
+        "id": "130",
+        "name": "S22-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "202",
+        "day": 1,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 22
+      },
+      {
+        "id": "131",
+        "name": "S22-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "201",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 30,
+        "subjectId": 22
+      },
+      {
+        "id": "132",
+        "name": "S22-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "202",
+        "day": 5,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 22
+      },
+      {
+        "id": "133",
+        "name": "S23-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "101",
+        "day": 3,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 1,
+        "subjectId": 23
+      },
+      {
+        "id": "134",
+        "name": "S23-T2",
+        "type": "T",
+        "building": "B2",
+        "room": "101",
+        "day": 3,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 23
+      },
+      {
+        "id": "135",
+        "name": "S23-TP1",
+        "type": "TP",
+        "building": "B3",
+        "room": "102",
+        "day": 4,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 23
+      },
+      {
+        "id": "136",
+        "name": "S23-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "301",
+        "day": 1,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 30,
+        "subjectId": 23
+      },
+      {
+        "id": "137",
+        "name": "S23-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "101",
+        "day": 5,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 23
+      },
+      {
+        "id": "138",
+        "name": "S23-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "302",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 30,
+        "subjectId": 23
+      },
+      {
+        "id": "139",
+        "name": "S24-T1",
+        "type": "T",
+        "building": "B3",
+        "room": "302",
+        "day": 3,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 1,
+        "subjectId": 24
+      },
+      {
+        "id": "140",
+        "name": "S24-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "101",
+        "day": 2,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 24
+      },
+      {
+        "id": "141",
+        "name": "S24-TP1",
+        "type": "TP",
+        "building": "B1",
+        "room": "202",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 30,
+        "subjectId": 24
+      },
+      {
+        "id": "142",
+        "name": "S24-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "201",
+        "day": 5,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 30,
+        "subjectId": 24
+      },
+      {
+        "id": "143",
+        "name": "S24-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "401",
+        "day": 3,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 25,
+        "subjectId": 24
+      },
+      {
+        "id": "144",
+        "name": "S24-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "102",
+        "day": 4,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 24
+      },
+      {
+        "id": "145",
+        "name": "S25-T1",
+        "type": "T",
+        "building": "B4",
+        "room": "101",
+        "day": 1,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 1,
+        "subjectId": 25
+      },
+      {
+        "id": "146",
+        "name": "S25-T2",
+        "type": "T",
+        "building": "B1",
+        "room": "102",
+        "day": 3,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 25
+      },
+      {
+        "id": "147",
+        "name": "S25-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "201",
+        "day": 3,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 20,
+        "subjectId": 25
+      },
+      {
+        "id": "148",
+        "name": "S25-TP2",
+        "type": "TP",
+        "building": "B1",
+        "room": "101",
+        "day": 3,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 25
+      },
+      {
+        "id": "149",
+        "name": "S25-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "302",
+        "day": 3,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 25
+      },
+      {
+        "id": "150",
+        "name": "S25-TP4",
+        "type": "TP",
+        "building": "B3",
+        "room": "102",
+        "day": 2,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 25,
+        "subjectId": 25
+      },
+      {
+        "id": "151",
+        "name": "S26-T1",
+        "type": "T",
+        "building": "B3",
+        "room": "101",
+        "day": 1,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 1,
+        "subjectId": 26
+      },
+      {
+        "id": "152",
+        "name": "S26-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "102",
+        "day": 5,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 20,
+        "subjectId": 26
+      },
+      {
+        "id": "153",
+        "name": "S26-TP1",
+        "type": "TP",
+        "building": "B4",
+        "room": "101",
+        "day": 5,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 26
+      },
+      {
+        "id": "154",
+        "name": "S26-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "402",
+        "day": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 26
+      },
+      {
+        "id": "155",
+        "name": "S26-TP3",
+        "type": "TP",
+        "building": "B1",
+        "room": "201",
+        "day": 2,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 26
+      },
+      {
+        "id": "156",
+        "name": "S26-TP4",
+        "type": "TP",
+        "building": "B4",
+        "room": "402",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 20,
+        "subjectId": 26
+      },
+      {
+        "id": "157",
+        "name": "S27-T1",
+        "type": "T",
+        "building": "B3",
+        "room": "102",
+        "day": 2,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 1,
+        "subjectId": 27
+      },
+      {
+        "id": "158",
+        "name": "S27-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "101",
+        "day": 5,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 27
+      },
+      {
+        "id": "159",
+        "name": "S27-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "202",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 27
+      },
+      {
+        "id": "160",
+        "name": "S27-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "402",
+        "day": 2,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 25,
+        "subjectId": 27
+      },
+      {
+        "id": "161",
+        "name": "S27-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "202",
+        "day": 5,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 27
+      },
+      {
+        "id": "162",
+        "name": "S27-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "202",
+        "day": 1,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 27
+      },
+      {
+        "id": "163",
+        "name": "S28-T1",
+        "type": "T",
+        "building": "B3",
+        "room": "302",
+        "day": 5,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 1,
+        "subjectId": 28
+      },
+      {
+        "id": "164",
+        "name": "S28-T2",
+        "type": "T",
+        "building": "B2",
+        "room": "401",
+        "day": 2,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 28
+      },
+      {
+        "id": "165",
+        "name": "S28-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "101",
+        "day": 1,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 25,
+        "subjectId": 28
+      },
+      {
+        "id": "166",
+        "name": "S28-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "201",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 20,
+        "subjectId": 28
+      },
+      {
+        "id": "167",
+        "name": "S28-TP3",
+        "type": "TP",
+        "building": "B2",
+        "room": "301",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 30,
+        "subjectId": 28
+      },
+      {
+        "id": "168",
+        "name": "S28-TP4",
+        "type": "TP",
+        "building": "B4",
+        "room": "301",
+        "day": 4,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 28
+      },
+      {
+        "id": "169",
+        "name": "S29-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "102",
+        "day": 4,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 1,
+        "subjectId": 29
+      },
+      {
+        "id": "170",
+        "name": "S29-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "302",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 29
+      },
+      {
+        "id": "171",
+        "name": "S29-TP1",
+        "type": "TP",
+        "building": "B1",
+        "room": "101",
+        "day": 4,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 29
+      },
+      {
+        "id": "172",
+        "name": "S29-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "101",
+        "day": 1,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 29
+      },
+      {
+        "id": "173",
+        "name": "S29-TP3",
+        "type": "TP",
+        "building": "B4",
+        "room": "402",
+        "day": 3,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 29
+      },
+      {
+        "id": "174",
+        "name": "S29-TP4",
+        "type": "TP",
+        "building": "B3",
+        "room": "202",
+        "day": 5,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 29
+      },
+      {
+        "id": "175",
+        "name": "S30-T1",
+        "type": "T",
+        "building": "B2",
+        "room": "302",
+        "day": 4,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 1,
+        "subjectId": 30
+      },
+      {
+        "id": "176",
+        "name": "S30-T2",
+        "type": "T",
+        "building": "B3",
+        "room": "301",
+        "day": 5,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 30
+      },
+      {
+        "id": "177",
+        "name": "S30-TP1",
+        "type": "TP",
+        "building": "B3",
+        "room": "202",
+        "day": 3,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 25,
+        "subjectId": 30
+      },
+      {
+        "id": "178",
+        "name": "S30-TP2",
+        "type": "TP",
+        "building": "B2",
+        "room": "102",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 25,
+        "subjectId": 30
+      },
+      {
+        "id": "179",
+        "name": "S30-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "101",
+        "day": 2,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 30
+      },
+      {
+        "id": "180",
+        "name": "S30-TP4",
+        "type": "TP",
+        "building": "B3",
+        "room": "202",
+        "day": 2,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 30
+      },
+      {
+        "id": "181",
+        "name": "S31-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "301",
+        "day": 2,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 1,
+        "subjectId": 31
+      },
+      {
+        "id": "182",
+        "name": "S31-T2",
+        "type": "T",
+        "building": "B4",
+        "room": "401",
+        "day": 4,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 31
+      },
+      {
+        "id": "183",
+        "name": "S31-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "402",
+        "day": 4,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 25,
+        "subjectId": 31
+      },
+      {
+        "id": "184",
+        "name": "S31-TP2",
+        "type": "TP",
+        "building": "B4",
+        "room": "101",
+        "day": 1,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 25,
+        "subjectId": 31
+      },
+      {
+        "id": "185",
+        "name": "S31-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "202",
+        "day": 3,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 30,
+        "subjectId": 31
+      },
+      {
+        "id": "186",
+        "name": "S31-TP4",
+        "type": "TP",
+        "building": "B3",
+        "room": "202",
+        "day": 3,
+        "start": "12:00",
+        "end": "14:00",
+        "limit": 20,
+        "subjectId": 31
+      },
+      {
+        "id": "187",
+        "name": "S32-T1",
+        "type": "T",
+        "building": "B2",
+        "room": "101",
+        "day": 2,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 1,
+        "subjectId": 32
+      },
+      {
+        "id": "188",
+        "name": "S32-T2",
+        "type": "T",
+        "building": "B1",
+        "room": "301",
+        "day": 4,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 20,
+        "subjectId": 32
+      },
+      {
+        "id": "189",
+        "name": "S32-TP1",
+        "type": "TP",
+        "building": "B3",
+        "room": "101",
+        "day": 5,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 30,
+        "subjectId": 32
+      },
+      {
+        "id": "190",
+        "name": "S32-TP2",
+        "type": "TP",
+        "building": "B1",
+        "room": "101",
+        "day": 5,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 32
+      },
+      {
+        "id": "191",
+        "name": "S32-TP3",
+        "type": "TP",
+        "building": "B1",
+        "room": "402",
+        "day": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 25,
+        "subjectId": 32
+      },
+      {
+        "id": "192",
+        "name": "S32-TP4",
+        "type": "TP",
+        "building": "B2",
+        "room": "102",
+        "day": 3,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 25,
+        "subjectId": 32
+      },
+      {
+        "id": "193",
+        "name": "S33-T1",
+        "type": "T",
+        "building": "B2",
+        "room": "202",
+        "day": 5,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 1,
+        "subjectId": 33
+      },
+      {
+        "id": "194",
+        "name": "S33-T2",
+        "type": "T",
+        "building": "B1",
+        "room": "102",
+        "day": 4,
+        "start": "08:00",
+        "end": "10:00",
+        "limit": 20,
+        "subjectId": 33
+      },
+      {
+        "id": "195",
+        "name": "S33-TP1",
+        "type": "TP",
+        "building": "B4",
+        "room": "201",
+        "day": 5,
+        "start": "13:00",
+        "end": "15:00",
+        "limit": 20,
+        "subjectId": 33
+      },
+      {
+        "id": "196",
+        "name": "S33-TP2",
+        "type": "TP",
+        "building": "B3",
+        "room": "402",
+        "day": 2,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 33
+      },
+      {
+        "id": "197",
+        "name": "S33-TP3",
+        "type": "TP",
+        "building": "B1",
+        "room": "102",
+        "day": 3,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 30,
+        "subjectId": 33
+      },
+      {
+        "id": "198",
+        "name": "S33-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "102",
+        "day": 5,
+        "start": "10:00",
+        "end": "12:00",
+        "limit": 30,
+        "subjectId": 33
+      },
+      {
+        "id": "199",
+        "name": "S34-T1",
+        "type": "T",
+        "building": "B1",
+        "room": "201",
+        "day": 1,
+        "start": "15:00",
+        "end": "17:00",
+        "limit": 1,
+        "subjectId": 34
+      },
+      {
+        "id": "200",
+        "name": "S34-T2",
+        "type": "T",
+        "building": "B2",
+        "room": "102",
+        "day": 1,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 34
+      },
+      {
+        "id": "201",
+        "name": "S34-TP1",
+        "type": "TP",
+        "building": "B2",
+        "room": "402",
+        "day": 1,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 30,
+        "subjectId": 34
+      },
+      {
+        "id": "202",
+        "name": "S34-TP2",
+        "type": "TP",
+        "building": "B1",
+        "room": "401",
+        "day": 1,
+        "start": "14:00",
+        "end": "16:00",
+        "limit": 20,
+        "subjectId": 34
+      },
+      {
+        "id": "203",
+        "name": "S34-TP3",
+        "type": "TP",
+        "building": "B3",
+        "room": "401",
+        "day": 4,
+        "start": "11:00",
+        "end": "13:00",
+        "limit": 20,
+        "subjectId": 34
+      },
+      {
+        "id": "204",
+        "name": "S34-TP4",
+        "type": "TP",
+        "building": "B1",
+        "room": "202",
+        "day": 1,
+        "start": "09:00",
+        "end": "11:00",
+        "limit": 20,
+        "subjectId": 34
+      }
+    ],
+    "enrollments": [
+      { "id": "1", "studentId": 1, "subjectId": 1 },
+      { "id": "2", "studentId": 1, "subjectId": 2 },
+      { "id": "3", "studentId": 1, "subjectId": 3 },
+      { "id": "4", "studentId": 1, "subjectId": 6 },
+      { "id": "5", "studentId": 1, "subjectId": 8 },
+
+      { "id": "6", "studentId": 2, "subjectId": 12 },
+      { "id": "7", "studentId": 2, "subjectId": 13 },
+      { "id": "8", "studentId": 2, "subjectId": 14 },
+      { "id": "9", "studentId": 2, "subjectId": 18 },
+      { "id": "10", "studentId": 2, "subjectId": 23 },
+
+      { "id": "11", "studentId": 3, "subjectId": 1 },
+      { "id": "12", "studentId": 3, "subjectId": 2 },
+      { "id": "13", "studentId": 3, "subjectId": 4 },
+      { "id": "14", "studentId": 3, "subjectId": 7 },
+      { "id": "15", "studentId": 3, "subjectId": 8 },
+
+      { "id": "16", "studentId": 4, "subjectId": 1 },
+      { "id": "17", "studentId": 4, "subjectId": 3 },
+      { "id": "18", "studentId": 4, "subjectId": 5 },
+      { "id": "19", "studentId": 4, "subjectId": 6 },
+      { "id": "20", "studentId": 4, "subjectId": 10 },
+
+      { "id": "21", "studentId": 5, "subjectId": 12 },
+      { "id": "22", "studentId": 5, "subjectId": 14 },
+      { "id": "23", "studentId": 5, "subjectId": 16 },
+      { "id": "24", "studentId": 5, "subjectId": 18 },
+      { "id": "25", "studentId": 5, "subjectId": 22 },
+
+      { "id": "26", "studentId": 6, "subjectId": 12 },
+      { "id": "27", "studentId": 6, "subjectId": 13 },
+      { "id": "28", "studentId": 6, "subjectId": 15 },
+      { "id": "29", "studentId": 6, "subjectId": 19 },
+      { "id": "30", "studentId": 6, "subjectId": 23 },
+
+      { "id": "31", "studentId": 7, "subjectId": 12 },
+      { "id": "32", "studentId": 7, "subjectId": 14 },
+      { "id": "33", "studentId": 7, "subjectId": 17 },
+      { "id": "34", "studentId": 7, "subjectId": 19 },
+      { "id": "35", "studentId": 7, "subjectId": 22 },
+
+      { "id": "36", "studentId": 8, "subjectId": 1 },
+      { "id": "37", "studentId": 8, "subjectId": 2 },
+      { "id": "38", "studentId": 8, "subjectId": 4 },
+      { "id": "39", "studentId": 8, "subjectId": 6 },
+      { "id": "40", "studentId": 8, "subjectId": 9 },
+
+      { "id": "41", "studentId": 9, "subjectId": 12 },
+      { "id": "42", "studentId": 9, "subjectId": 13 },
+      { "id": "43", "studentId": 9, "subjectId": 15 },
+      { "id": "44", "studentId": 9, "subjectId": 18 },
+      { "id": "45", "studentId": 9, "subjectId": 21 },
+      
+      { "id": "46", "studentId": 10, "subjectId": 1 },
+      { "id": "47", "studentId": 10, "subjectId": 2 },
+      { "id": "48", "studentId": 10, "subjectId": 3 },
+      { "id": "49", "studentId": 10, "subjectId": 6 },
+      { "id": "50", "studentId": 10, "subjectId": 10 }
+    ],
+    "directors": [
+      {
+        "id": "1",
+        "email": "jose@uminho.pt",
+        "name": "José",
+        "password": "jose123",
+        "interests": "Automóveis, futebol, séries",
+        "goals": "Manter o curso a funcionar de forma eficiente, minimizando o esforço burocrático de gestão; maximizar as possibilidades de aprendizagem dos alunos.",
+        "quote": "Eu gosto do que faço, mas a direção de curso ocupa-me muito tempo com tarefas de gestão com pouco valor acrescentado para o curso. O novo sistema deverá ajudar a minimizar isso. Espero que seja de utilização eficaz e eficiente.",
+        "age": 35,
+        "city": "Braga",
+        "occupation": "Docente do ensino superior; diretor de curso",
+        "education": "Doutoramento em informática",
+        "challenges": "Sucesso do curso leva a um número crescente de alunos inscritos",
+        "solutions": "Automatizar processos para diminuir trabalho burocrático"
+      }
+    ],
+    "schedules": [
+      {
+        "id": "1",
+        "studentId": 1,
+        "shiftId": 2
+      },
+      {
+        "id": "2",
+        "studentId": 1,
+        "shiftId": 6
+      },
+      {
+        "id": "3",
+        "studentId": 1,
+        "shiftId": 7
+      },
+      {
+        "id": "4",
+        "studentId": 1,
+        "shiftId": 10
+      },
+      {
+        "id": "5",
+        "studentId": 1,
+        "shiftId": 14
+      },
+      {
+        "id": "6",
+        "studentId": 1,
+        "shiftId": 17
+      },
+      {
+        "id": "7",
+        "studentId": 1,
+        "shiftId": 32
+      },
+      {
+        "id": "8",
+        "studentId": 1,
+        "shiftId": 34
+      },
+      {
+        "id": "9",
+        "studentId": 1,
+        "shiftId": 44
+      },
+      {
+        "id": "10",
+        "studentId": 1,
+        "shiftId": 48
+      },
+      {
+        "id": "11",
+        "studentId": 2,
+        "shiftId": 67
+      },
+      {
+        "id": "12",
+        "studentId": 2,
+        "shiftId": 72
+      },
+      {
+        "id": "13",
+        "studentId": 2,
+        "shiftId": 74
+      },
+      {
+        "id": "14",
+        "studentId": 2,
+        "shiftId": 75
+      },
+      {
+        "id": "15",
+        "studentId": 2,
+        "shiftId": 79
+      },
+      {
+        "id": "16",
+        "studentId": 2,
+        "shiftId": 82
+      },
+      {
+        "id": "17",
+        "studentId": 2,
+        "shiftId": 104
+      },
+      {
+        "id": "18",
+        "studentId": 2,
+        "shiftId": 106
+      },
+      {
+        "id": "19",
+        "studentId": 2,
+        "shiftId": 134
+      },
+      {
+        "id": "20",
+        "studentId": 2,
+        "shiftId": 135
+      },
+      {
+        "id": "21",
+        "studentId": 3,
+        "shiftId": 140
+      },
+      {
+        "id": "22",
+        "studentId": 3,
+        "shiftId": 144
+      },
+      {
+        "id": "23",
+        "studentId": 3,
+        "shiftId": 145
+      },
+      {
+        "id": "24",
+        "studentId": 3,
+        "shiftId": 149
+      },
+      {
+        "id": "25",
+        "studentId": 3,
+        "shiftId": 151
+      },
+      {
+        "id": "26",
+        "studentId": 3,
+        "shiftId": 153
+      },
+      {
+        "id": "27",
+        "studentId": 3,
+        "shiftId": 158
+      },
+      {
+        "id": "28",
+        "studentId": 3,
+        "shiftId": 160
+      },
+      {
+        "id": "29",
+        "studentId": 3,
+        "shiftId": 163
+      },
+      {
+        "id": "30",
+        "studentId": 3,
+        "shiftId": 167
+      },
+      {
+        "id": "31",
+        "studentId": 4,
+        "shiftId": 2
+      },
+      {
+        "id": "32",
+        "studentId": 4,
+        "shiftId": 3
+      },
+      {
+        "id": "33",
+        "studentId": 4,
+        "shiftId": 7
+      },
+      {
+        "id": "34",
+        "studentId": 4,
+        "shiftId": 9
+      },
+      {
+        "id": "35",
+        "studentId": 4,
+        "shiftId": 14
+      },
+      {
+        "id": "36",
+        "studentId": 4,
+        "shiftId": 16
+      },
+      {
+        "id": "37",
+        "studentId": 4,
+        "shiftId": 19
+      },
+      {
+        "id": "38",
+        "studentId": 4,
+        "shiftId": 21
+      },
+      {
+        "id": "39",
+        "studentId": 4,
+        "shiftId": 25
+      },
+      {
+        "id": "40",
+        "studentId": 4,
+        "shiftId": 30
+      },
+      {
+        "id": "41",
+        "studentId": 5,
+        "shiftId": 13
+      },
+      {
+        "id": "42",
+        "studentId": 5,
+        "shiftId": 18
+      },
+      {
+        "id": "43",
+        "studentId": 5,
+        "shiftId": 19
+      },
+      {
+        "id": "44",
+        "studentId": 5,
+        "shiftId": 24
+      },
+      {
+        "id": "45",
+        "studentId": 5,
+        "shiftId": 49
+      },
+      {
+        "id": "46",
+        "studentId": 5,
+        "shiftId": 53
+      },
+      {
+        "id": "47",
+        "studentId": 5,
+        "shiftId": 55
+      },
+      {
+        "id": "48",
+        "studentId": 5,
+        "shiftId": 60
+      },
+      {
+        "id": "49",
+        "studentId": 5,
+        "shiftId": 62
+      },
+      {
+        "id": "50",
+        "studentId": 5,
+        "shiftId": 63
+      },
+      {
+        "id": "51",
+        "studentId": 6,
+        "shiftId": 26
+      },
+      {
+        "id": "52",
+        "studentId": 6,
+        "shiftId": 30
+      },
+      {
+        "id": "53",
+        "studentId": 6,
+        "shiftId": 32
+      },
+      {
+        "id": "54",
+        "studentId": 6,
+        "shiftId": 34
+      },
+      {
+        "id": "55",
+        "studentId": 6,
+        "shiftId": 68
+      },
+      {
+        "id": "56",
+        "studentId": 6,
+        "shiftId": 71
+      },
+      {
+        "id": "57",
+        "studentId": 6,
+        "shiftId": 73
+      },
+      {
+        "id": "58",
+        "studentId": 6,
+        "shiftId": 78
+      },
+      {
+        "id": "59",
+        "studentId": 6,
+        "shiftId": 79
+      },
+      {
+        "id": "60",
+        "studentId": 6,
+        "shiftId": 82
+      },
+      {
+        "id": "61",
+        "studentId": 7,
+        "shiftId": 1
+      },
+      {
+        "id": "62",
+        "studentId": 7,
+        "shiftId": 6
+      },
+      {
+        "id": "63",
+        "studentId": 7,
+        "shiftId": 37
+      },
+      {
+        "id": "64",
+        "studentId": 7,
+        "shiftId": 42
+      },
+      {
+        "id": "65",
+        "studentId": 7,
+        "shiftId": 121
+      },
+      {
+        "id": "66",
+        "studentId": 7,
+        "shiftId": 123
+      },
+      {
+        "id": "67",
+        "studentId": 7,
+        "shiftId": 128
+      },
+      {
+        "id": "68",
+        "studentId": 7,
+        "shiftId": 129
+      },
+      {
+        "id": "69",
+        "studentId": 7,
+        "shiftId": 134
+      },
+      {
+        "id": "70",
+        "studentId": 7,
+        "shiftId": 137
+      },
+      {
+        "id": "71",
+        "studentId": 8,
+        "shiftId": 43
+      },
+      {
+        "id": "72",
+        "studentId": 8,
+        "shiftId": 47
+      },
+      {
+        "id": "73",
+        "studentId": 8,
+        "shiftId": 49
+      },
+      {
+        "id": "74",
+        "studentId": 8,
+        "shiftId": 52
+      },
+      {
+        "id": "75",
+        "studentId": 8,
+        "shiftId": 140
+      },
+      {
+        "id": "76",
+        "studentId": 8,
+        "shiftId": 144
+      },
+      {
+        "id": "77",
+        "studentId": 8,
+        "shiftId": 146
+      },
+      {
+        "id": "78",
+        "studentId": 8,
+        "shiftId": 147
+      },
+      {
+        "id": "79",
+        "studentId": 8,
+        "shiftId": 152
+      },
+      {
+        "id": "80",
+        "studentId": 8,
+        "shiftId": 154
+      },
+      {
+        "id": "81",
+        "studentId": 9,
+        "shiftId": 7
+      },
+      {
+        "id": "82",
+        "studentId": 9,
+        "shiftId": 10
+      },
+      {
+        "id": "83",
+        "studentId": 9,
+        "shiftId": 32
+      },
+      {
+        "id": "84",
+        "studentId": 9,
+        "shiftId": 34
+      },
+      {
+        "id": "85",
+        "studentId": 9,
+        "shiftId": 157
+      },
+      {
+        "id": "86",
+        "studentId": 9,
+        "shiftId": 160
+      },
+      {
+        "id": "87",
+        "studentId": 9,
+        "shiftId": 164
+      },
+      {
+        "id": "88",
+        "studentId": 9,
+        "shiftId": 168
+      },
+      {
+        "id": "89",
+        "studentId": 9,
+        "shiftId": 170
+      },
+      {
+        "id": "90",
+        "studentId": 9,
+        "shiftId": 171
+      },
+      {
+        "id": "91",
+        "studentId": 10,
+        "shiftId": 20
+      },
+      {
+        "id": "92",
+        "studentId": 10,
+        "shiftId": 24
+      },
+      {
+        "id": "93",
+        "studentId": 10,
+        "shiftId": 25
+      },
+      {
+        "id": "94",
+        "studentId": 10,
+        "shiftId": 30
+      },
+      {
+        "id": "95",
+        "studentId": 10,
+        "shiftId": 32
+      },
+      {
+        "id": "96",
+        "studentId": 10,
+        "shiftId": 33
+      },
+      {
+        "id": "97",
+        "studentId": 10,
+        "shiftId": 37
+      },
+      {
+        "id": "98",
+        "studentId": 10,
+        "shiftId": 39
+      },
+      {
+        "id": "99",
+        "studentId": 10,
+        "shiftId": 44
+      },
+      {
+        "id": "100",
+        "studentId": 10,
+        "shiftId": 48
+      }
+    ],
+    "notifications": [
+      {
+        "id": "1",
+        "type": "Change",
+        "date": "2025-04-15",
+        "message": "Gostava de trocar de turno.",
+        "currentShift": 2,
+        "wantedShift": 3,
+        "studentId": 1
+      },
+      {
+        "id": "2",
+        "type": "Change",
+        "date": "2025-04-15",
+        "message": "Gostava de trocar de turno.",
+        "currentShift": 6,
+        "wantedShift": 5,
+        "studentId": 1
+      },
+      {
+        "id": "3",
+        "type": "Change",
+        "date": "2025-04-15",
+        "message": "Gostava de trocar de turno.",
+        "currentShift": 7,
+        "wantedShift": 8,
+        "studentId": 1
+      },
+      {
+        "id": "4",
+        "type": "Change",
+        "date": "2025-04-15",
+        "message": "Gostava de trocar de turno.",
+        "currentShift": 10,
+        "wantedShift": 12,
+        "studentId": 1
+      },
+      {
+        "id": "5",
+        "type": "Change",
+        "date": "2025-04-15",
+        "message": "Gostava de trocar de turno.",
+        "currentShift": 14,
+        "wantedShift": 17,
+        "studentId": 1
+      }
+    ]
+  }
+  

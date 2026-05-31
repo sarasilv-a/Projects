@@ -1,0 +1,97 @@
+-- Criação da tabela Utilizador
+CREATE TABLE Utilizador (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nome NVARCHAR(45) NOT NULL,
+    Senha NVARCHAR(100) NOT NULL,
+    NIF CHAR(9) NULL,
+    DataDeNascimento DATETIME2(7) NULL,
+    DataDeCriacao DATETIME2(7) NULL DEFAULT GETDATE(),
+    ImagemURL NVARCHAR(90) NULL,
+    QuantidadeDeProdutosRealizados INT NULL DEFAULT 0,
+    QuantidadeDeProdutosRejeitados INT NULL DEFAULT 0,
+    MediaDeSatisfacao DECIMAL(4,2) NULL DEFAULT 0,
+    TempoMedioPorProduto TIME NULL DEFAULT '00:00:00',
+    Tipo NVARCHAR(15) NOT NULL
+);
+
+-- Criação da tabela Produto
+CREATE TABLE Produto (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nome NVARCHAR(45) NOT NULL,
+    Categoria NVARCHAR(15) NOT NULL,
+    Preco DECIMAL(4,2) NOT NULL,
+    QuantidadeDeRealizacoes INT NOT NULL DEFAULT 0,
+    QuantidadeDeVendas INT NOT NULL DEFAULT 0,
+    QuantidadeDeRejeicoes INT NOT NULL DEFAULT 0,
+    MediaDeSatisfacao DECIMAL(4,2) NOT NULL DEFAULT 0,
+    MediaDoTempoDeMontagem TIME NOT NULL DEFAULT '00:00:00',
+    QuantidadeEmStock INT NOT NULL DEFAULT 0,
+    ImagemURL NVARCHAR(90) NOT NULL,
+    IdAdministrador INT NULL,
+    CONSTRAINT FK_Produto_IdAdministrador FOREIGN KEY (IdAdministrador) REFERENCES Utilizador(Id) ON DELETE SET NULL
+);
+
+-- Criação da tabela Ingrediente
+CREATE TABLE Ingrediente (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Nome NVARCHAR(45) NOT NULL,
+    Preco DECIMAL(4,2) NOT NULL,
+    QuantidadeEmStock INT NOT NULL DEFAULT 0,
+    EmUso BIT NOT NULL DEFAULT 1,
+    ImagemURL NVARCHAR(90) NOT NULL,
+    IdAdministrador INT NULL,
+    CONSTRAINT FK_Ingrediente_IdAdministrador FOREIGN KEY (IdAdministrador) REFERENCES Utilizador(Id) ON DELETE SET NULL
+);
+
+-- Criação da tabela Montagem
+CREATE TABLE Montagem (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    IdIngrediente INT NOT NULL,
+    IdProduto INT NOT NULL,
+    Ordem INT NOT NULL,
+    Descricao NVARCHAR(90) NOT NULL,
+    CONSTRAINT FK_Montagem_IdIngrediente FOREIGN KEY (IdIngrediente) REFERENCES Ingrediente(Id),
+    CONSTRAINT FK_Montagem_IdProduto FOREIGN KEY (IdProduto) REFERENCES Produto(Id)
+);
+
+-- Criação da tabela LinhaDeMontagem
+CREATE TABLE LinhaDeMontagem (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    DataDeInicio DATETIME2(7) NOT NULL,
+    DataDeFim DATETIME2(7) NULL,
+    Estado BIT NOT NULL DEFAULT 1,
+    Satisfacao INT NOT NULL,
+    IdFuncionario INT NULL,
+    IdProduto INT NULL,
+    CONSTRAINT FK_LinhaDeMontagem_IdFuncionario FOREIGN KEY (IdFuncionario) REFERENCES Utilizador(Id) ON DELETE SET NULL,
+    CONSTRAINT FK_LinhaDeMontagem_IdProduto FOREIGN KEY (IdProduto) REFERENCES Produto(Id) ON DELETE SET NULL
+);
+
+-- Criação da tabela Operacao
+CREATE TABLE Operacao (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Quantidade INT NOT NULL,
+    ValorUnitario DECIMAL(4,2) NOT NULL,
+    ValorTotal DECIMAL(6,2) NOT NULL,
+    DataDaOperacao DATETIME2(7) NOT NULL DEFAULT GETDATE(),
+    IdAdministrador INT NULL,
+    CONSTRAINT FK_Operacao_IdAdministrador FOREIGN KEY (IdAdministrador) REFERENCES Utilizador(Id) ON DELETE SET NULL
+);
+
+-- Criação da tabela Compra
+CREATE TABLE Compra (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    IdIngrediente INT NULL,
+    IdOperacao INT NOT NULL,
+    CONSTRAINT FK_Compra_IdIngrediente FOREIGN KEY (IdIngrediente) REFERENCES Ingrediente(Id) ON DELETE SET NULL,
+    CONSTRAINT FK_Compra_IdOperacao FOREIGN KEY (IdOperacao) REFERENCES Operacao(Id)
+);
+
+-- Criação da tabela Venda
+CREATE TABLE Venda (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    IdProduto INT NULL,
+    IdOperacao INT NOT NULL,
+    CONSTRAINT FK_Venda_IdProduto FOREIGN KEY (IdProduto) REFERENCES Produto(Id) ON DELETE SET NULL,
+    CONSTRAINT FK_Venda_IdOperacao FOREIGN KEY (IdOperacao) REFERENCES Operacao(Id)
+);

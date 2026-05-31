@@ -1,0 +1,183 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthProvider
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@using MontagemBelasPizzas.UI.Authentication
+@inject NavigationManager NavigationManager
+
+<style>
+    .nav-item:hover {
+        background-color: #7FA979;
+        border-radius: 10px;
+    }
+
+    .nav-item:hover .d-flex {
+        transform: scale(1.01);
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        border-radius: 10px;
+        background-color: #7FA979;
+        color: #ffffff;
+    }
+</style>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="d-flex flex-column vh-100 position-sticky rounded-r-xl" style="background-color: #006837; width: 16rem; top: 0;" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-grow-1 mt-12 px-3">
+        @if (!isAuthenticated)
+        {
+            <div class="nav-item px-3 py-3" @onclick="NavigateToLogin">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-boxes me-2"></i>
+                    <span>Produtos</span>
+                </div>
+            </div>
+        }
+        else if (userRole == "Administrador")
+        {
+            <div class="nav-item px-3 py-3" @onclick="NavigateToAdminHome">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-house-door me-2"></i>
+                    <span>Página Inicial</span>
+                </div>
+            </div>
+            <div class="nav-item px-3 py-3" @onclick="NavigateToAdminProducts">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-boxes me-2"></i>
+                    <span>Produtos</span>
+                </div>
+            </div>
+            <div class="nav-item px-3 py-3" @onclick="NavigateToInventory">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-box-seam me-2"></i>
+                    <span>Compras e Vendas</span>
+                </div>
+            </div>
+            <div class="nav-item px-3 py-3" @onclick="NavigateToIngredients">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-clipboard me-2"></i>
+                    <span>Ingredientes</span>
+                </div>
+            </div>
+            <div class="nav-item px-3 py-3" @onclick="NavigateToAdmins">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-person-vcard me-2"></i>
+                    <span>Administradores</span>
+                </div>
+            </div>
+            <div class="nav-item px-3 py-3" @onclick="NavigateToEmployees">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-people me-2"></i>
+                    <span>Funcionários</span>
+                </div>
+            </div>
+        }
+        else if (userRole == "Funcionario")
+        {
+            <div class="nav-item px-3 py-3" @onclick="NavigateToEmployeeHome">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-house-door-fill me-2"></i>
+                    <span>Página Inicial</span>
+                </div>
+            </div>
+            <div class="nav-item px-3 py-3" @onclick="NavigateToEmployeeProducts">
+                <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                    <i class="bi bi-box me-2"></i>
+                    <span>Produtos</span>
+                </div>
+            </div>
+        }
+    </nav>
+    <div class="px-2 py-2 mt-auto">
+        <div class="nav-item px-3 py-3" @onclick="HandleLogout" style="text-align: left; cursor: pointer;">
+            <div class="d-flex align-items-center text-light" style="cursor: pointer;">
+                <i class="bi bi-box-arrow-left me-2"></i>
+                <span>Logout</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+            }
+
+            StateHasChanged();
+        }
+    }
+
+    private async Task HandleLogout()
+    {
+        if (AuthProvider is CustomAuthenticationStateProvider customAuthProvider)
+        {
+            await customAuthProvider.Logout();
+        }
+
+        NavigationManager.NavigateTo("/", forceLoad: true);
+    }
+
+    private void NavigateToAdminHome()
+    {
+        NavigationManager.NavigateTo("/admin-home");
+    }
+
+    private void NavigateToAdminProducts()
+    {
+        NavigationManager.NavigateTo("/admin-products");
+    }
+
+    private void NavigateToInventory()
+    {
+        NavigationManager.NavigateTo("/inventory");
+    }
+
+    private void NavigateToIngredients()
+    {
+        NavigationManager.NavigateTo("/ingredients");
+    }
+
+    private void NavigateToAdmins()
+    {
+        NavigationManager.NavigateTo("/admins");
+    }
+
+    private void NavigateToEmployees()
+    {
+        NavigationManager.NavigateTo("/employees");
+    }
+
+    private void NavigateToSettings()
+    {
+        NavigationManager.NavigateTo("/settings");
+    }
+
+    private void NavigateToEmployeeHome()
+    {
+        NavigationManager.NavigateTo("/employee-home");
+    }
+
+    private void NavigateToEmployeeProducts()
+    {
+        NavigationManager.NavigateTo("/employee-products");
+    }
+
+    private void NavigateToLogin()
+    {
+        NavigationManager.NavigateTo("/login");
+    }
+}

@@ -1,0 +1,41 @@
+-- Procedure para obter todas as montagens de um produto específico
+CREATE PROCEDURE spMontagem_GetByProdutoId
+    @IdProduto INT
+AS
+BEGIN
+    SELECT 
+        Id AS MontagemId,
+        IdIngrediente,
+        IdProduto,
+        Ordem,
+        Descricao
+    FROM Montagem
+    WHERE IdProduto = @IdProduto
+    ORDER BY Ordem; -- Ordenar pelo número da ordem
+END;
+GO
+
+-- Procedure para inserir uma nova montagem
+CREATE PROCEDURE spMontagem_Insert
+    @IdIngrediente INT,
+    @IdProduto INT,
+    @Ordem INT,
+    @Descricao NVARCHAR(90)
+AS
+BEGIN
+    INSERT INTO Montagem (IdIngrediente, IdProduto, Ordem, Descricao)
+    VALUES (@IdIngrediente, @IdProduto, @Ordem, @Descricao);
+
+    SELECT SCOPE_IDENTITY() AS NovoId;
+END;
+GO
+
+-- Procedure para apagar montagem
+CREATE PROCEDURE spMontagem_Delete
+    @Id INT
+AS
+BEGIN
+    DELETE FROM Montagem
+    WHERE Id = @Id;
+END;
+GO

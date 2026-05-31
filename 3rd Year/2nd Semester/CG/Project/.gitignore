@@ -1,0 +1,65 @@
+# ==========================
+# 🛠️ Ignorar ficheiros de build
+# ==========================
+/build/
+/out/
+/bin/
+/Debug/
+/Release/
+/Win32/
+/x64/
+/CMakeFiles/
+/CMakeCache.txt
+/CMakeScratch/
+/cmake_install.cmake
+/Makefile
+/*.sln
+/*.vcxproj
+/*.vcxproj.filters
+/*.vcxproj.user
+/.vs/
+*.ncb
+*.sdf
+*.opendb
+*.VC.db
+*.VC.opendb
+
+# ==========================
+# 🚀 Ignorar executáveis e bibliotecas compiladas
+# ==========================
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.idb
+*.log
+*.tlog
+*.iobj
+*.ipdb
+
+# ==========================
+# 🔄 Ignorar ficheiros temporários e caches
+# ==========================
+*.cache
+*.tmp
+*.swp
+*.bak
+*.log
+*.DS_Store
+*.vscode/
+*.idea/
+*.vs/
+Thumbs.db
+
+# ==========================
+# 📄 Ignorar ficheiros gerados pelo Generator
+# ==========================
+/src/models/*.3d
+
+# ==========================
+# 🔍 Ignorar backups do Windows/macOS/Linux
+# ==========================
+*.~* # Ficheiros temporários
+*._* # Ficheiros de metadata do macOS

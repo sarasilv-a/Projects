@@ -1,0 +1,92 @@
+[
+  {
+    "id": 14309,
+    "subjectId": 14309,
+    "name": "Calculo de Programas",
+    "short_name": "CP",
+    "year": 3,
+    "semester": 1,
+    "opcional": "no"
+  },
+  {
+    "id": 14313,
+    "subjectId": 14313,
+    "name": "Comunicacoes por Computador",
+    "short_name": "CC",
+    "year": 3,
+    "semester": 1,
+    "opcional": "no"
+  },
+  {
+    "id": 14310,
+    "subjectId": 14310,
+    "name": "Desenvolvimento de Sistemas de Software",
+    "short_name": "DSS",
+    "year": 3,
+    "semester": 1,
+    "opcional": "no"
+  },
+  {
+    "id": 14311,
+    "subjectId": 14311,
+    "name": "Inteligencia Artificial",
+    "short_name": "IA",
+    "year": 3,
+    "semester": 1,
+    "opcional": "no"
+  },
+  {
+    "id": 14298,
+    "subjectId": 14298,
+    "name": "Laboratorios de Informatica IV",
+    "short_name": "LI4",
+    "year": 3,
+    "semester": 1,
+    "opcional": "no"
+  },
+  {
+    "id": 14312,
+    "subjectId": 14312,
+    "name": "Sistemas Distribuidos",
+    "short_name": "SD",
+    "year": 3,
+    "semester": 1,
+    "opcional": "no"
+  },
+  {
+    "id": 14320,
+    "subjectId": 14320,
+    "name": "Analise de Projetos",
+    "short_name": "AProj",
+    "year": 3,
+    "semester": 2,
+    "opcional": "yes"
+  },
+  {
+    "id": 14319,
+    "subjectId": 14319,
+    "name": "Engenharia Web",
+    "short_name": "EngWeb",
+    "year": 3,
+    "semester": 2,
+    "opcional": "yes"
+  },
+  {
+    "id": 14321,
+    "subjectId": 14321,
+    "name": "Mecanica Quantica",
+    "short_name": "MQ",
+    "year": 3,
+    "semester": 2,
+    "opcional": "yes"
+  },
+  {
+    "id": 14322,
+    "subjectId": 14322,
+    "name": "Analise e Teste de Software",
+    "short_name": "ATS",
+    "year": 3,
+    "semester": 2,
+    "opcional": "yes"
+  }
+]

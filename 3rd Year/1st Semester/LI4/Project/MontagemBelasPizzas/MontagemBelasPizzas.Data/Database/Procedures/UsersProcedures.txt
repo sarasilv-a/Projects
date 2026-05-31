@@ -1,0 +1,138 @@
+-- Procedure para obter utilizador por ID
+CREATE PROCEDURE spUtilizador_GetById
+    @Id INT
+AS
+BEGIN
+    -- Declarar variáveis para armazenar os valores calculados
+    DECLARE @MediaDeSatisfacaoCalculada DECIMAL(4, 2);
+    DECLARE @TempoMedioPorProdutoCalculado TIME;
+
+    -- Calcular a média de satisfação
+    SELECT 
+        @MediaDeSatisfacaoCalculada = ISNULL(AVG(CAST(lm.Satisfacao AS DECIMAL(4, 2))), 0)
+    FROM LinhaDeMontagem lm
+    WHERE lm.IdFuncionario = @Id;
+
+    -- Calcular o tempo médio por produto
+    SELECT 
+        @TempoMedioPorProdutoCalculado = ISNULL(CAST(DATEADD(SECOND, AVG(DATEDIFF(SECOND, lm.DataDeInicio, lm.DataDeFim)), 0) AS TIME), '00:00:00')
+    FROM LinhaDeMontagem lm
+    WHERE lm.IdFuncionario = @Id;
+
+    -- Atualizar os campos calculados na tabela Utilizador
+    UPDATE Utilizador
+    SET 
+        MediaDeSatisfacao = @MediaDeSatisfacaoCalculada,
+        TempoMedioPorProduto = @TempoMedioPorProdutoCalculado
+    WHERE Id = @Id;
+
+    -- Retornar os dados do utilizador
+    SELECT *
+    FROM Utilizador
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para obter todos os utilizadores
+CREATE PROCEDURE spUtilizador_GetAll
+AS
+BEGIN
+    -- Atualizar a média de satisfação e o tempo médio por produto para todos os utilizadores
+    UPDATE Utilizador
+    SET 
+        MediaDeSatisfacao = ISNULL(
+            (
+                SELECT AVG(CAST(lm.Satisfacao AS DECIMAL(4, 2)))
+                FROM LinhaDeMontagem lm
+                WHERE lm.IdFuncionario = Utilizador.Id
+            ), 0
+        ),
+        TempoMedioPorProduto = ISNULL(
+            CAST(DATEADD(SECOND, 
+                (
+                    SELECT AVG(DATEDIFF(SECOND, lm.DataDeInicio, lm.DataDeFim))
+                    FROM LinhaDeMontagem lm
+                    WHERE lm.IdFuncionario = Utilizador.Id
+                ), 0) AS TIME), 
+            '00:00:00'
+        );
+
+    -- Retornar todos os utilizadores com os dados atualizados
+    SELECT *
+    FROM Utilizador;
+END;
+GO
+
+-- Procedure para inserir um novo utilizador
+CREATE PROCEDURE spUtilizador_Insert
+    @Nome NVARCHAR(45),
+    @Senha NVARCHAR(100),
+    @NIF CHAR(9),
+    @DataDeNascimento DATETIME2(7),
+    @ImagemURL NVARCHAR(90),
+    @Tipo NVARCHAR(15)
+AS
+BEGIN
+    INSERT INTO Utilizador (Nome, Senha, NIF, DataDeNascimento, ImagemURL, Tipo)
+    VALUES (@Nome, @Senha, @NIF, @DataDeNascimento, @ImagemURL, @Tipo);
+
+    SELECT SCOPE_IDENTITY() AS NovoId;
+END;
+GO
+
+-- Procedure para atualizar utilizador existente
+CREATE PROCEDURE spUtilizador_Update
+    @Id INT,
+    @Nome NVARCHAR(45),
+    @Senha NVARCHAR(100),
+    @NIF CHAR(9),
+    @DataDeNascimento DATETIME2(7),
+    @ImagemURL NVARCHAR(90),
+    @QuantidadeDeProdutosRealizados INT,
+    @QuantidadeDeProdutosRejeitados INT,
+    @MediaDeSatisfacao DECIMAL(4,2),
+    @TempoMedioPorProduto TIME,
+    @Tipo NVARCHAR(15)
+AS
+BEGIN
+    UPDATE Utilizador
+    SET Nome = @Nome,
+        Senha = @Senha,
+        NIF = @NIF,
+        DataDeNascimento = @DataDeNascimento,
+        ImagemURL = @ImagemURL,
+        QuantidadeDeProdutosRealizados = @QuantidadeDeProdutosRealizados,
+        QuantidadeDeProdutosRejeitados = @QuantidadeDeProdutosRejeitados,
+        MediaDeSatisfacao = @MediaDeSatisfacao,
+        TempoMedioPorProduto = @TempoMedioPorProduto,
+        Tipo = @Tipo
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para apagar utilizador
+CREATE PROCEDURE spUtilizador_Delete
+    @Id INT
+AS
+BEGIN
+    DELETE FROM Utilizador
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para aumentar em 1 as pizzas rejeitadas
+CREATE PROCEDURE spUtilizador_IncrementarPizzasRejeitadas
+    @Id INT
+AS
+BEGIN
+    -- Atualiza o campo QuantidadeDeProdutosRejeitados incrementando em 1
+    UPDATE Utilizador
+    SET QuantidadeDeProdutosRejeitados = QuantidadeDeProdutosRejeitados + 1
+    WHERE Id = @Id;
+
+    -- Retorna os dados do utilizador atualizado (opcional)
+    SELECT *
+    FROM Utilizador
+    WHERE Id = @Id;
+END;
+GO

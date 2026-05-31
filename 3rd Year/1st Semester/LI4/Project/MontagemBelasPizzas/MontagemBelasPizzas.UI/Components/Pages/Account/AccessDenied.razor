@@ -1,0 +1,22 @@
+﻿@page "/access-denied"
+
+<div class="container text-center mt-5">
+    <h1 class="display-4">Acesso Negado</h1>
+    <p class="lead mt-3">
+        Não tem permissão para aceder a esta página.
+    </p>
+    <p>
+        Por favor, contacte o administrador do sistema ou volte à <a href="/">Página Inicial</a>.
+    </p>
+    <button class="btn btn-primary mt-3" @onclick="NavigateToHome">Voltar à Página Inicial</button>
+</div>
+
+@code {
+    private void NavigateToHome()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+}

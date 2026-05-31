@@ -1,0 +1,285 @@
+﻿@page "/ingredients"
+@inject ILogger<Ingredients> Logger
+@inject IngredienteService IngredienteService
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+@using System.Security.Claims
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@using MontagemBelasPizzas.UI.Components.Shared
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager NavigationManager
+
+@if (isLoading)
+{
+    <!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+    <div class="loading text-center">
+    </div>
+}
+else if (!isAuthenticated)
+{
+    <Login/>
+}
+else if (userRole == "Funcionario")
+{
+    <AccessDenied />
+}
+else if (userRole == "Administrador")
+{
+    <div class="p-6">
+        <!-- Header com pesquisa e ordenação -->
+        <div class="flex items-center space-x-2 mb-6 mt-4">
+            <!-- Search -->
+            <div class="flex bg-white rounded-full shadow-md px-4 py-2 w-1/2">
+                <i class="bi bi-search text-brown-500 mr-2" style="color: #7B351C;"></i>
+                <input type="text" placeholder="Pesquisar" class="outline-none w-full"
+                       style="color: #7B351C;" @bind="SearchTerm" @bind:event="oninput" />
+            </div>
+
+            <!-- Ordenar Dropdown -->
+            <div class="flex items-center bg-white rounded-full shadow-md px-4 py-2">
+                <i class="bi bi-sort-down text-brown-500 mr-2" style="color: #7B351C;"></i>
+                <select class="bg-transparent text-brown-500 outline-none cursor-pointer" style="color: #7B351C;" @bind="SelectedOrderColumn">
+                    <option value="">Ordenar por...</option>
+                    @for (var i = 0; i < ColumnHeaders.Count; i++)
+                    {
+                        <option value="@i">@ColumnHeaders[i]</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <!-- Lista de ingredientes -->
+        <div class="bg-white shadow p-4 space-y-4" style="border-radius: 20px; margin-top: 4rem;">
+            <div class="flex items-center justify-between space-x-4 mb-4">
+                <!-- Title -->
+                <div class="fs-3" style="font-weight: 900; color: #7B351C">Ingredientes</div>
+                <!-- Add Button -->
+                <div>
+                    <button class="text-white px-6 py-2" style="background-color: #FC5825; border-radius: 20px" @onclick="HandleAddClick">
+                        + Adicionar
+                    </button>
+                </div>
+            </div>
+            <div class="border-t">
+                @foreach (var ingredient in FilteredIngredients)
+                {
+                    <div class="flex items-center justify-between border-b py-4">
+                        <!-- Detalhes do ingrediente -->
+                        <div class="flex items-center space-x-4">
+                            <img src="@ingredient.ImagemURL" alt="Image" class="h-12 w-12 rounded-full" style="background-color: #FFE9BA"/>
+                            <div>
+                                <h3 class="text-lg font-semibold" style=" color: #7B351C">@ingredient.Nome</h3>
+                                <p class="text-sm" style=" color: #7B351C">
+                                    Quantidade: @ingredient.QuantidadeEmStock | Preço: @ingredient.Preco€ | Em uso: @(ingredient.EmUso ? "sim" : "não")
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Botões de ação -->
+                        <div class="flex space-x-2">
+                            <button class="flex items-center space-x-2 px-5 py-2 mr-2" style=" color: #7B351C; border-radius: 20px; background-color: #F5F5F5" @onclick="() => HandleRemoveClick(ingredient)">
+                                <i class="bi bi-x-lg mr-2"></i>
+                                Remover
+                            </button>
+                            <button class="flex items-center space-x-2 px-5 py-2" style=" color: #7B351C; border-radius: 20px; background-color: #F5F5F5" @onclick="() => HandleEditClick(ingredient)">
+                                <i class="bi bi-pencil mr-2"></i>
+                                Editar
+                            </button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    // Validate authenticated User
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+    private int userId;
+    private bool isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                userId = int.Parse(user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "1");
+            }
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    // Get the Ingredients
+    private List<string> ColumnHeaders = new List<string>
+    {
+        "Nome", "Quantidade", "Preço", "Em uso"
+    };
+
+    private List<Ingrediente> IngredientsData = new();
+
+    private string SearchTerm = string.Empty;
+    private int SelectedSearchColumn = 0;
+    private int SelectedOrderColumn = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var ingredientes = await IngredienteService.GetAllIngredientes();
+            IngredientsData = ingredientes.ToList();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load ingredients.");
+        }
+    }
+
+    private IEnumerable<Ingrediente> FilteredIngredients => IngredientsData
+        .Where(i => SearchTerm == string.Empty || MatchesSearchTerm(i))
+        .OrderBy(i => SelectedOrderColumn >= 0 ? GetPropertyValue(i, SelectedOrderColumn) : null);
+
+    private async void HandleAddClick()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions { BackgroundClass = "custom-dialog", CloseButton = true, MaxWidth = MaxWidth.Medium };
+
+        var dialog = DialogService.Show<AddIngredient>("Adicionar Ingrediente", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled && result.Data is Ingrediente newIngredient)
+        {
+            try
+            {
+                newIngredient.IdAdministrador = userId;
+                await IngredienteService.CreateIngrediente(newIngredient);
+
+                var allIngredientes = await IngredienteService.GetAllIngredientes();
+                IngredientsData = allIngredientes.ToList();
+                
+                Logger.LogInformation($"Added: {newIngredient.Nome}");
+
+                Snackbar.Add(
+                    $"Ingrediente '{newIngredient.Nome}' adicionado com sucesso!",
+                    Severity.Success,
+                    config =>
+                    {
+                        config.ShowCloseIcon = false;
+                        config.SnackbarTypeClass = "snackbar-container custom-snackbar custom-snackbar-success";
+                        config.Icon = Icons.Material.Filled.CheckCircle;
+                    });
+
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "Failed to add ingredient.");
+            }
+        }
+    }
+
+    private async void HandleEditClick(Ingrediente selectedIngredient)
+    {
+        var parameters = new DialogParameters
+        {
+            { "Ingredient", selectedIngredient }
+        };
+
+        var options = new DialogOptions { BackgroundClass = "custom-dialog", CloseButton = true, MaxWidth = MaxWidth.Medium };
+
+        var dialog = DialogService.Show<AddIngredient>("Editar Ingrediente", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled && result.Data is Ingrediente updatedIngredient)
+        {
+            try
+            {
+                await IngredienteService.UpdateIngrediente(updatedIngredient);
+
+                // Update the ingredient in the IngredientsData list
+                var index = IngredientsData.FindIndex(i => i.Id == updatedIngredient.Id);
+                if (index != -1)
+                {
+                    IngredientsData[index] = updatedIngredient;
+                }
+
+                Logger.LogInformation($"Updated: {updatedIngredient.Nome}");
+
+                Snackbar.Add(
+                    $"Ingrediente '{updatedIngredient.Nome}' atualizado com sucesso!",
+                    Severity.Success,
+                    config =>
+                    {
+                        config.ShowCloseIcon = false;
+                        config.SnackbarTypeClass = "snackbar-container custom-snackbar custom-snackbar-success";
+                        config.Icon = Icons.Material.Filled.CheckCircle;
+                    });
+
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, "Failed to update ingredient.");
+            }
+        }
+    }
+
+
+    private async Task HandleRemoveClick(Ingrediente ingredient)
+    {
+        var parameters = new DialogParameters
+        {
+            { "ContentText", $"Tem a certeza que deseja remover o ingrediente {ingredient.Nome}?" },
+            { "ButtonText", "Remover" },
+            { "Color", Color.Error }
+        };
+
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small };
+        var dialog = DialogService.Show<ConfirmationPopUp>("Confirmação", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            try
+            {
+                await IngredienteService.DeleteIngrediente(ingredient.Id);
+                IngredientsData.Remove(ingredient);
+                Logger.LogInformation($"Removed: {ingredient.Nome}");
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex, $"Failed to remove ingredient: {ingredient.Nome}");
+            }
+        }
+    }
+
+    private bool MatchesSearchTerm(Ingrediente ingredient)
+    {
+        var value = GetPropertyValue(ingredient, SelectedSearchColumn)?.ToString()?.ToLower() ?? string.Empty;
+        return value.Contains(SearchTerm.ToLower());
+    }
+
+    private object GetPropertyValue(Ingrediente ingredient, int columnIndex)
+    {
+        return columnIndex switch
+        {
+            0 => ingredient.Nome,
+            1 => ingredient.QuantidadeEmStock,
+            2 => ingredient.Preco,
+            3 => ingredient.EmUso ? "sim" : "não",
+            _ => null
+        };
+    }
+}

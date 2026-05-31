@@ -1,0 +1,32 @@
+plugins {
+    id 'application' // Plugin para permitir execução da aplicação
+}
+
+group 'com.exemplo'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral() // Repositório padrão para dependências
+    flatDir {
+        dirs 'libs'  // Diretório onde o JAR foi colocado
+    }
+}
+
+dependencies {
+    implementation 'mysql:mysql-connector-java:8.0.22'  // Ou a versão que estás a usar
+    implementation files('libs/mysql-connector-java-x.x.x.jar')  // Dependência do JAR local
+    implementation 'org.json:json:20230618'
+}
+
+application {
+    mainClass = 'Main' // Nome completo da sua classe Main
+    // Aumenta a memória da JVM para 2GB (ajusta conforme necessário)
+    applicationDefaultJvmArgs = ["-Xmx2g", "-Xms512m"]  // Max heap size de 2GB, inicializa com 512MB
+}
+
+tasks.withType(JavaExec) {
+    // Configura o redirecionamento do fluxo de entrada
+    standardInput = System.in
+}
+
+

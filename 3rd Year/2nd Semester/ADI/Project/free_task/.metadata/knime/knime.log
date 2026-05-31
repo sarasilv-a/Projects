@@ -1,0 +1,102 @@
+2025-03-18 09:35:24,227 : WARN  : comm-pool-thread-1 :  : Node : CSV Reader : 3:1 : Please specify a file
+2025-03-18 09:35:44,765 : WARN  : comm-pool-thread-1 :  : Node : CSV Reader : 3:1 : Please specify a file
+2025-03-18 10:22:20,561 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 3:3 valid [3:1, 3:2] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 87)
+2025-03-18 10:22:20,562 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 87)
+2025-03-18 10:22:20,562 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 3:3 valid [3:1, 3:2] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 45)
+2025-03-18 10:22:22,291 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 3:2 valid [3:1] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 87)
+2025-03-18 10:22:22,291 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 87)
+2025-03-18 10:22:22,291 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 3:2 valid [3:1] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 45)
+2025-03-18 14:18:26,560 : WARN  : comm-pool-thread-3 :  : Node : Rank Correlation : 3:4 : Auto configuration: Using all suitable columns (in total 15)
+2025-03-18 14:18:28,242 : WARN  : KNIME-Worker-27-Rank Correlation 3:4 :  : Node : Rank Correlation : 3:4 : Rows containing missing values are filtered. Please resolve them with the Missing Value node.
+2025-03-18 14:23:39,990 : WARN  : KNIME-Worker-31-Rank Correlation 3:4 :  : Node : Rank Correlation : 3:4 : Rows containing missing values are filtered. Please resolve them with the Missing Value node.
+2025-03-18 14:53:17,038 : WARN  : comm-pool-thread-5 :  : Node : Linear Correlation : 3:8 : Auto configuration: Using all suitable columns (in total 15)
+2025-03-18 14:53:18,930 : WARN  : KNIME-Worker-36-Linear Correlation 3:8 :  : Node : Linear Correlation : 3:8 : Some numeric column(s) contained missing values: "Overtime_Hours_Per_Week", "Job_Satisfaction", "Employee_ID", "Absences_Per_Year", <7 more>...
+2025-03-18 14:58:26,034 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 14:58:26,034 : WARN  : main :  : Node : Box Plot : 3:5 : Table contains no compatible (numeric) dimension columns
+2025-03-18 14:58:26,848 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 14:58:26,848 : WARN  : main :  : Node : Box Plot : 3:5 : Table contains no compatible (numeric) dimension columns
+2025-03-18 14:58:29,266 : WARN  : KNIME-Worker-37-CSV Reader 3:1 :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 14:58:29,268 : WARN  : KNIME-Worker-37-CSV Reader 3:1 :  : Node : Box Plot : 3:5 : Table contains no compatible (numeric) dimension columns
+2025-03-18 14:58:48,575 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 14:58:49,342 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 14:58:50,581 : WARN  : KNIME-Worker-39-CSV Reader 3:1 :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:01:45,304 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Age" of type "String" is not compatible (i.e. numeric)
+2025-03-18 15:01:45,307 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:01:46,104 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Age" of type "String" is not compatible (i.e. numeric)
+2025-03-18 15:01:46,105 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:01:48,277 : WARN  : KNIME-Worker-41-CSV Reader 3:1 :  : Node : Box Plot : 3:5 : The selected dimension column "Age" of type "String" is not compatible (i.e. numeric)
+2025-03-18 15:01:48,280 : WARN  : KNIME-Worker-41-CSV Reader 3:1 :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:04:25,075 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:04:26,099 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:04:27,523 : WARN  : KNIME-Worker-43-CSV Reader 3:1 :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:20:15,749 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:20:16,589 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:20:18,629 : WARN  : KNIME-Worker-45-CSV Reader 3:1 :  : Node : Box Plot : 3:5 : The selected dimension column "Employee_ID" does not exist in the table
+2025-03-18 15:20:18,636 : WARN  : KNIME-Worker-46-Rank Correlation 3:4 :  : Node : Rank Correlation : 3:4 : Rows containing missing values are filtered. Please resolve them with the Missing Value node.
+2025-03-18 15:23:39,027 : ERROR : main :  : CEFNodeView :  :  : ResizeObserver loop completed with undelivered notifications. (source: http://org.knime.js.pagebuilder/apWrapper.html; line: 0)
+2025-03-19 13:44:22,455 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "ID" does not exist in the table
+2025-03-19 13:44:23,150 : WARN  : main :  : Node : Box Plot : 3:5 : The selected dimension column "ID" does not exist in the table
+2025-03-19 13:44:37,678 : WARN  : KNIME-Worker-59-CSV Reader 3:1 :  : Node : Box Plot : 3:5 : The selected dimension column "ID" does not exist in the table
+2025-03-19 13:48:17,393 : WARN  : KNIME-Worker-74-Rank Correlation 3:4 :  : Node : Rank Correlation : 3:4 : Rows containing missing values are filtered. Please resolve them with the Missing Value node.
+2025-03-19 15:02:08,047 : ERROR : main :  : CEFNodeView :  :  : ResizeObserver loop completed with undelivered notifications. (source: http://org.knime.js.pagebuilder/apWrapper.html; line: 0)
+2025-03-20 10:32:13,707 : ERROR : main :  : CEFNodeView :  :  : ResizeObserver loop completed with undelivered notifications. (source: http://org.knime.js.pagebuilder/apWrapper.html; line: 0)
+2025-03-20 10:33:03,436 : ERROR : main :  : CEFNodeView :  :  : ResizeObserver loop completed with undelivered notifications. (source: http://org.knime.js.pagebuilder/apWrapper.html; line: 0)
+2025-03-20 10:37:24,536 : ERROR : main :  : CEFNodeView :  :  : ResizeObserver loop completed with undelivered notifications. (source: http://org.knime.js.pagebuilder/apWrapper.html; line: 0)
+2025-03-20 10:42:25,661 : ERROR : main :  : CEFNodeView :  :  : ResizeObserver loop completed with undelivered notifications. (source: http://org.knime.js.pagebuilder/apWrapper.html; line: 0)
+2025-03-20 10:43:04,846 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 3:7 valid [3:1, 3:2, 3:3, 3:4, 3:5, 3:6, 3:8, 3:9, 3:10] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 87)
+2025-03-20 10:43:04,846 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 87)
+2025-03-20 10:43:04,846 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 3:7 valid [3:1, 3:2, 3:3, 3:4, 3:5, 3:6, 3:8, 3:9, 3:10] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 45)
+2025-03-20 10:45:02,635 : WARN  : KNIME-Worker-104-Linear Correlation 3:8 :  : Node : Linear Correlation : 3:8 : Some numeric column(s) contained missing values: "wip"
+2025-03-20 10:45:09,111 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: No such node ID: 3:8 valid [3:1, 3:2, 3:3, 3:4, 3:5, 3:6, 3:10] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 87)
+2025-03-20 10:45:09,111 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c Unhandled rejection:: 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      [object Object] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 87)
+2025-03-20 10:45:09,112 : ERROR : main :  : KnimeBrowserView :  :  : Uncaught (in promise) Error: No such node ID: 3:8 valid [3:1, 3:2, 3:3, 3:4, 3:5, 3:6, 3:10] (source: http://org.knime.ui.java/assets/index-CS720IlZ.js; line: 45)
+2025-03-20 10:45:35,862 : WARN  : comm-pool-thread-9 :  : Node : Rank Correlation : 3:11:4 : Auto configuration: Using all suitable columns (in total 15)
+2025-03-20 10:45:46,618 : WARN  : KNIME-Worker-108-Rank Correlation 3:11:4 :  : Node : Rank Correlation : 3:11:4 : Rows containing missing values are filtered. Please resolve them with the Missing Value node.

@@ -1,0 +1,83 @@
+﻿@inherits LayoutComponentBase
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager NavigationManager
+
+@if (isLoading)
+{
+    <!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+    <div class="loading text-center">
+        
+        
+    </div>
+}
+else if (!isAuthenticated)
+{
+    <Login />
+}
+else
+{
+    <MudThemeProvider Theme="MyCustomTheme" />
+    <MudPopoverProvider />
+    <MudDialogProvider />
+    <MudSnackbarProvider />
+    <div class="page bg-[#f5f5f5]">
+        <div class="logo-container" style="position: absolute; right: 15px; z-index: 1000;">
+            <img src="Images/logo/logo.png" alt="Logo Pizzaria" class="img-fluid" style="width: 100px; height: auto;" />
+        </div>
+
+        <div>
+            <NavMenu />
+        </div>
+
+        <main>
+            <article class="content px-4">
+                @Body
+            </article>
+        </main>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+}
+
+@code {
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userRole;
+    private bool isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+            }
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    MudTheme MyCustomTheme = new MudTheme()
+        {
+            PaletteLight = new PaletteLight()
+            {
+                Primary = "7B351C",
+                Secondary = "7B351C",
+                Tertiary = "FFFFFF"
+            },
+            LayoutProperties = new LayoutProperties()
+            {
+                DefaultBorderRadius = "20px"
+            }
+        };
+}

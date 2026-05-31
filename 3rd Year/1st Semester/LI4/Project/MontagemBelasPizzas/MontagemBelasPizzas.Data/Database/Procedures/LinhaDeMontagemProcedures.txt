@@ -1,0 +1,73 @@
+-- Procedure para buscar as linhas de montagem por ID de utilizador
+CREATE PROCEDURE spGetLinhasDeMontagemPorUtilizador
+    @IdFuncionario INT
+AS
+BEGIN
+    SELECT *
+    FROM LinhaDeMontagem
+    WHERE IdFuncionario = @IdFuncionario;
+END;
+GO
+
+-- Procedure para buscar a linha de montagem por ID
+CREATE PROCEDURE spLinhaDeMontagem_GetById
+    @Id INT
+AS
+BEGIN
+    SELECT * FROM LinhaDeMontagem WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para buscar todas as linhas de montagem
+CREATE PROCEDURE spLinhaDeMontagem_GetAll
+AS
+BEGIN
+    SELECT * FROM LinhaDeMontagem;
+END;
+GO
+
+-- Procedure para inserir linha de montagem
+CREATE PROCEDURE spLinhaDeMontagem_Insert
+    @DataDeInicio DATETIME,
+    @DataDeFim DATETIME,
+    @Estado BIT,
+    @Satisfacao INT,
+    @IdFuncionario INT,
+    @IdProduto INT
+AS
+BEGIN
+    INSERT INTO LinhaDeMontagem (DataDeInicio, DataDeFim, Estado, Satisfacao, IdFuncionario, IdProduto)
+    VALUES (@DataDeInicio, @DataDeFim, @Estado, @Satisfacao, @IdFuncionario, @IdProduto);
+END;
+GO
+
+-- Procedure para dar update de uma linha de montagem
+CREATE PROCEDURE spLinhaDeMontagem_Update
+    @Id INT,
+    @DataDeInicio DATETIME,
+    @DataDeFim DATETIME,
+    @Estado BIT,
+    @Satisfacao INT,
+    @IdFuncionario INT,
+    @IdProduto INT
+AS
+BEGIN
+    UPDATE LinhaDeMontagem
+    SET DataDeInicio = @DataDeInicio,
+        DataDeFim = @DataDeFim,
+        Estado = @Estado,
+        Satisfacao = @Satisfacao,
+        IdFuncionario = @IdFuncionario,
+        IdProduto = @IdProduto
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para eliminar uma linha de montagem
+CREATE PROCEDURE spLinhaDeMontagem_Delete
+    @Id INT
+AS
+BEGIN
+    DELETE FROM LinhaDeMontagem WHERE Id = @Id;
+END;
+GO

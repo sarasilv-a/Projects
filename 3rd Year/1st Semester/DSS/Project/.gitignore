@@ -1,0 +1,25 @@
+# Gradle-specific
+.gradle/
+../gradle/
+build/
+!../gradle/wrapper/gradle-wrapper.jar
+
+# Java-specific
+*.class
+*.log
+
+# IntelliJ IDEA-specific
+../.idea/
+*.iml
+out/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini

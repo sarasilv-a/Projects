@@ -1,0 +1,82 @@
+﻿<MudDialog MaxWidth="MaxWidth.Medium" Style="width: 600px; border-radius: 20px; background-color: #F5F5F5">
+    <DialogContent>
+        <MudDivider />
+        <MudPaper Class="p-4" Elevation="0" Style="background-color: #F5F5F5">
+            <!-- Image -->
+            <MudPaper Class="d-flex align-items-center justify-content-center m-auto mb-4"
+                      Style="position: relative; width: 150px; height: 150px; border-radius: 50%; background-color: #FFE9BA;">
+                @if (!string.IsNullOrEmpty(Ingredient.ImagemURL))
+                {
+                    <img src="@Ingredient.ImagemURL" alt="Foto do Ingrediente"
+                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+                }
+                else
+                {
+                    <MudIcon Icon="@Icons.Material.Filled.Image" Style="font-size: 5rem; color: #7B351C;" />
+                }
+
+                <MudFab StartIcon="@Icons.Material.Filled.Edit"
+                        IconColor="Color.Tertiary"
+                        Style="position: absolute; bottom: 4px; right: 4px; background-color: #006837;"
+                        Size="Size.Small"
+                        OnClick="OpenUploaderFoto" />
+            </MudPaper>
+
+            <!-- Form Fields -->
+            <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Nome</MudText>
+            <MudTextField @bind-Value="Ingredient.Nome" Required="true" Variant="Variant.Outlined"
+                          Style="background-color: #ffffff; border-radius: 20px;" />
+
+            <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Preço (€)</MudText>
+            <MudTextField @bind-Value="Ingredient.Preco" Required="true" Variant="Variant.Outlined"
+                          Style="background-color: #ffffff; border-radius: 20px;" />
+        </MudPaper>
+
+        <!-- Input file hidden -->
+        <InputFile OnChange="HandleFileUpload" Style="display: none;" id="inputFile" />
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Confirm" Color="Color.Primary" Typo="Typo.caption"
+                   Class="px-4 mb-4" Style="background-color: white; margin-right: 8px;">
+            Confirmar
+        </MudButton>
+        <MudButton OnClick="Cancel" Color="Color.Default" Typo="Typo.caption"
+                   Class="px-4 mb-4" Style="background-color: white; margin-right: 8px;">
+            Cancelar
+        </MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] private IMudDialogInstance MudDialog { get; set; } = default!;
+    [Parameter] public Ingrediente Ingredient { get; set; } = new();
+    [Inject] private IJSRuntime JSRuntime { get; set; } = default!;
+
+
+private void Confirm() => MudDialog.Close(DialogResult.Ok(Ingredient));
+    private void Cancel() => MudDialog.Cancel();
+
+    private async Task OpenUploaderFoto()
+    {
+        await JSRuntime.InvokeVoidAsync("triggerFileUpload", "inputFile");
+    }
+
+    private async Task HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+
+        if (file != null)
+        {
+            // Assume file is saved in project directory
+            var filePath = $"Images/ingredients/{file.Name}";
+            Ingredient.ImagemURL = filePath;
+
+            Console.WriteLine($"File Selected: {file.Name}");
+            Console.WriteLine($"Image Path: {Ingredient.ImagemURL}");
+        }
+        else
+        {
+            Console.WriteLine("No file selected.");
+        }
+    }
+}

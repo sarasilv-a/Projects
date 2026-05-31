@@ -1,0 +1,4798 @@
+<world>
+	<window width="1080" height="720"/>
+	<camera>
+		<position x="10" y="10" z="10"/>
+		<lookAt x="0" y="0" z="0"/>
+		<up x="0" y="1" z="0"/>
+		<projection fov="60" near="1" far="1000"/>
+	</camera>
+	<lights>
+		<light type="point" posx="0" posy="0" posz="0"/>
+	</lights>
+	<group>
+		<group>
+			<transform>
+				<translate x="0.000000" y="0.000000" z="0.000000"/>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="3.000000" y="3.000000" z="3.000000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="sunmap.jpg"/>
+					<color>
+						<diffuse R="255.000000" G="255.000000" B="200.000000"/>
+						<ambient R="100.000000" G="100.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="255.000000" G="255.000000" B="200.000000"/>
+						<shininess value="100.000000"/>
+					</color>
+				</model>
+			</models>
+		</group>
+		<group>
+			<transform>
+				<translate time="40.000000" align="true">
+					<point x="3.825219" y="0.000000" z="-1.169487"/>
+					<point x="3.276608" y="0.000000" z="-2.294306"/>
+					<point x="2.407259" y="0.000000" z="-3.194542"/>
+					<point x="1.302272" y="0.000000" z="-3.782074"/>
+					<point x="0.069810" y="0.000000" z="-3.999391"/>
+					<point x="-1.169487" y="0.000000" z="-3.825219"/>
+					<point x="-2.294307" y="0.000000" z="-3.276608"/>
+					<point x="-3.194543" y="0.000000" z="-2.407259"/>
+					<point x="-3.782074" y="0.000000" z="-1.302273"/>
+					<point x="-3.999391" y="0.000000" z="-0.069809"/>
+					<point x="-3.825219" y="0.000000" z="1.169488"/>
+					<point x="-3.276607" y="0.000000" z="2.294307"/>
+					<point x="-2.407260" y="0.000000" z="3.194542"/>
+					<point x="-1.302272" y="0.000000" z="3.782074"/>
+					<point x="-0.069809" y="0.000000" z="3.999391"/>
+					<point x="1.169487" y="0.000000" z="3.825219"/>
+					<point x="2.294306" y="0.000000" z="3.276608"/>
+					<point x="3.194542" y="0.000000" z="2.407259"/>
+					<point x="3.782074" y="0.000000" z="1.302273"/>
+					<point x="3.999391" y="0.000000" z="0.069810"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="0.300000" y="0.300000" z="0.300000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="mercurymap.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+		</group>
+		<group>
+			<transform>
+				<translate time="45.000000" align="true">
+					<point x="-3.914351" y="0.000000" z="-5.803263"/>
+					<point x="-5.516075" y="0.000000" z="-4.309630"/>
+					<point x="-6.577849" y="0.000000" z="-2.394140"/>
+					<point x="-6.995736" y="0.000000" z="-0.244295"/>
+					<point x="-6.728831" y="0.000000" z="1.929464"/>
+					<point x="-5.803263" y="0.000000" z="3.914350"/>
+					<point x="-4.309629" y="0.000000" z="5.516076"/>
+					<point x="-2.394139" y="0.000000" z="6.577849"/>
+					<point x="-0.244297" y="0.000000" z="6.995736"/>
+					<point x="1.929462" y="0.000000" z="6.728832"/>
+					<point x="3.914351" y="0.000000" z="5.803262"/>
+					<point x="5.516077" y="0.000000" z="4.309629"/>
+					<point x="6.577849" y="0.000000" z="2.394138"/>
+					<point x="6.995736" y="0.000000" z="0.244293"/>
+					<point x="6.728830" y="0.000000" z="-1.929466"/>
+					<point x="5.803264" y="0.000000" z="-3.914350"/>
+					<point x="4.309630" y="0.000000" z="-5.516075"/>
+					<point x="2.394140" y="0.000000" z="-6.577849"/>
+					<point x="0.244295" y="0.000000" z="-6.995736"/>
+					<point x="-1.929464" y="0.000000" z="-6.728831"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="0.500000" y="0.500000" z="0.500000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="venusmap.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+		</group>
+		<group>
+			<transform>
+				<translate time="50.000000" align="true">
+					<point x="-6.427876" y="0.000000" z="-7.660445"/>
+					<point x="-8.480480" y="0.000000" z="-5.299194"/>
+					<point x="-9.702957" y="0.000000" z="-2.419219"/>
+					<point x="-9.975640" y="0.000000" z="0.697566"/>
+					<point x="-9.271839" y="0.000000" z="3.746064"/>
+					<point x="-7.660445" y="0.000000" z="6.427875"/>
+					<point x="-5.299192" y="0.000000" z="8.480481"/>
+					<point x="-2.419218" y="0.000000" z="9.702958"/>
+					<point x="0.697567" y="0.000000" z="9.975640"/>
+					<point x="3.746065" y="0.000000" z="9.271839"/>
+					<point x="6.427876" y="0.000000" z="7.660444"/>
+					<point x="8.480482" y="0.000000" z="5.299191"/>
+					<point x="9.702957" y="0.000000" z="2.419221"/>
+					<point x="9.975641" y="0.000000" z="-0.697564"/>
+					<point x="9.271838" y="0.000000" z="-3.746067"/>
+					<point x="7.660443" y="0.000000" z="-6.427877"/>
+					<point x="5.299190" y="0.000000" z="-8.480483"/>
+					<point x="2.419214" y="0.000000" z="-9.702958"/>
+					<point x="-0.697561" y="0.000000" z="-9.975641"/>
+					<point x="-3.746064" y="0.000000" z="-9.271839"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="0.500000" y="0.500000" z="0.500000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="earth.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+			<group>
+				<transform>
+					<rotate angle="89.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="1.700000" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.400000" y="0.400000" z="0.400000"/>
+				</transform>
+				<models>
+					<model file="sphere.3d">
+						<texture file="moonmap1k.jpg"/>
+						<color>
+							<diffuse R="100.000000" G="100.000000" B="100.000000"/>
+							<ambient R="40.000000" G="40.000000" B="40.000000"/>
+							<specular R="20.000000" G="20.000000" B="20.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+		</group>
+		<group>
+			<transform>
+				<translate time="55.000000" align="true">
+					<point x="-12.583117" y="0.000000" z="-6.137194"/>
+					<point x="-13.863753" y="0.000000" z="-1.948419"/>
+					<point x="-13.787308" y="0.000000" z="2.431074"/>
+					<point x="-12.361266" y="0.000000" z="6.572603"/>
+					<point x="-9.725215" y="0.000000" z="10.070760"/>
+					<point x="-6.137192" y="0.000000" z="12.583119"/>
+					<point x="-1.948417" y="0.000000" z="13.863753"/>
+					<point x="2.431083" y="0.000000" z="13.787308"/>
+					<point x="6.572605" y="0.000000" z="12.361264"/>
+					<point x="10.070756" y="0.000000" z="9.725219"/>
+					<point x="12.583117" y="0.000000" z="6.137195"/>
+					<point x="13.863753" y="0.000000" z="1.948421"/>
+					<point x="13.787308" y="0.000000" z="-2.431079"/>
+					<point x="12.361263" y="0.000000" z="-6.572607"/>
+					<point x="9.725212" y="0.000000" z="-10.070763"/>
+					<point x="6.137187" y="0.000000" z="-12.583121"/>
+					<point x="1.948412" y="0.000000" z="-13.863754"/>
+					<point x="-2.431087" y="0.000000" z="-13.787307"/>
+					<point x="-6.572603" y="0.000000" z="-12.361266"/>
+					<point x="-10.070760" y="0.000000" z="-9.725215"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="0.400000" y="0.400000" z="0.400000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="mars_1k_color.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+			<group>
+				<transform>
+					<rotate angle="318.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="1.400000" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.200000" y="0.200000" z="0.200000"/>
+				</transform>
+				<models>
+					<model file="sphere.3d">
+						<texture file="moonmap1k.jpg"/>
+						<color>
+							<diffuse R="100.000000" G="100.000000" B="100.000000"/>
+							<ambient R="40.000000" G="40.000000" B="40.000000"/>
+							<specular R="20.000000" G="20.000000" B="20.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="198.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="2.000000" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.100000" y="0.100000" z="0.100000"/>
+				</transform>
+				<models>
+					<model file="sphere.3d">
+						<texture file="moonmap1k.jpg"/>
+						<color>
+							<diffuse R="100.000000" G="100.000000" B="100.000000"/>
+							<ambient R="40.000000" G="40.000000" B="40.000000"/>
+							<specular R="20.000000" G="20.000000" B="20.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+		</group>
+		<group>
+			<group>
+				<transform>
+					<rotate angle="322.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.739815" y="-0.225000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.145000" y="0.145000" z="0.145000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="267.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.411985" y="0.205000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.195000" y="0.195000" z="0.195000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="147.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.997696" y="0.205000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.104000" y="0.104000" z="0.104000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="153.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.526734" y="0.160000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.121000" y="0.121000" z="0.121000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="278.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.321497" y="-0.015000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.126000" y="0.126000" z="0.126000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="18.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.671117" y="-0.190000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.167000" y="0.167000" z="0.167000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="115.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.405849" y="-0.235000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.111000" y="0.111000" z="0.111000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="93.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.118061" y="0.070000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.141000" y="0.141000" z="0.141000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="173.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.128803" y="-0.015000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.144000" y="0.144000" z="0.144000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="357.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.334497" y="0.045000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.123000" y="0.123000" z="0.123000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="169.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.571230" y="-0.170000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.135000" y="0.135000" z="0.135000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="42.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.526368" y="-0.220000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.140000" y="0.140000" z="0.140000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="184.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.573549" y="-0.020000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.105000" y="0.105000" z="0.105000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="249.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.731209" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.106000" y="0.106000" z="0.106000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="273.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.824839" y="-0.105000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.123000" y="0.123000" z="0.123000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="154.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.217216" y="-0.050000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.166000" y="0.166000" z="0.166000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="251.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.908644" y="-0.030000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.139000" y="0.139000" z="0.139000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="163.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.006943" y="-0.060000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.118000" y="0.118000" z="0.118000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="249.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.014420" y="-0.085000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.115000" y="0.115000" z="0.115000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="138.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.578676" y="-0.100000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.177000" y="0.177000" z="0.177000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="353.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.549562" y="-0.145000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.145000" y="0.145000" z="0.145000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="352.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.074053" y="-0.105000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.177000" y="0.177000" z="0.177000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="57.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.011765" y="0.180000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.190000" y="0.190000" z="0.190000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="276.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.546724" y="0.085000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.155000" y="0.155000" z="0.155000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="71.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.603428" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.150000" y="0.150000" z="0.150000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="124.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.778664" y="-0.100000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.107000" y="0.107000" z="0.107000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="7.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.537966" y="0.035000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.187000" y="0.187000" z="0.187000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="303.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.868298" y="-0.205000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.109000" y="0.109000" z="0.109000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="101.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.201834" y="-0.140000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.146000" y="0.146000" z="0.146000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="70.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.002701" y="0.090000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.100000" y="0.100000" z="0.100000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="42.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.651525" y="-0.200000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.159000" y="0.159000" z="0.159000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="17.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.472839" y="0.165000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.195000" y="0.195000" z="0.195000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="2.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.729378" y="0.205000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.136000" y="0.136000" z="0.136000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="220.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.920789" y="-0.145000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.148000" y="0.148000" z="0.148000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="228.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.741646" y="0.155000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.134000" y="0.134000" z="0.134000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="199.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.918715" y="-0.060000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.100000" y="0.100000" z="0.100000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="127.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.542756" y="-0.110000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.193000" y="0.193000" z="0.193000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="163.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.130329" y="-0.145000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.110000" y="0.110000" z="0.110000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="133.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.371059" y="-0.205000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.116000" y="0.116000" z="0.116000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="171.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.386044" y="-0.005000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.119000" y="0.119000" z="0.119000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="118.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.274406" y="-0.130000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.108000" y="0.108000" z="0.108000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="209.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.872326" y="-0.240000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.195000" y="0.195000" z="0.195000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="213.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.813181" y="-0.135000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.187000" y="0.187000" z="0.187000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="143.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.181906" y="-0.250000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.158000" y="0.158000" z="0.158000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="60.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.312433" y="0.240000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.181000" y="0.181000" z="0.181000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="278.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.064379" y="0.035000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.172000" y="0.172000" z="0.172000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="178.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.625401" y="-0.060000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.179000" y="0.179000" z="0.179000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="137.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.228600" y="0.205000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.115000" y="0.115000" z="0.115000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="76.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.553896" y="-0.240000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.134000" y="0.134000" z="0.134000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="255.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.361141" y="-0.020000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.162000" y="0.162000" z="0.162000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="155.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.103199" y="0.095000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.142000" y="0.142000" z="0.142000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="336.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.503326" y="0.240000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.122000" y="0.122000" z="0.122000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="301.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.021774" y="0.035000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.176000" y="0.176000" z="0.176000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="269.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.964644" y="-0.190000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.100000" y="0.100000" z="0.100000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="123.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.960005" y="0.055000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.188000" y="0.188000" z="0.188000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="69.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.896679" y="-0.135000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.102000" y="0.102000" z="0.102000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="62.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.441648" y="0.190000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.126000" y="0.126000" z="0.126000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="357.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.400173" y="-0.090000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.169000" y="0.169000" z="0.169000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="161.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.073748" y="0.130000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.129000" y="0.129000" z="0.129000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="252.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.461576" y="0.025000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.134000" y="0.134000" z="0.134000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="241.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.370876" y="-0.025000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.160000" y="0.160000" z="0.160000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="153.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.977615" y="-0.135000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.179000" y="0.179000" z="0.179000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="127.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.647099" y="-0.005000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.137000" y="0.137000" z="0.137000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="349.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.517671" y="0.225000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.197000" y="0.197000" z="0.197000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="206.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.974503" y="0.190000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.182000" y="0.182000" z="0.182000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="174.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.158438" y="-0.245000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.116000" y="0.116000" z="0.116000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="26.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.622746" y="-0.185000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.155000" y="0.155000" z="0.155000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="253.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.583499" y="-0.210000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.132000" y="0.132000" z="0.132000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="353.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.041216" y="-0.145000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.158000" y="0.158000" z="0.158000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="262.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.544038" y="-0.030000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.196000" y="0.196000" z="0.196000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="289.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.697851" y="-0.075000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.150000" y="0.150000" z="0.150000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="26.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.602695" y="0.045000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.192000" y="0.192000" z="0.192000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="333.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.333307" y="0.020000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.110000" y="0.110000" z="0.110000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="129.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.707251" y="-0.185000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.174000" y="0.174000" z="0.174000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="8.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.783426" y="0.185000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.105000" y="0.105000" z="0.105000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="191.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.434050" y="-0.125000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.177000" y="0.177000" z="0.177000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="314.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.864330" y="-0.080000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.174000" y="0.174000" z="0.174000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="359.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.583376" y="0.100000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.187000" y="0.187000" z="0.187000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="318.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.248650" y="0.115000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.170000" y="0.170000" z="0.170000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="148.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.074022" y="0.175000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.102000" y="0.102000" z="0.102000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="53.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.198294" y="-0.240000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.199000" y="0.199000" z="0.199000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="105.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.641271" y="-0.130000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.123000" y="0.123000" z="0.123000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="101.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.798349" y="-0.235000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.132000" y="0.132000" z="0.132000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="233.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.580599" y="-0.095000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.192000" y="0.192000" z="0.192000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="302.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.364407" y="0.070000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.100000" y="0.100000" z="0.100000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="80.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.552034" y="0.120000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.170000" y="0.170000" z="0.170000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="235.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.322931" y="-0.195000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.160000" y="0.160000" z="0.160000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="347.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.166983" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.140000" y="0.140000" z="0.140000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="175.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.479797" y="-0.155000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.125000" y="0.125000" z="0.125000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="94.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.574465" y="-0.240000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.171000" y="0.171000" z="0.171000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="358.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.568514" y="0.005000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.184000" y="0.184000" z="0.184000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="24.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.433561" y="0.010000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.100000" y="0.100000" z="0.100000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.676336" y="-0.200000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.157000" y="0.157000" z="0.157000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="155.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.376736" y="-0.115000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.143000" y="0.143000" z="0.143000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="324.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.967757" y="0.160000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.186000" y="0.186000" z="0.186000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="247.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.207937" y="0.120000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.125000" y="0.125000" z="0.125000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="229.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.423185" y="-0.135000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.120000" y="0.120000" z="0.120000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="202.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.511261" y="0.230000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.137000" y="0.137000" z="0.137000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="115.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.477844" y="0.070000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.160000" y="0.160000" z="0.160000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="196.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.960525" y="-0.120000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.111000" y="0.111000" z="0.111000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="291.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.838970" y="0.015000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.120000" y="0.120000" z="0.120000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="164.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.263878" y="0.065000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.140000" y="0.140000" z="0.140000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="302.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.766121" y="-0.250000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.113000" y="0.113000" z="0.113000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="298.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.265862" y="-0.215000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.177000" y="0.177000" z="0.177000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="138.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.089525" y="-0.235000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.160000" y="0.160000" z="0.160000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="164.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.093006" y="-0.210000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.113000" y="0.113000" z="0.113000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="1.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.592045" y="0.050000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.128000" y="0.128000" z="0.128000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="24.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.276634" y="-0.050000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.111000" y="0.111000" z="0.111000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="235.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.462372" y="0.110000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.150000" y="0.150000" z="0.150000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="85.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.382015" y="-0.170000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.126000" y="0.126000" z="0.126000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="246.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.722908" y="-0.065000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.171000" y="0.171000" z="0.171000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="201.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.680700" y="-0.140000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.117000" y="0.117000" z="0.117000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="117.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.211721" y="0.175000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.141000" y="0.141000" z="0.141000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="9.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.718300" y="0.075000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.159000" y="0.159000" z="0.159000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="336.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.233391" y="0.015000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.162000" y="0.162000" z="0.162000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="214.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.109211" y="0.110000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.157000" y="0.157000" z="0.157000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="212.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.771279" y="-0.215000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.183000" y="0.183000" z="0.183000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="115.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.421690" y="-0.010000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.175000" y="0.175000" z="0.175000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="63.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.527222" y="0.020000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.111000" y="0.111000" z="0.111000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="15.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.464689" y="-0.125000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.121000" y="0.121000" z="0.121000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="186.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.423735" y="-0.225000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.183000" y="0.183000" z="0.183000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="118.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.539766" y="-0.245000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.193000" y="0.193000" z="0.193000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="197.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.929335" y="0.030000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.193000" y="0.193000" z="0.193000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="145.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.137409" y="-0.010000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.181000" y="0.181000" z="0.181000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="13.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.023575" y="0.025000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.155000" y="0.155000" z="0.155000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="302.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.027939" y="0.135000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.124000" y="0.124000" z="0.124000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="312.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.188559" y="0.230000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.173000" y="0.173000" z="0.173000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="313.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.580112" y="0.110000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.118000" y="0.118000" z="0.118000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="297.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.867107" y="-0.190000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.195000" y="0.195000" z="0.195000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="71.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.334772" y="0.190000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.185000" y="0.185000" z="0.185000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="57.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.737038" y="0.200000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.145000" y="0.145000" z="0.145000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="234.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.207602" y="-0.050000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.144000" y="0.144000" z="0.144000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="335.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.301935" y="0.210000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.105000" y="0.105000" z="0.105000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="301.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.109608" y="-0.105000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.175000" y="0.175000" z="0.175000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="132.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.049059" y="-0.005000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.156000" y="0.156000" z="0.156000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="307.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.092089" y="-0.045000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.129000" y="0.129000" z="0.129000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="93.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.171041" y="-0.245000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.177000" y="0.177000" z="0.177000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="43.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.251945" y="0.210000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.124000" y="0.124000" z="0.124000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="352.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.942823" y="0.100000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.128000" y="0.128000" z="0.128000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="124.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.422422" y="0.180000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.198000" y="0.198000" z="0.198000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="167.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.683325" y="-0.230000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.103000" y="0.103000" z="0.103000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="343.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.022415" y="0.065000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.110000" y="0.110000" z="0.110000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="129.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.169973" y="0.070000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.142000" y="0.142000" z="0.142000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="33.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.194998" y="-0.230000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.118000" y="0.118000" z="0.118000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="30.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.807657" y="0.125000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.139000" y="0.139000" z="0.139000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="262.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.431639" y="-0.015000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.184000" y="0.184000" z="0.184000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="91.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.135548" y="-0.185000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.175000" y="0.175000" z="0.175000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="272.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.106434" y="0.140000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.169000" y="0.169000" z="0.169000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="239.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.780403" y="0.195000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.144000" y="0.144000" z="0.144000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="180.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.628208" y="-0.210000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.118000" y="0.118000" z="0.118000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="241.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.093128" y="-0.090000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.172000" y="0.172000" z="0.172000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="247.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.115742" y="0.065000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.101000" y="0.101000" z="0.101000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="23.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.822916" y="-0.250000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.169000" y="0.169000" z="0.169000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="165.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.502563" y="-0.035000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.147000" y="0.147000" z="0.147000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="63.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.656986" y="-0.205000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.163000" y="0.163000" z="0.163000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="1.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.645391" y="-0.040000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.108000" y="0.108000" z="0.108000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="341.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.660954" y="0.020000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.188000" y="0.188000" z="0.188000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="330.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.227776" y="-0.035000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.130000" y="0.130000" z="0.130000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="28.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.978134" y="-0.070000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.183000" y="0.183000" z="0.183000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="186.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.890270" y="-0.060000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.153000" y="0.153000" z="0.153000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="64.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.941816" y="-0.135000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.159000" y="0.159000" z="0.159000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="286.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.952650" y="0.025000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.118000" y="0.118000" z="0.118000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="211.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.424955" y="0.025000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.101000" y="0.101000" z="0.101000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="136.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.201468" y="-0.175000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.164000" y="0.164000" z="0.164000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="155.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.140034" y="-0.040000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.196000" y="0.196000" z="0.196000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="232.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.370113" y="-0.220000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.173000" y="0.173000" z="0.173000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="4.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.113880" y="-0.120000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.112000" y="0.112000" z="0.112000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="213.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.016617" y="-0.070000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.136000" y="0.136000" z="0.136000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="214.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.048784" y="0.030000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.152000" y="0.152000" z="0.152000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="238.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.375240" y="0.025000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.115000" y="0.115000" z="0.115000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="230.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.133442" y="-0.125000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.111000" y="0.111000" z="0.111000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="226.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.302729" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.162000" y="0.162000" z="0.162000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="93.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.447874" y="-0.170000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.152000" y="0.152000" z="0.152000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="62.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.535555" y="0.020000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.103000" y="0.103000" z="0.103000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="23.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.805216" y="-0.010000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.124000" y="0.124000" z="0.124000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="253.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.981979" y="-0.110000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.100000" y="0.100000" z="0.100000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="78.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.043444" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.155000" y="0.155000" z="0.155000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="144.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.589785" y="0.130000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.143000" y="0.143000" z="0.143000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="142.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.826029" y="0.195000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.148000" y="0.148000" z="0.148000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="333.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.308374" y="-0.150000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.102000" y="0.102000" z="0.102000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="231.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.273338" y="0.140000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.159000" y="0.159000" z="0.159000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="299.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.694677" y="-0.235000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.145000" y="0.145000" z="0.145000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="224.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.634556" y="0.175000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.113000" y="0.113000" z="0.113000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="189.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.664770" y="-0.060000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.137000" y="0.137000" z="0.137000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="141.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.070757" y="-0.210000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.161000" y="0.161000" z="0.161000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="13.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.638706" y="0.095000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.137000" y="0.137000" z="0.137000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="58.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.845867" y="0.105000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.164000" y="0.164000" z="0.164000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="15.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.748146" y="-0.175000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.130000" y="0.130000" z="0.130000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="332.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.181479" y="0.160000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.154000" y="0.154000" z="0.154000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="190.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.741646" y="0.120000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.180000" y="0.180000" z="0.180000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="31.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.098866" y="-0.175000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.179000" y="0.179000" z="0.179000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="338.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.612461" y="0.190000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.177000" y="0.177000" z="0.177000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="76.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.126637" y="-0.185000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.108000" y="0.108000" z="0.108000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="310.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.657750" y="0.065000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.128000" y="0.128000" z="0.128000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="298.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.159201" y="0.105000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.185000" y="0.185000" z="0.185000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="351.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.537600" y="0.085000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.153000" y="0.153000" z="0.153000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="128.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="17.406645" y="0.130000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.129000" y="0.129000" z="0.129000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="78.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="15.802958" y="0.215000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.186000" y="0.186000" z="0.186000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="36.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="16.621464" y="0.085000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.128000" y="0.128000" z="0.128000"/>
+				</transform>
+				<models>
+					<model file="cone.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="304.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<rotate time="100.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="18.193655" y="-0.225000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.126000" y="0.126000" z="0.126000"/>
+				</transform>
+				<models>
+					<model file="box.3d">
+						<texture file="phobosbump.jpg"/>
+						<color>
+							<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+							<ambient R="30.000000" G="30.000000" B="30.000000"/>
+							<specular R="50.000000" G="50.000000" B="50.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="5.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+		</group>
+		<group>
+			<transform>
+				<translate time="60.000000" align="true">
+					<point x="-17.366455" y="0.000000" z="17.983500"/>
+					<point x="-10.959270" y="0.000000" z="22.469856"/>
+					<point x="-3.479315" y="0.000000" z="24.756702"/>
+					<point x="4.341208" y="0.000000" z="24.620193"/>
+					<point x="11.736795" y="0.000000" z="22.073687"/>
+					<point x="17.983501" y="0.000000" z="17.366453"/>
+					<point x="22.469851" y="0.000000" z="10.959277"/>
+					<point x="24.756702" y="0.000000" z="3.479323"/>
+					<point x="24.620193" y="0.000000" z="-4.341212"/>
+					<point x="22.073685" y="0.000000" z="-11.736798"/>
+					<point x="17.366449" y="0.000000" z="-17.983505"/>
+					<point x="10.959263" y="0.000000" z="-22.469858"/>
+					<point x="3.479307" y="0.000000" z="-24.756704"/>
+					<point x="-4.341228" y="0.000000" z="-24.620190"/>
+					<point x="-11.736813" y="0.000000" z="-22.073677"/>
+					<point x="-17.983500" y="0.000000" z="-17.366455"/>
+					<point x="-22.469856" y="0.000000" z="-10.959270"/>
+					<point x="-24.756702" y="0.000000" z="-3.479315"/>
+					<point x="-24.620195" y="0.000000" z="4.341196"/>
+					<point x="-22.073692" y="0.000000" z="11.736785"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="1.200000" y="1.200000" z="1.200000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="jupitermap.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+			<group>
+				<transform>
+					<rotate angle="6.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="1.400000" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.150000" y="0.150000" z="0.150000"/>
+				</transform>
+				<models>
+					<model file="sphere.3d">
+						<texture file="moonmap1k.jpg"/>
+						<color>
+							<diffuse R="100.000000" G="100.000000" B="100.000000"/>
+							<ambient R="40.000000" G="40.000000" B="40.000000"/>
+							<specular R="20.000000" G="20.000000" B="20.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="226.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="2.000000" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.100000" y="0.100000" z="0.100000"/>
+				</transform>
+				<models>
+					<model file="sphere.3d">
+						<texture file="moonmap1k.jpg"/>
+						<color>
+							<diffuse R="100.000000" G="100.000000" B="100.000000"/>
+							<ambient R="40.000000" G="40.000000" B="40.000000"/>
+							<specular R="20.000000" G="20.000000" B="20.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="287.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="2.500000" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.200000" y="0.200000" z="0.200000"/>
+				</transform>
+				<models>
+					<model file="sphere.3d">
+						<texture file="moonmap1k.jpg"/>
+						<color>
+							<diffuse R="100.000000" G="100.000000" B="100.000000"/>
+							<ambient R="40.000000" G="40.000000" B="40.000000"/>
+							<specular R="20.000000" G="20.000000" B="20.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="321.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="3.000000" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.250000" y="0.250000" z="0.250000"/>
+				</transform>
+				<models>
+					<model file="sphere.3d">
+						<texture file="moonmap1k.jpg"/>
+						<color>
+							<diffuse R="100.000000" G="100.000000" B="100.000000"/>
+							<ambient R="40.000000" G="40.000000" B="40.000000"/>
+							<specular R="20.000000" G="20.000000" B="20.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+		</group>
+		<group>
+			<transform>
+				<translate time="65.000000" align="true">
+					<point x="8.269121" y="0.000000" z="-28.837851"/>
+					<point x="-1.046989" y="0.000000" z="-29.981726"/>
+					<point x="-10.260605" y="0.000000" z="-28.190779"/>
+					<point x="-18.469841" y="0.000000" z="-23.640326"/>
+					<point x="-24.871128" y="0.000000" z="-16.775787"/>
+					<point x="-28.837852" y="0.000000" z="-8.269116"/>
+					<point x="-29.981726" y="0.000000" z="1.046979"/>
+					<point x="-28.190779" y="0.000000" z="10.260603"/>
+					<point x="-23.640322" y="0.000000" z="18.469845"/>
+					<point x="-16.775782" y="0.000000" z="24.871130"/>
+					<point x="-8.269111" y="0.000000" z="28.837854"/>
+					<point x="1.046999" y="0.000000" z="29.981726"/>
+					<point x="10.260608" y="0.000000" z="28.190777"/>
+					<point x="18.469851" y="0.000000" z="23.640318"/>
+					<point x="24.871134" y="0.000000" z="16.775778"/>
+					<point x="28.837851" y="0.000000" z="8.269121"/>
+					<point x="29.981726" y="0.000000" z="-1.046989"/>
+					<point x="28.190777" y="0.000000" z="-10.260612"/>
+					<point x="23.640331" y="0.000000" z="-18.469831"/>
+					<point x="16.775797" y="0.000000" z="-24.871119"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="1.100000" y="1.100000" z="1.100000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="saturnmap.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+			<group>
+				<transform>
+					<rotate angle="260.000000" x="1.000000" y="0.000000" z="0.000000"/>
+				</transform>
+				<models>
+					<model file="torus.3d">
+						<texture file="saturnringcolor.jpg"/>
+						<color>
+							<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+							<ambient R="50.000000" G="50.000000" B="50.000000"/>
+							<specular R="0.000000" G="0.000000" B="0.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+			<group>
+				<transform>
+					<rotate angle="286.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<translate x="2.000000" y="0.000000" z="0.000000"/>
+					<rotate time="50.000000" x="0.000000" y="1.000000" z="0.000000"/>
+					<scale x="0.250000" y="0.250000" z="0.250000"/>
+				</transform>
+				<models>
+					<model file="sphere.3d">
+						<texture file="moonmap1k.jpg"/>
+						<color>
+							<diffuse R="100.000000" G="100.000000" B="100.000000"/>
+							<ambient R="40.000000" G="40.000000" B="40.000000"/>
+							<specular R="20.000000" G="20.000000" B="20.000000"/>
+							<emissive R="0.000000" G="0.000000" B="0.000000"/>
+							<shininess value="1.000000"/>
+						</color>
+					</model>
+				</models>
+			</group>
+		</group>
+		<group>
+			<transform>
+				<translate time="70.000000" align="true">
+					<point x="-33.581402" y="0.000000" z="-5.318774"/>
+					<point x="-33.581402" y="0.000000" z="5.318774"/>
+					<point x="-30.294218" y="0.000000" z="15.435682"/>
+					<point x="-24.041634" y="0.000000" z="24.041626"/>
+					<point x="-15.435678" y="0.000000" z="30.294222"/>
+					<point x="-5.318768" y="0.000000" z="33.581406"/>
+					<point x="5.318764" y="0.000000" z="33.581406"/>
+					<point x="15.435674" y="0.000000" z="30.294224"/>
+					<point x="24.041630" y="0.000000" z="24.041630"/>
+					<point x="30.294224" y="0.000000" z="15.435673"/>
+					<point x="33.581406" y="0.000000" z="5.318763"/>
+					<point x="33.581402" y="0.000000" z="-5.318785"/>
+					<point x="30.294228" y="0.000000" z="-15.435664"/>
+					<point x="24.041637" y="0.000000" z="-24.041624"/>
+					<point x="15.435681" y="0.000000" z="-30.294220"/>
+					<point x="5.318773" y="0.000000" z="-33.581406"/>
+					<point x="-5.318775" y="0.000000" z="-33.581402"/>
+					<point x="-15.435684" y="0.000000" z="-30.294218"/>
+					<point x="-24.041637" y="0.000000" z="-24.041622"/>
+					<point x="-30.294230" y="0.000000" z="-15.435662"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="0.900000" y="0.900000" z="0.900000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="uranusmap.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+		</group>
+		<group>
+			<transform>
+				<translate time="75.000000" align="true">
+					<point x="23.395134" y="0.000000" z="-29.944410"/>
+					<point x="12.996768" y="0.000000" z="-35.708321"/>
+					<point x="1.326179" y="0.000000" z="-37.976852"/>
+					<point x="-10.474226" y="0.000000" z="-36.527943"/>
+					<point x="-21.249332" y="0.000000" z="-31.503428"/>
+					<point x="-29.944407" y="0.000000" z="-23.395138"/>
+					<point x="-35.708321" y="0.000000" z="-12.996762"/>
+					<point x="-37.976852" y="0.000000" z="-1.326173"/>
+					<point x="-36.527943" y="0.000000" z="10.474232"/>
+					<point x="-31.503429" y="0.000000" z="21.249331"/>
+					<point x="-23.395132" y="0.000000" z="29.944412"/>
+					<point x="-12.996757" y="0.000000" z="35.708321"/>
+					<point x="-1.326185" y="0.000000" z="37.976852"/>
+					<point x="10.474220" y="0.000000" z="36.527943"/>
+					<point x="21.249334" y="0.000000" z="31.503424"/>
+					<point x="29.944416" y="0.000000" z="23.395128"/>
+					<point x="35.708324" y="0.000000" z="12.996751"/>
+					<point x="37.976852" y="0.000000" z="1.326161"/>
+					<point x="36.527946" y="0.000000" z="-10.474210"/>
+					<point x="31.503431" y="0.000000" z="-21.249325"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="0.800000" y="0.800000" z="0.800000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="neptunemap.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+		</group>
+		<group>
+			<transform>
+				<translate time="80.000000" align="true">
+					<point x="-26.431448" y="0.000000" z="32.640137"/>
+					<point x="-15.051440" y="0.000000" z="39.210384"/>
+					<point x="-2.198110" y="0.000000" z="41.942440"/>
+					<point x="10.870405" y="0.000000" z="40.568886"/>
+					<point x="22.874847" y="0.000000" z="35.224159"/>
+					<point x="32.640141" y="0.000000" z="26.431444"/>
+					<point x="39.210388" y="0.000000" z="15.051434"/>
+					<point x="41.942444" y="0.000000" z="2.198083"/>
+					<point x="40.568878" y="0.000000" z="-10.870431"/>
+					<point x="35.224167" y="0.000000" z="-22.874838"/>
+					<point x="26.431454" y="0.000000" z="-32.640133"/>
+					<point x="15.051446" y="0.000000" z="-39.210381"/>
+					<point x="2.198097" y="0.000000" z="-41.942444"/>
+					<point x="-10.870419" y="0.000000" z="-40.568878"/>
+					<point x="-22.874861" y="0.000000" z="-35.224152"/>
+					<point x="-32.640125" y="0.000000" z="-26.431463"/>
+					<point x="-39.210377" y="0.000000" z="-15.051459"/>
+					<point x="-41.942440" y="0.000000" z="-2.198110"/>
+					<point x="-40.568886" y="0.000000" z="10.870405"/>
+					<point x="-35.224159" y="0.000000" z="22.874847"/>
+				</translate>
+				<rotate time="20.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="0.600000" y="0.600000" z="0.600000"/>
+			</transform>
+			<models>
+				<model file="sphere.3d">
+					<texture file="plutomap1k.jpg"/>
+					<color>
+						<diffuse R="200.000000" G="200.000000" B="200.000000"/>
+						<ambient R="50.000000" G="50.000000" B="50.000000"/>
+						<specular R="0.000000" G="0.000000" B="0.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="0.000000"/>
+					</color>
+				</model>
+			</models>
+		</group>
+		<group>
+			<transform>
+				<rotate time="150.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<translate time="80.000000" align="true">
+					<point x="26.000000" y="0.000000" z="0.000000"/>
+					<point x="20.000000" y="5.000000" z="10.000000"/>
+					<point x="13.000000" y="0.000000" z="0.000000"/>
+					<point x="20.000000" y="-5.000000" z="-10.000000"/>
+				</translate>
+				<rotate time="60.000000" x="0.000000" y="1.000000" z="0.000000"/>
+				<scale x="0.200000" y="0.200000" z="0.200000"/>
+			</transform>
+			<models>
+				<model file="comet.3d">
+					<texture file="phobosbump.jpg"/>
+					<color>
+						<diffuse R="120.000000" G="120.000000" B="120.000000"/>
+						<ambient R="30.000000" G="30.000000" B="30.000000"/>
+						<specular R="50.000000" G="50.000000" B="50.000000"/>
+						<emissive R="0.000000" G="0.000000" B="0.000000"/>
+						<shininess value="5.000000"/>
+					</color>
+				</model>
+			</models>
+		</group>
+	</group>
+</world>
+

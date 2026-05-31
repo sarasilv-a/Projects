@@ -1,0 +1,55 @@
+﻿<MudDialog MaxWidth="MaxWidth.Medium" Style="width: 600px; border-radius: 20px; background-color: #F5F5F5">
+    <DialogContent>
+        <MudDivider />
+        <MudPaper Class="p-4" Elevation="0" Style="background-color: #F5F5F5">
+            <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Nome</MudText>
+            <MudTextField @bind-Value="Administrator.Nome" Required="true"
+                          Variant="Variant.Outlined"
+                          Style="background-color: #ffffff; border-radius: 20px;" />
+            <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Senha</MudText>
+            <MudTextField @bind-Value="Administrator.Senha" Required="true"
+                          Variant="Variant.Outlined" InputType="InputType.Password"
+                          Style="background-color: #ffffff; border-radius: 20px;" />
+        </MudPaper>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="async () => await Confirm()" Color="Color.Primary" Typo="Typo.caption" 
+                   Class="px-4 mb-4" Style="background-color: white; margin-right: 8px;">
+            Confirmar
+        </MudButton>
+        <MudButton OnClick="Cancel" Color="Color.Default" Typo="Typo.caption"
+                   Class="px-4 mb-4" Style="background-color: white; margin-right: 8px;">
+            Cancelar
+        </MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] private IMudDialogInstance MudDialog { get; set; } = default!;
+    [Inject] private ISnackbar Snackbar { get; set; } = default!;
+    [Inject] private UtilizadorService UtilizadorService { get; set; } = default!;
+
+    [Parameter] public Utilizador Administrator { get; set; } = new();
+    private string? Senha { get; set; }
+
+    private async Task Confirm()
+    {
+        try
+        {
+            Administrator.Tipo = TipoUtilizador.Administrador;
+            Administrator.DataDeCriacao = DateTime.Now;
+            await UtilizadorService.AddUtilizador(Administrator);
+
+            Snackbar.Add("Administrador adicionado com sucesso!", Severity.Success);
+            MudDialog.Close(DialogResult.Ok(Administrator));
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"Erro ao adicionar administrador: {ex.Message}", Severity.Error);
+        }
+    }
+
+    private void Cancel() => MudDialog.Cancel();
+}
+
+

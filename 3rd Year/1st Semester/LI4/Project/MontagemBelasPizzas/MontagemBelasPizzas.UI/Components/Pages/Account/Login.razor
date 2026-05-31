@@ -1,0 +1,76 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
+@using MontagemBelasPizzas.UI.Authentication
+@using MontagemBelasPizzas.Data.Entities.Utilizadores
+
+@inject AuthenticationStateProvider AuthProvider
+@inject NavigationManager Navigation
+@inject MontagemBelasPizzas.Business.Services.Utilizadores.UtilizadorService UtilizadorService
+
+<div class="d-flex flex-column justify-content-center align-items-center vh-100" style="background-color: #f5f5f5;">
+    <img src="Images/logo/logo.png" alt="Montagem Belas Pizzas Logo" class="mb-4" style="width: 175px;">
+
+    <div class="card shadow" style="width: 525px; height: 480px; border-radius: 15px;">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h3 style="font-size: 30px; color: #5c251b;" class="mb-4">Sign in</h3>
+
+            <EditForm Model="user" OnValidSubmit="HandleLogin" class="text-center" style="width: 90%;">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-group mb-3 text-start">
+                    <label for="identificador" style="font-size: 12px; color: #5c251b; margin-left: 5px;" class="form-label">Identificador</label>
+                    <InputText id="identificador" class="form-control py-2" @bind-Value="user_id_string" style="border: 1px solid #5c251b; border-radius: 15px;" />
+                </div>
+
+                <div class="form-group mb-4 position-relative text-start">
+                    <label for="senha" style="font-size: 12px; color: #5c251b; margin-left: 5px;" class="form-label">Senha</label>
+                    <InputText id="senha" class="form-control py-2" @bind-Value="user.Senha" type="password" style="border: 1px solid #5c251b; border-radius: 15px;" />
+                </div>
+
+                <button type="submit" class="btn w-100 py-2" style="background-color: #689164; color: white; border-radius: 30px;">Log in</button>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Utilizador user = new();
+    private string? user_id_string;
+    private string? errorMessage;
+
+    private async Task HandleLogin()
+    {
+        try
+        {
+            if (!string.IsNullOrEmpty(user_id_string) && int.TryParse(user_id_string, out int parsedId))
+            {
+                user.Id = parsedId;
+                var matchedUser = await UtilizadorService.ValidateCredentials(user.Id, user.Senha);
+                if (matchedUser is not null)
+                {
+                    await ((CustomAuthenticationStateProvider)AuthProvider).Login(matchedUser);
+                    if (matchedUser.Tipo == TipoUtilizador.Administrador)
+                    {
+                        Navigation.NavigateTo("/admin-home", forceLoad: true);
+                    } else
+                    {
+                        Navigation.NavigateTo("/employee-home", forceLoad: true);
+                    }
+                }
+                else
+                {
+                    errorMessage = "Credenciais inválidas. Por favor, tente novamente.";
+                }
+            }
+            else
+            {
+                errorMessage = "O campo Identificador é inválido ou está vazio.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Erro: {ex.Message}";
+        }
+    }
+}

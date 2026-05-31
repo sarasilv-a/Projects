@@ -1,0 +1,91 @@
+﻿<MudDialog MaxWidth="MaxWidth.Medium" Style="width: 600px; border-radius: 20px; background-color: #F5F5F5">
+    <DialogContent>
+        <MudDivider />
+        <MudPaper Class="p-4" Elevation="0" Style="background-color: #F5F5F5">
+            <!-- Foto do funcionário -->
+            <MudPaper Class="d-flex align-items-center justify-content-center m-auto mb-4"
+                      Style="position: relative; width: 150px; height: 150px; border-radius: 50%; background-color: #FFE9BA;">
+                @if (!string.IsNullOrEmpty(Employee.ImagemURL))
+                {
+                    <img src="@Employee.ImagemURL" alt="Foto do Funcionário" 
+                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+                }
+                else
+                {
+                    <MudIcon Icon="@Icons.Material.Filled.Person" Style="font-size: 5rem; color: #7B351C;" />
+                }
+
+                <MudFab StartIcon="@Icons.Material.Filled.Edit"
+                        IconColor="Color.Tertiary"
+                        Style="position: absolute; bottom: 4px; right: 4px; background-color: #006837;"
+                        Size="Size.Small"
+                        OnClick="OpenUploaderFoto" />
+            </MudPaper>
+
+            <!-- Campos do formulário -->
+            <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Nome</MudText>
+            <MudTextField @bind-Value="Employee.Nome" Required="true" Variant="Variant.Outlined"
+                          Style="background-color: #ffffff; border-radius: 20px;" />
+
+            <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Senha</MudText>
+            <MudTextField @bind-Value="Employee.Senha" InputType="InputType.Password" Required="true" Variant="Variant.Outlined"
+                          Style="background-color: #ffffff; border-radius: 20px;" />
+
+            <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">NIF</MudText>
+            <MudTextField @bind-Value="Employee.NIF" Required="true" Variant="Variant.Outlined"
+                          Style="background-color: #ffffff; border-radius: 20px" />
+
+            <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Data de nascimento</MudText>
+            <MudDatePicker @bind-Date="Employee.DataDeNascimento" Required="true" Variant="Variant.Outlined"
+                           Style="background-color: #ffffff; border-radius: 20px" />
+        </MudPaper>
+
+        <!-- Input de upload escondido -->
+        <InputFile OnChange="HandleFileUpload" Style="display: none;" id="inputFile" />
+    </DialogContent>
+    <DialogActions>
+
+        <MudButton OnClick="Confirm" Color="Color.Primary" Typo="Typo.caption" 
+                   Class="px-4 mb-4" Style="background-color: white; margin-right: 8px;">
+            Confirmar
+        </MudButton>
+        <MudButton OnClick="Cancel" Color="Color.Default" Typo="Typo.caption" 
+                   Class="px-4 mb-4" Style="background-color: white; margin-right: 8px;">
+        Cancelar
+        </MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] private IMudDialogInstance MudDialog { get; set; } = default!;
+    [Inject] private IJSRuntime JSRuntime { get; set; } = default!;
+
+    [Parameter] public Utilizador Employee { get; set; } = new();
+
+    private void Confirm() => MudDialog.Close(DialogResult.Ok(Employee));
+    private void Cancel() => MudDialog.Cancel();
+
+    private async Task OpenUploaderFoto()
+    {
+        await JSRuntime.InvokeVoidAsync("triggerFileUpload", "inputFile");
+    }
+
+    private async Task HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+
+        if (file != null)
+        {
+            // Assume-se que o ficheiro é salvo no diretório do projeto
+            var filePath = $"Images/perfil/{file.Name}"; // Ajuste conforme o diretório desejado
+            Employee.ImagemURL = filePath;
+
+            Console.WriteLine($"Ficheiro Selecionado: {file.Name}");
+            Console.WriteLine($"Caminho da Imagem: {Employee.ImagemURL}");
+        }
+        else
+        {
+            Console.WriteLine("Nenhum ficheiro selecionado.");
+        }
+    }
+}

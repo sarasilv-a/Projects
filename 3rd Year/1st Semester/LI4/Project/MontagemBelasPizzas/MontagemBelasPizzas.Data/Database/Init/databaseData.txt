@@ -1,0 +1,87 @@
+-- Inserir 5 registos de utilizadores (2 Administradores, 3 Funcionários)
+INSERT INTO Utilizador (Nome, Senha, NIF, DataDeNascimento, ImagemURL, Tipo)
+VALUES
+('Fernando Pires', 'iAmUsed', NULL, NULL, NULL, 'Administrador'),
+('Pedro Teixeira', 'gymBroDoggo', NULL, NULL, NULL, 'Administrador'),
+('Rafael Seara', 'lgbtPower', '228592345', '2004-04-25', 'Images/employees/rafael.png', 'Funcionario'),
+('Zita Duarte', 'souBeta', '228592346', '2004-02-10', 'Images/employees/zi.png', 'Funcionario'),
+('Sara Silva', 'fromTheStreets', '228592347', '2003-12-27', 'Images/employees/sa.png', 'Funcionario');
+
+-- Inserir 3 produtos
+INSERT INTO Produto (Nome, Categoria, Preco, QuantidadeDeRealizacoes, QuantidadeDeVendas, QuantidadeDeRejeicoes, MediaDeSatisfacao, MediaDoTempoDeMontagem, QuantidadeEmStock, ImagemURL, IdAdministrador)
+VALUES
+('Pizza do Mar', 'Normal', 12.50, 10, 5, 1, 4.50, '00:00:00', 20, 'Images/pizzas/pizza_mar.svg', 1),
+('Pizza Pepperoni', 'Normal', 10.00, 8, 4, 0, 4.75, '00:00:00', 15, 'Images/pizzas/pizza_pepperoni.svg ', 1),
+('Pizza Caprese', 'Vegetariano', 15.00, 12, 6, 2, 4.25, '00:00:00', 10, 'Images/pizzas/pizza_caprese.svg ', 2);
+
+-- Inserir 10 ingredientes
+INSERT INTO Ingrediente (Nome, Preco, QuantidadeEmStock, EmUso, ImagemURL, IdAdministrador)
+VALUES
+('Base', 2.50, 100, 1, 'Images/ingredients/base.svg', 1),
+('Manjericão', 3.00, 150, 1, 'Images/ingredients/basil.svg', 1),
+('Queijo', 1.75, 200, 1, 'Images/ingredients/cheese.svg', 2),
+('Mozzarella', 4.20, 50, 1, 'Images/ingredients/mozzarella.svg', 2),
+('Pepperoni', 5.00, 75, 0, 'Images/ingredients/pepperoni.svg', 1),
+('Molho Pesto', 5.00, 75, 0, 'Images/ingredients/pesto_sauce.svg', 1),
+('Ananás', 5.00, 75, 0, 'Images/ingredients/pineapple.svg', 1),
+('Camarão', 5.00, 75, 0, 'Images/ingredients/shrimp.svg', 1),
+('Molho de Tomate', 5.00, 75, 0, 'Images/ingredients/tomato_sauce.svg', 1),
+('Tomate', 5.00, 75, 0, 'Images/ingredients/tomatos.svg', 1);
+
+-- Inserir montagens
+INSERT INTO Montagem (IdIngrediente, IdProduto, Ordem, Descricao)
+VALUES
+-- Produto 1 (Pizza do Mar)
+(1, 1, 1, 'Preparar base da Pizza do Mar'),
+(9, 1, 2, 'Espalhar molho de tomate pela base'),
+(8, 1, 3, 'Colocar camarões na pizza'),
+(7, 1, 4, 'Colocar ananás na pizza'),
+-- Produto 2 (Pizza Pepperoni)
+(1, 2, 1, 'Preparar base da Pizza Pepperoni'),
+(9, 2, 2, 'Espalhar molho de tomate pela base'),
+(3, 2, 3, 'Espalhar queijo pela base'),
+(5, 2, 4, 'Colocar pepperoni na pizza'),
+(2, 2, 5, 'Espalhar manjericão pela pizza'),
+-- Produto 3 (Pizza Caprese)
+(1, 3, 1, 'Preparar base da Pizza Caprese'),
+(6, 3, 2, 'Espalhar molho pesto pela base'),
+(4, 3, 3, 'Colocar mozzarella na pizza'),
+(10, 3, 4, 'Colocar tomates na pizza');
+
+
+-- Inserir 5 linhas de montagem
+INSERT INTO LinhaDeMontagem (DataDeInicio, DataDeFim, Estado, Satisfacao, IdFuncionario, IdProduto)
+VALUES
+('2025-01-01 08:00:00', '2025-01-01 10:00:00', 1, 2, 3, 1), -- Completado
+('2025-01-02 09:00:00', '2025-01-02 11:30:00', 1, 4, 3, 2), -- Completado
+('2025-01-03 10:00:00', '2025-01-03 12:15:00', 0, 0, 4, 3), -- Rejeitado
+('2025-01-04 08:30:00', '2025-01-04 10:45:00', 1, 5, 4, 2), -- Completado
+('2025-01-05 07:00:00', '2025-01-05 09:20:00', 0, 0, 5, 1); -- Rejeitado
+
+-- Inserir Operações
+INSERT INTO Operacao (Quantidade, ValorUnitario, ValorTotal, DataDaOperacao, IdAdministrador)
+VALUES
+-- Compras
+(100, 2.50, 125.00, '2025-01-06 10:00:00', 1),
+(50, 5.00, 150.00, '2025-01-07 11:30:00', 2),
+(75, 5.00, 150.00, '2025-01-07 11:30:00', 2),
+(30, 5.00, 150.00, '2025-01-07 11:30:00', 2),
+-- Vendas
+(5, 12.50, 62.50, '2025-01-08 12:45:00', 1),
+(3, 10.00, 30.00, '2025-01-09 14:20:00', 1),
+(4, 15.00, 60.00, '2025-01-10 09:15:00', 2);
+
+-- Inserir Compras
+INSERT INTO Compra (IdIngrediente, IdOperacao)
+VALUES
+(1, 1), -- Base
+(3, 2), -- Queijo
+(5, 3), -- Pepperoni
+(7, 4); -- Ananás
+
+-- Inserir Vendas
+INSERT INTO Venda (IdProduto, IdOperacao)
+VALUES
+(1, 5), -- Pizza do Mar
+(2, 6), -- Pizza Pepperoni
+(3, 7); -- Pizza Caprese

@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\Images\NovaPasta\**" />
+    <Content Remove="wwwroot\Images\NovaPasta\**" />
+    <EmbeddedResource Remove="wwwroot\Images\NovaPasta\**" />
+    <None Remove="wwwroot\Images\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MontagemBelasPizzas.Business\MontagemBelasPizzas.Business.csproj" />
+    <ProjectReference Include="..\MontagemBelasPizzas.Data\MontagemBelasPizzas.Data.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Watch Include="./Styles/app.css" Exclude="./wwwroot/**/*;obj\**\*;bin\**\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Components\Pages\Employee\Production\" />
+	  <Folder Include="wwwroot\Images\perfil\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+	  <PackageReference Include="Blazored.LocalStorage" Version="4.5.0" />
+	  <PackageReference Include="Blazored.Modal" Version="7.3.1" />
+	  <PackageReference Include="Microsoft.AspNetCore" Version="2.3.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.3.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.Core" Version="2.3.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.12" />
+	  <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.12" />
+	  <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.12" />
+	  <PackageReference Include="MudBlazor" Version="8.0.0" />
+	  <PackageReference Include="Quick.AspNetCore.Components.Web.Extensions" Version="6.0.2" />
+	  <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+	</ItemGroup>
+
+	<Target Name="Tailwind" BeforeTargets="Compile">
+		<Exec Command="npx tailwindcss -i ./Styles/app.css -o ./wwwroot/css/app.css" />
+	</Target>
+
+
+</Project>

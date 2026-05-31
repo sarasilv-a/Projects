@@ -1,0 +1,165 @@
+-- Stored Procedure para obter todas as compras
+CREATE PROCEDURE spCompra_GetAll
+AS
+BEGIN
+    SELECT 
+        o.Id,
+        o.Quantidade,
+        o.ValorUnitario,
+        o.ValorTotal,
+        o.DataDaOperacao,
+        o.IdAdministrador,
+        c.IdIngrediente
+    FROM Operacao o
+    INNER JOIN Compra c ON o.Id = c.IdOperacao;
+END;
+GO
+
+-- Stored Procedure para obter todas as vendas
+CREATE PROCEDURE spVenda_GetAll
+AS
+BEGIN
+    SELECT 
+        o.Id,
+        o.Quantidade,
+        o.ValorUnitario,
+        o.ValorTotal,
+        o.DataDaOperacao,
+        o.IdAdministrador,
+        v.IdProduto
+    FROM Operacao o
+    INNER JOIN Venda v ON o.Id = v.IdOperacao;
+END;
+GO
+
+-- Procedure para obter todas as vendas num mes
+CREATE PROCEDURE spSalesPerMonth
+AS
+BEGIN
+    SELECT
+        MONTH(o.DataDaOperacao) AS Mes,
+        COUNT(*) AS NumeroDeVendas
+    FROM Operacao o
+    INNER JOIN Venda v ON o.Id = v.IdOperacao
+    GROUP BY MONTH(o.DataDaOperacao)
+    ORDER BY Mes;
+END;
+GO
+
+-- Procedure para obter todas as compras num mes
+CREATE PROCEDURE spBuysPerMonth
+AS
+BEGIN
+    SELECT
+        MONTH(o.DataDaOperacao) AS Mes,
+        COUNT(*) AS NumeroDeCompras
+    FROM Operacao o
+    INNER JOIN Compra c ON o.Id = c.IdOperacao
+    GROUP BY MONTH(o.DataDaOperacao)
+    ORDER BY Mes;
+END;
+GO
+
+-- Stored Procedure para obter todas as compras de um admin
+CREATE PROCEDURE spCompra_GetAllByAdminId
+    @IdAdministrador INT
+AS
+BEGIN
+    SELECT 
+        o.Id,
+        o.Quantidade,
+        o.ValorUnitario,
+        o.ValorTotal,
+        o.DataDaOperacao,
+        o.IdAdministrador,
+        c.IdIngrediente
+    FROM Operacao o
+    INNER JOIN Compra c ON o.Id = c.IdOperacao
+    WHERE o.IdAdministrador = @IdAdministrador;
+END;
+GO
+
+-- Stored Procedure para obter todas as vendas para um admin
+CREATE PROCEDURE spVenda_GetAllByAdminId
+    @IdAdministrador INT
+AS
+BEGIN
+    SELECT 
+        o.Id,
+        o.Quantidade,
+        o.ValorUnitario,
+        o.ValorTotal,
+        o.DataDaOperacao,
+        o.IdAdministrador,
+        v.IdProduto
+    FROM Operacao o
+    INNER JOIN Venda v ON o.Id = v.IdOperacao
+    WHERE o.IdAdministrador = @IdAdministrador;
+END;
+GO
+
+-- Stored Procedure para inserir compras
+CREATE PROCEDURE spInserirCompra
+    @IdIngrediente INT,
+    @Quantidade INT,
+    @ValorUnitario DECIMAL(6, 2),
+    @ValorTotal DECIMAL(10, 2),
+    @IdAdministrador INT
+AS
+BEGIN
+    BEGIN TRANSACTION;
+
+    -- Inserir na tabela Operacao
+    INSERT INTO Operacao (Quantidade, ValorUnitario, ValorTotal, DataDaOperacao, IdAdministrador)
+    VALUES (@Quantidade, @ValorUnitario, @ValorTotal, GETDATE(), @IdAdministrador);
+
+    -- Obter o ID da operação recém-inserida
+    DECLARE @IdOperacao INT = SCOPE_IDENTITY();
+
+    -- Inserir na tabela Compra
+    INSERT INTO Compra (IdIngrediente, IdOperacao)
+    VALUES (@IdIngrediente, @IdOperacao);
+
+    COMMIT TRANSACTION;
+END;
+GO
+
+-- Stored Procedure para inserir vendas
+CREATE PROCEDURE spInserirVenda
+    @IdProduto INT,
+    @Quantidade INT,
+    @ValorUnitario DECIMAL(6, 2),
+    @ValorTotal DECIMAL(10, 2),
+    @IdAdministrador INT
+AS
+BEGIN
+    BEGIN TRANSACTION;
+
+    -- Inserir na tabela Operacao
+    INSERT INTO Operacao (Quantidade, ValorUnitario, ValorTotal, DataDaOperacao, IdAdministrador)
+    VALUES (@Quantidade, @ValorUnitario, @ValorTotal, GETDATE(), @IdAdministrador);
+
+    -- Obter o ID da operação recém-inserida
+    DECLARE @IdOperacao INT = SCOPE_IDENTITY();
+
+    -- Inserir na tabela Venda
+    INSERT INTO Venda (IdProduto, IdOperacao)
+    VALUES (@IdProduto, @IdOperacao);
+
+    COMMIT TRANSACTION;
+END;
+GO
+
+CREATE PROCEDURE spTop5MostSoldProducts
+AS
+BEGIN
+    SELECT TOP 5
+        p.Nome AS ProdutoNome,
+        SUM(o.Quantidade) AS QuantidadeVendida
+    FROM Venda v
+    INNER JOIN Operacao o ON v.IdOperacao = o.Id
+    INNER JOIN Produto p ON v.IdProduto = p.Id
+    GROUP BY p.Nome
+    ORDER BY QuantidadeVendida DESC;
+END;
+GO

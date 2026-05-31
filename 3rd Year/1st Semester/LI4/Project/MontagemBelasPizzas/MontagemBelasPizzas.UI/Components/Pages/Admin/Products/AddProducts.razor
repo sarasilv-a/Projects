@@ -1,0 +1,204 @@
+﻿@using MontagemBelasPizzas.Data.Entities.Produtos
+@inject ILogger<AddProducts> Logger
+@inject IngredienteService IngredienteService
+@inject ISnackbar Snackbar
+@using MudBlazor
+
+
+<MudDialog MaxWidth="MaxWidth.Medium" Style="width: 650px; border-radius: 20px; background-color: #F5F5F5">
+    <DialogContent>
+        <MudDivider />
+        <MudPaper Class="p-4" Elevation="0" Style="background-color: #F5F5F5">
+            @if (Step1)
+            {
+                <!-- Image -->
+                <MudPaper Class="d-flex align-items-center justify-content-center m-auto mb-4"
+                          Style="position: relative; width: 150px; height: 150px; border-radius: 50%; background-color: #FFE9BA;">
+                    @if (!string.IsNullOrEmpty(Product.ImagemURL))
+                    {
+                    <img src="@Product.ImagemURL" alt="Foto do produto"
+                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />
+                    }
+                    else
+                    {
+                    <MudIcon Icon="@Icons.Material.Filled.Image" Style="font-size: 5rem; color: #7B351C;" />
+                    }
+
+                    <MudFab StartIcon="@Icons.Material.Filled.Edit"
+                            IconColor="Color.Tertiary"
+                            Style="position: absolute; bottom: 4px; right: 4px; background-color: #006837;"
+                            Size="Size.Small"
+                            OnClick="OpenUploaderFoto" />
+                </MudPaper>
+                <!-- Step 1: Product Information -->
+                <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Nome</MudText>
+                <MudTextField @bind-Value="Product.Nome" Required="true"
+                              Variant="Variant.Outlined"
+                              Style="background-color: #ffffff; border-radius: 20px;" />
+                <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Categoria</MudText>
+                <MudSelect @bind-Value="Product.Categoria" Required="true"
+                           Variant="Variant.Outlined"
+                           Style="background-color: #ffffff; border-radius: 20px">
+                    @foreach (var category in _categories)
+                    {
+                        <MudSelectItem Value="@category">@category</MudSelectItem>
+                    }
+                </MudSelect>
+                <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Preço (€)</MudText>
+                <MudTextField @bind-Value="Product.Preco" Required="true"
+                              Variant="Variant.Outlined"
+                              Style="background-color: #ffffff; border-radius: 20px;" />
+                <MudButton OnClick="NextStep" Color="Color.Primary" Typo="Typo.caption"
+                           Class="px-4 mt-12"
+                           Style="background-color: white">Próximo</MudButton>
+                
+                <InputFile OnChange="HandleFileUpload" Style="display: none;" id="inputFile" />
+            }
+            else
+            {
+                <!-- Step 2: Ingredients -->
+                <h2 class="text-lg font-semibold mb-4">Adicionar Ingredientes (max. 5)</h2>
+                <MudTable Items="SelectedMontagens" Class="mb-4">
+                    <HeaderContent>
+                        <MudTh>Ingrediente</MudTh>
+                        <MudTh>Ordem</MudTh>
+                        <MudTh>Descrição</MudTh>
+                        <MudTh>Remover</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd>@AvailableIngredients.FirstOrDefault(i => i.Id == context.IdIngrediente)?.Nome</MudTd>
+                        <MudTd>@context.Ordem</MudTd>
+                        <MudTd>@context.Descricao</MudTd>
+                        <MudTd>
+                            <MudButton Color="Color.Error" Size="Size.Small" OnClick="() => RemoveMontagem(context)">
+                                ✖
+                            </MudButton>
+                        </MudTd>
+                    </RowTemplate>
+                </MudTable>
+                @if (SelectedMontagens.Count < MaxIngredients)
+                {
+                    <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Ingrediente</MudText>
+                    <MudSelect @bind-Value="NewIngredientId" Variant="Variant.Outlined"
+                               Style="background-color: #ffffff; border-radius: 20px; margin-bottom: 8px;">
+                        <MudSelectItem Value="-1" Disabled="true">Escolha um ingrediente</MudSelectItem>
+                        @foreach (var ingredient in AvailableIngredients)
+                        {
+                            <MudSelectItem Value="@ingredient.Id">@ingredient.Nome</MudSelectItem>
+                        }
+                    </MudSelect>
+        
+                    <MudText Typo="Typo.subtitle1" Class="mb-2 mt-4" Color="Color.Primary">Descrição</MudText>
+                    <MudTextField @bind-Value="NewMontagemDescricao" Variant="Variant.Outlined"
+                                  Style="background-color: #ffffff; border-radius: 20px;"/>
+                    <div class="d-flex justify-content-end">
+                        <MudButton OnClick="AddMontagem" Color="Color.Tertiary" Typo="Typo.caption" 
+                                   Class="px-4 mt-8" Style="background-color: #FC5825;">
+                            + Adicionar Passo
+                        </MudButton>
+                    </div>
+                }
+                <div class="mt-12">
+                    <MudButton OnClick="Confirm" Color="Color.Primary" Typo="Typo.caption"
+                               Class="px-4"
+                               Style="background-color: white; margin-right: 8px;">
+                        Confirmar
+                    </MudButton>
+                    <MudButton OnClick="PreviousStep" Color="Color.Default" Typo="Typo.caption"
+                               Class="px-4"
+                               Style="background-color: white;">
+                        Voltar
+                    </MudButton>
+                </div>
+            }
+        </MudPaper>
+    </DialogContent>
+</MudDialog>
+
+@code {
+    [CascadingParameter] private IMudDialogInstance MudDialog { get; set; } = default!;
+    [Parameter] public Produto Product { get; set; } = new();
+    [Inject] private IJSRuntime JSRuntime { get; set; } = default!;
+
+    private bool Step1 = true;
+
+    private string[] _categories =
+    {
+        "Normal", "Sem Gluten", "Vegetariano"
+    };
+
+    // Ingredient management
+    private int MaxIngredients = 5;
+    [Parameter] public List<Montagem> SelectedMontagens { get; set; } = new();
+    private List<Ingrediente> AvailableIngredients { get; set; } = new();
+    private int NewIngredientId { get; set; } = -1;
+    private string NewMontagemDescricao = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var ingredientes = await IngredienteService.GetAllIngredientes();
+            AvailableIngredients = ingredientes.ToList();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load ingredients.");
+        }
+    }
+
+    private void NextStep() => Step1 = false;
+    private void PreviousStep() => Step1 = true;
+
+    private void AddMontagem()
+    {
+        if (NewIngredientId == -1)
+        {
+            Snackbar.Add("Por favor, escolha um ingrediente!", Severity.Warning);
+            return;
+        }
+        if (NewIngredientId > -1)
+        {
+            SelectedMontagens.Add(new Montagem
+            {
+                IdIngrediente = NewIngredientId,
+                Ordem = SelectedMontagens.Count + 1,
+                Descricao = NewMontagemDescricao
+            });
+            NewIngredientId = -1;
+            NewMontagemDescricao = string.Empty;
+        }
+    }
+    
+    private async Task OpenUploaderFoto()
+    {
+        await JSRuntime.InvokeVoidAsync("triggerFileUpload", "inputFile");
+    }
+
+    private async Task HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+
+        if (file != null)
+        {
+            // Assume file is saved in project directory
+            var filePath = $"Images/pizzas/{file.Name}";
+            Product.ImagemURL = filePath;
+
+            Console.WriteLine($"File Selected: {file.Name}");
+            Console.WriteLine($"Image Path: {Product.ImagemURL}");
+        }
+        else
+        {
+            Console.WriteLine("No file selected.");
+        }
+    }
+
+    private void RemoveMontagem(Montagem montagem) =>
+        SelectedMontagens.Remove(montagem);
+
+    private void Confirm() =>
+        MudDialog.Close(DialogResult.Ok(new { Product, SelectedMontagens }));
+
+    private void Cancel() => MudDialog.Cancel();
+}

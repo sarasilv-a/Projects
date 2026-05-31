@@ -1,0 +1,234 @@
+﻿@page "/assembly-line"
+@using MontagemBelasPizzas.Data.Entities.Produtos
+@using MontagemBelasPizzas.UI.Components.Shared
+@using System.Security.Claims
+@using MontagemBelasPizzas.UI.Components.Pages.Account
+@inject MontagemService MontagemService
+@inject LinhaDeMontagemService LinhaDeMontagemService
+@inject ProdutoService ProdutoService
+@inject UtilizadorService UtilizadorService
+@inject IngredienteService IngredienteService
+@inject NavigationManager NavigationManager
+@inject IDialogService DialogService
+@inject AuthenticationStateProvider AuthProvider
+
+@if (isLoading)
+{
+    <!-- Mostra um spinner ou placeholder enquanto carrega os dados -->
+    <div class="loading text-center">
+    </div>
+}
+else if (!isAuthenticated)
+{
+    <Login />
+}
+else if (userRole == "Administrador")
+{
+    <AccessDenied />
+}
+else if (userRole == "Funcionario")
+{
+    <div class="px-4 py-2 fs-4 fw-bold mb-15 ml-2 mt-2" style="background-color: #FFFFFF; display: inline-block; border-radius: 15px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 50%;">
+        <h1 class="fw-bold" style="color: #6c3e2c; font-family: 'Poppins', sans-serif; font-size: 1.2rem; margin: 0;">
+            @Produto?.Nome
+        </h1>
+    </div>
+
+    <div class="mx-auto p-4 bg-white" style="width: 1000px; height: 600px; border-radius: 20px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; position: relative;">
+        <h1 class="fs-2 fw-bold ml-12" style="color: #6c3e2c;">Montagem:</h1>
+        <hr class="my-4" style="border: 1px solid #ccc; width: 90%; margin: auto;" />
+
+        <div class="position-relative flex-1">
+            @if (MontagensComIngredientes != null && MontagensComIngredientes.Any())
+            {
+                <div class="position-absolute px-4 py-2 ml-12"
+                     style="background-color: #FFFFFF; border-radius: 20px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); width: 90%;">
+                    <h2 style="color: #6c3e2c; font-family: 'Poppins', sans-serif; font-size: 1rem; margin: 0; font-weight: 500; white-space: nowrap;">
+                        Passo @MontagensComIngredientes[CurrentIndex].Ordem - @MontagensComIngredientes[CurrentIndex].Descricao
+                    </h2>
+                </div>
+                <div class="position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+                    @foreach (var montagem in MontagensComIngredientes.Select((m, index) => new { Montagem = m, Index = index }))
+                    {
+                        @if (montagem.Index <= CurrentIndex)
+                        {
+                            <img src="@montagem.Montagem.Ingrediente.ImagemURL"
+                                 alt="@montagem.Montagem.Descricao"
+                                 class="position-absolute img-fluid rounded"
+                                 style="max-width: 30%;" />
+                        }
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="position-absolute" style="bottom: 40px; right: 20px; display: flex; gap: 5px;">
+            @if (CurrentIndex > 0)
+            {
+                <button @onclick="ShowPrevious" class="btn d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+            }
+            @if (CurrentIndex < MontagensComIngredientes?.Count - 1)
+            {
+                <button @onclick="ShowNext" class="btn d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            }
+            else
+            {
+                <button @onclick="HandleCheckClick" class="btn d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                    <i class="bi bi-check-lg"></i>
+                </button>
+            }
+            <button @onclick="HandleTrashClick" class="btn d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                <i class="bi bi-trash"></i>
+            </button>
+        </div>
+    </div>
+}
+
+
+@code {
+    // Validate authenticated User
+    private AuthenticationState? authState;
+    private bool isAuthenticated = false;
+    private string? userName;
+    private string? userRole;
+    private int userId;
+    private bool isLoading = true;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity is not null && user.Identity.IsAuthenticated)
+            {
+                isAuthenticated = true;
+                userName = user.Identity.Name;
+                userRole = user.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                userId = int.Parse(user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "1");
+            }
+            isLoading = false;
+
+            StateHasChanged();
+        }
+    }
+
+    private Produto? Produto;
+    private List<MontagemComIngrediente>? MontagensComIngredientes;
+    private int CurrentIndex = 0;
+
+    private DateTime DataDeInicio;
+
+    protected override async Task OnInitializedAsync()
+    {   
+        DataDeInicio = DateTime.Now;
+
+        var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+        var query = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query);
+
+        if (query.TryGetValue("produtoId", out var produtoIdStr) && int.TryParse(produtoIdStr, out var produtoId))
+        {
+            Produto = await ProdutoService.GetProdutoById(produtoId);
+            var montagens = await MontagemService.GetMontagensByProdutoId(produtoId);
+            MontagensComIngredientes = new List<MontagemComIngrediente>();
+
+            foreach (var montagem in montagens)
+            {
+                var ingrediente = await IngredienteService.GetIngredienteById(montagem.IdIngrediente);
+                if (ingrediente != null)
+                {
+                    MontagensComIngredientes.Add(new MontagemComIngrediente
+                        {
+                            Ordem = montagem.Ordem,
+                            Descricao = montagem.Descricao,
+                            Ingrediente = ingrediente
+                        });
+                }
+            }
+        }
+    }
+
+    private void ShowNext()
+    {
+        if (MontagensComIngredientes != null && MontagensComIngredientes.Any())
+        {
+            CurrentIndex = (CurrentIndex + 1) % MontagensComIngredientes.Count;
+        }
+    }
+
+    private void ShowPrevious()
+    {
+        if (MontagensComIngredientes != null && MontagensComIngredientes.Any())
+        {
+            CurrentIndex = (CurrentIndex - 1 + MontagensComIngredientes.Count) % MontagensComIngredientes.Count;
+        }
+    }
+
+    private async Task HandleTrashClick()
+    {
+        var parameters = new DialogParameters
+        {   
+            { "ContentText", $"Tem a certeza que deseja parar a montagem?" },
+            { "ButtonText", "Sim" },
+            { "Color", Color.Error }
+        };
+
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Small };
+        var dialog = DialogService.Show<ConfirmationPopUp>("Tens a certeza?", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            await UtilizadorService.IncrementarPizzasRejeitadas(userId);
+            NavigationManager.NavigateTo("/employee-products");
+        }
+    }
+
+    private async Task HandleCheckClick()
+    {
+        var parameters = new DialogParameters
+    {
+        { "Title", "Pizza Concluída" },
+        { "ImageURL", "Images/logo/logo.png" },
+        { "Rating", 5 },
+        { "ReturnText", "Voltar para a Linha de Montagem" },
+        { "ReturnURL", "/employee-products" }
+    };
+
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Medium };
+        var dialog = DialogService.Show<CompletedPopUp>("", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            if (result.Data is int rating)
+            {
+                var novaLinhaDeMontagem = new LinhaDeMontagem
+                    {
+                        DataDeInicio = DataDeInicio,             // Data de início capturada ao entrar na página
+                        DataDeFim = DateTime.Now,               // Data de fim capturada no clique do botão de check
+                        Estado = true,                          // Estado ativo
+                        Satisfacao = rating,                    // Satisfação devolvida pelo popup
+                        IdFuncionario = userId,                 // ID do funcionário autenticado
+                        IdProduto = Produto?.Id ?? 0            // ID do produto selecionado
+                    };
+
+                await LinhaDeMontagemService.CreateLinhaDeMontagem(novaLinhaDeMontagem);
+            }
+
+            NavigationManager.NavigateTo("/employee-products");
+        }
+    }
+
+    public class MontagemComIngrediente
+    {
+        public int Ordem { get; set; }
+        public string Descricao { get; set; } = string.Empty;
+        public Ingrediente Ingrediente { get; set; } = new();
+    }
+}

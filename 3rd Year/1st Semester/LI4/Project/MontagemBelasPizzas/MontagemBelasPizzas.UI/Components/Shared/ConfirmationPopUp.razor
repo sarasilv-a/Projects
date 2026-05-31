@@ -1,0 +1,21 @@
+﻿<MudDialog Style="display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 20px;">
+    <DialogContent>
+        <MudText Color="Color.Primary">@ContentText</MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel" Color="Color.Primary" Style="border-radius: 20px; padding: 7px">Cancelar</MudButton>
+        <MudButton OnClick="Submit" Color="@Color" Style="border-radius: 20px; padding: 7px">@ButtonText</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] private IMudDialogInstance MudDialog { get; set; } = default!;
+
+    [Parameter] public string ContentText { get; set; } = "Tem a certeza que deseja continuar?";
+    [Parameter] public string ButtonText { get; set; } = "Confirmar";
+    [Parameter] public Color Color { get; set; } = Color.Primary;
+
+    private void Submit() => MudDialog.Close(DialogResult.Ok(true));
+
+    private void Cancel() => MudDialog.Cancel();
+}

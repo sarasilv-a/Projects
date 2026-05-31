@@ -1,0 +1,69 @@
+-- Procedure para obter ingrediente por ID
+CREATE PROCEDURE spIngrediente_GetById
+    @Id INT
+AS
+BEGIN
+    SELECT *
+    FROM Ingrediente
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para obter todos os ingredientes
+CREATE PROCEDURE spIngrediente_GetAll
+AS
+BEGIN
+    SELECT *
+    FROM Ingrediente;
+END;
+GO
+
+-- Procedure para inserir um novo ingrediente
+CREATE PROCEDURE spIngrediente_Insert
+    @Nome NVARCHAR(45),
+    @Preco DECIMAL(4,2),
+    @QuantidadeEmStock INT,
+    @EmUso BIT,
+    @ImagemURL NVARCHAR(90),
+    @IdAdministrador INT
+AS
+BEGIN
+    INSERT INTO Ingrediente (Nome, Preco, QuantidadeEmStock, EmUso, ImagemURL, IdAdministrador)
+    VALUES (@Nome, @Preco, @QuantidadeEmStock, @EmUso, @ImagemURL, @IdAdministrador);
+
+    SELECT SCOPE_IDENTITY() AS NovoId;
+END;
+GO
+
+-- Procedure para atualizar ingrediente existente
+CREATE PROCEDURE spIngrediente_Update
+    @Id INT,
+    @Nome NVARCHAR(45),
+    @Preco DECIMAL(4,2),
+    @QuantidadeEmStock INT,
+    @EmUso BIT,
+    @ImagemURL NVARCHAR(90),
+    @IdAdministrador INT
+AS
+BEGIN
+    UPDATE Ingrediente
+    SET Nome = @Nome,
+        Preco = @Preco,
+        QuantidadeEmStock = @QuantidadeEmStock,
+        EmUso = @EmUso,
+        ImagemURL = @ImagemURL,
+        IdAdministrador = @IdAdministrador
+    WHERE Id = @Id;
+END;
+GO
+
+-- Procedure para apagar ingrediente
+CREATE PROCEDURE spIngrediente_Delete
+    @Id INT
+AS
+BEGIN
+    DELETE FROM Ingrediente
+    WHERE Id = @Id;
+END;
+GO
+
