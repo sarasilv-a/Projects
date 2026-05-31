@@ -1,0 +1,6 @@
+{
+      "id": "Netflix",
+      "role": "server",
+      "neighbors": ["10.0.2.1"],
+      "streams": ["movie.Mjpeg", "videobala.mp4"]
+}

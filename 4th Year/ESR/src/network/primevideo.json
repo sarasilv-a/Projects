@@ -1,0 +1,6 @@
+{
+      "id": "PrimeVideo",
+      "role": "server",
+      "neighbors": ["10.0.7.1"],
+      "streams": ["movie.Mjpeg", "crazy.mp4"]
+}

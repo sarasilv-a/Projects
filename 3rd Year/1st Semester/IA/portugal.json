@@ -1,0 +1,6464 @@
+{
+    "veiculos": [
+        {
+            "nome": "Camiao",
+            "peso": 12000,
+            "capacidade": 10000,
+            "velocidade": 80,
+            "combustivel": 100,
+            "eficiencia_combustivel": 0.1
+        },
+        {
+            "nome": "Carro",
+            "peso": 1500,
+            "capacidade": 800,
+            "velocidade": 120,
+            "combustivel": 100,
+            "eficiencia_combustivel": 0.05
+        },
+        {
+            "nome": "Helicoptero",
+            "peso": 8000,
+            "capacidade": 20,
+            "velocidade": 100,
+            "combustivel": 100,
+            "eficiencia_combustivel": 0.05
+        }
+    ],
+    "nos": [
+        {
+            "nome": "Arcos de Valdevez",
+            "id": 0,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Caminha",
+            "id": 1,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Melgaco",
+            "id": 2,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Moncao",
+            "id": 3,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Paredes de Coura",
+            "id": 4,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ponte da Barca",
+            "id": 5,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ponte de Lima",
+            "id": 6,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Valenca",
+            "id": 7,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Nova de Cerveira",
+            "id": 8,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Amares",
+            "id": 9,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Barcelos",
+            "id": 10,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Braga",
+            "id": 11,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 90
+        },
+        {
+            "nome": "Cabeceiras de Basto",
+            "id": 12,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Celorico de Basto",
+            "id": 13,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Esposende",
+            "id": 14,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Fafe",
+            "id": 15,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Guimarães",
+            "id": 16,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Póvoa de lanhoso",
+            "id": 17,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Terras de Bouro",
+            "id": 18,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vieira do Minho",
+            "id": 19,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Nova de Famalicão",
+            "id": 20,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Verde",
+            "id": 21,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vizela",
+            "id": 22,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Real",
+            "id": 23,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Chaves",
+            "id": 24,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ribeira de Pena",
+            "id": 25,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Valpaços",
+            "id": 26,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Montalegre",
+            "id": 27,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Boticas",
+            "id": 28,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Pouca de Aguiar",
+            "id": 29,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mondim de Basto",
+            "id": 30,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Murça",
+            "id": 31,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Peso da Régua",
+            "id": 32,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mesão Frio",
+            "id": 33,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Santa Marta de Penaguião",
+            "id": 34,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alijó",
+            "id": 35,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sabrosa",
+            "id": 36,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Águeda",
+            "id": 37,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Albergaria-a-Velha",
+            "id": 38,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Anadia",
+            "id": 39,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Arouca",
+            "id": 40,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Aveiro",
+            "id": 41,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Castelo de Paiva",
+            "id": 42,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Espinho",
+            "id": 43,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Estarreja",
+            "id": 44,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ílhavo",
+            "id": 45,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mealhada",
+            "id": 46,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Murtosa",
+            "id": 47,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Oliveira de Azeméis",
+            "id": 48,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Oliveira do Bairro",
+            "id": 49,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ovar",
+            "id": 50,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Santa Maria da Feira",
+            "id": 51,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "São João da Madeira",
+            "id": 52,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sever do Vouga",
+            "id": 53,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vagos",
+            "id": 54,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vale de Cambra",
+            "id": 55,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Odemira",
+            "id": 56,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ourique",
+            "id": 57,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Almodôvar",
+            "id": 58,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Castro Verde",
+            "id": 59,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Aljustrel",
+            "id": 60,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ferreira do Alentejo",
+            "id": 61,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Beja",
+            "id": 62,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mértola",
+            "id": 63,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Serpa",
+            "id": 64,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vidigueira",
+            "id": 65,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Cuba",
+            "id": 66,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alvito",
+            "id": 67,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Moura",
+            "id": 68,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Barrancos",
+            "id": 69,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Bragança",
+            "id": 70,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mirandela",
+            "id": 71,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Macedo de Cavaleiros",
+            "id": 72,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vimioso",
+            "id": 73,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vinhais",
+            "id": 74,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Miranda do Douro",
+            "id": 75,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mogadouro",
+            "id": 76,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alfândega da Fé",
+            "id": 77,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Torre de Moncorvo",
+            "id": 78,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Freixo de Espada à Cinta",
+            "id": 79,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Carrazeda de Ansiães",
+            "id": 80,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Flor",
+            "id": 81,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Belmonte",
+            "id": 82,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Castelo Branco",
+            "id": 83,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Covilhã",
+            "id": 84,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Fundão",
+            "id": 85,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Idanha-a-Nova",
+            "id": 86,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Oleiros",
+            "id": 87,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Penamacor",
+            "id": 88,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Proença-a-Nova",
+            "id": 89,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sertã",
+            "id": 90,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila de Rei",
+            "id": 91,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Velha de Ródão",
+            "id": 92,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Arganil",
+            "id": 93,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Cantanhede",
+            "id": 94,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Coimbra",
+            "id": 95,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Condeixa-a-Nova",
+            "id": 96,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Figueira da Foz",
+            "id": 97,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Góis",
+            "id": 98,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Lousã",
+            "id": 99,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mira",
+            "id": 100,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Miranda do Corvo",
+            "id": 101,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Montemor-o-Velho",
+            "id": 102,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Oliveira do Hospital",
+            "id": 103,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Pampilhosa da Serra",
+            "id": 104,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Penacova",
+            "id": 105,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Penela",
+            "id": 106,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Soure",
+            "id": 107,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Tábua",
+            "id": 108,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Nova de Poiares",
+            "id": 109,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vendas Novas",
+            "id": 110,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Montemor-o-Novo",
+            "id": 111,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mora",
+            "id": 112,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Arraiolos",
+            "id": 113,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Estremoz",
+            "id": 114,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Borba",
+            "id": 115,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Viçosa",
+            "id": 116,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alandroal",
+            "id": 117,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Redondo",
+            "id": 118,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Reguengos de Monsaraz",
+            "id": 119,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mourão",
+            "id": 120,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Portel",
+            "id": 121,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Viana do Alentejo",
+            "id": 122,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Évora",
+            "id": 123,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Albufeira",
+            "id": 124,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alcoutim",
+            "id": 125,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Aljezur",
+            "id": 126,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Castro Marim",
+            "id": 127,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Faro",
+            "id": 128,
+            "prioridade": 10,
+            "acessibilidade": [
+                "Carro"
+            ],
+            "delivery_deadline": 12.0,
+            "suprimentos_necessarios": 2400.0
+        },
+        {
+            "nome": "Lagoa",
+            "id": 129,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Lagos",
+            "id": 130,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Loulé",
+            "id": 131,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Monchique",
+            "id": 132,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Olhão",
+            "id": 133,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Portimão",
+            "id": 134,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "São Brás de Alportel",
+            "id": 135,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Silves",
+            "id": 136,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Tavira",
+            "id": 137,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila do Bispo",
+            "id": 138,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Real de Santo António",
+            "id": 139,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Aguiar da Beira",
+            "id": 140,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Almeida",
+            "id": 141,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Celorico da Beira",
+            "id": 142,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Figueira de Castelo Rodrigo",
+            "id": 143,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Fornos de Algodres",
+            "id": 144,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Gouveia",
+            "id": 145,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Guarda",
+            "id": 146,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Manteigas",
+            "id": 147,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Pinhel",
+            "id": 148,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sabugal",
+            "id": 149,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Seia",
+            "id": 150,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Trancoso",
+            "id": 151,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Nova de Foz Côa",
+            "id": 152,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mêda",
+            "id": 153,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Leiria",
+            "id": 154,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alcobaça",
+            "id": 155,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Batalha",
+            "id": 156,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Bombarral",
+            "id": 157,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Caldas da Rainha",
+            "id": 158,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Castanheira de Pera",
+            "id": 159,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Figueiró dos Vinhos",
+            "id": 160,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Marinha Grande",
+            "id": 161,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Nazaré",
+            "id": 162,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Óbidos",
+            "id": 163,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Pedrógão Grande",
+            "id": 164,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Peniche",
+            "id": 165,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Pombal",
+            "id": 166,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Porto de Mós",
+            "id": 167,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alvaiázere",
+            "id": 168,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ansião",
+            "id": 169,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Lisboa",
+            "id": 170,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Amadora",
+            "id": 171,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Oeiras",
+            "id": 172,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Cascais",
+            "id": 173,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sintra",
+            "id": 174,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Loures",
+            "id": 175,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Odivelas",
+            "id": 176,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Franca de Xira",
+            "id": 177,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mafra",
+            "id": 178,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Torres Vedras",
+            "id": 179,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sobral de Monte Agraço",
+            "id": 180,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Arruda dos Vinhos",
+            "id": 181,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alenquer",
+            "id": 182,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Azambuja",
+            "id": 183,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Cadaval",
+            "id": 184,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Lourinhã",
+            "id": 185,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alter do Chão",
+            "id": 186,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Arronches",
+            "id": 187,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Avis",
+            "id": 188,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Campo Maior",
+            "id": 189,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Castelo de Vide",
+            "id": 190,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Crato",
+            "id": 191,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Elvas",
+            "id": 192,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Fronteira",
+            "id": 193,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Gavião",
+            "id": 194,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Marvão",
+            "id": 195,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Monforte",
+            "id": 196,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Nisa",
+            "id": 197,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ponte de Sor",
+            "id": 198,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Portalegre",
+            "id": 199,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sousel",
+            "id": 200,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Amarante",
+            "id": 201,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Baião",
+            "id": 202,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Felgueiras",
+            "id": 203,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Gondomar",
+            "id": 204,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Lousada",
+            "id": 205,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Maia",
+            "id": 206,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Marco de Canaveses",
+            "id": 207,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Matosinhos",
+            "id": 208,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Paços de Ferreira",
+            "id": 209,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Paredes",
+            "id": 210,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Penafiel",
+            "id": 211,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Porto",
+            "id": 212,
+            "prioridade": 12,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "delivery_deadline": 12.0,
+            "suprimentos_necessarios": 100
+        },
+        {
+            "nome": "Póvoa de Varzim",
+            "id": 213,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Santo Tirso",
+            "id": 214,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Trofa",
+            "id": 215,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Valongo",
+            "id": 216,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila do Conde",
+            "id": 217,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Nova de Gaia",
+            "id": 218,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Santarém",
+            "id": 219,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Rio Maior",
+            "id": 220,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Torres Novas",
+            "id": 221,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Almeirim",
+            "id": 222,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alpiarça",
+            "id": 223,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Cartaxo",
+            "id": 224,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Salvaterra de Magos",
+            "id": 225,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Benavente",
+            "id": 226,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Coruche",
+            "id": 227,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Golegã",
+            "id": 228,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Entroncamento",
+            "id": 229,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Nova da Barquinha",
+            "id": 230,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Tomar",
+            "id": 231,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ferreira do Zêzere",
+            "id": 232,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Ourém",
+            "id": 233,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mação",
+            "id": 234,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sardoal",
+            "id": 235,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Abrantes",
+            "id": 236,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Constância",
+            "id": 237,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Chamusca",
+            "id": 238,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alcanena",
+            "id": 239,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alcochete",
+            "id": 240,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Montijo",
+            "id": 241,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Moita",
+            "id": 242,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Barreiro",
+            "id": 243,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Seixal",
+            "id": 244,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Almada",
+            "id": 245,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sesimbra",
+            "id": 246,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Palmela",
+            "id": 247,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Setúbal",
+            "id": 248,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Alcácer do Sal",
+            "id": 249,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Grândola",
+            "id": 250,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Santiago do Cacém",
+            "id": 251,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sines",
+            "id": 252,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Viana do Castelo",
+            "id": 253,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "delivery_deadline": 0,
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Armamar",
+            "id": 254,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Carregal do Sal",
+            "id": 255,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Castro Daire",
+            "id": 256,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Cinfães",
+            "id": 257,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Lamego",
+            "id": 258,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mangualde",
+            "id": 259,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Moimenta da Beira",
+            "id": 260,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Mortágua",
+            "id": 261,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Nelas",
+            "id": 262,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Oliveira de Frades",
+            "id": 263,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Penalva do Castelo",
+            "id": 264,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Penedono",
+            "id": 265,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Resende",
+            "id": 266,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Santa Comba Dão",
+            "id": 267,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "São João da Pesqueira",
+            "id": 268,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "São Pedro do Sul",
+            "id": 269,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sátão",
+            "id": 270,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Sernancelhe",
+            "id": 271,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Tabuaço",
+            "id": 272,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Tarouca",
+            "id": 273,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Tondela",
+            "id": 274,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vila Nova de Paiva",
+            "id": 275,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Viseu",
+            "id": 276,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        },
+        {
+            "nome": "Vouzela",
+            "id": 277,
+            "prioridade": 0,
+            "acessibilidade": [
+                "Camiao",
+                "Carro"
+            ],
+            "suprimentos_necessarios": 0
+        }
+    ],
+    "arestas": [
+        {
+            "origem": "Viana do Castelo",
+            "destino": "Esposende",
+            "custo": 15.0
+        },
+        {
+            "origem": "Viana do Castelo",
+            "destino": "Barcelos",
+            "custo": 20.0
+        },
+        {
+            "origem": "Ponte de Lima",
+            "destino": "Barcelos",
+            "custo": 18.0
+        },
+        {
+            "origem": "Ponte de Lima",
+            "destino": "Vila Verde",
+            "custo": 22.0
+        },
+        {
+            "origem": "Ponte da Barca",
+            "destino": "Vila Verde",
+            "custo": 19.0
+        },
+        {
+            "origem": "Ponte da Barca",
+            "destino": "Terras de Bouro",
+            "custo": 25.0
+        },
+        {
+            "origem": "Montalegre",
+            "destino": "Terras de Bouro",
+            "custo": 30.0
+        },
+        {
+            "origem": "Montalegre",
+            "destino": "Vieira do Minho",
+            "custo": 28.0
+        },
+        {
+            "origem": "Montalegre",
+            "destino": "Cabeceiras de Basto",
+            "custo": 35.0
+        },
+        {
+            "origem": "Cabeceiras de Basto",
+            "destino": "Boticas",
+            "custo": 20.0
+        },
+        {
+            "origem": "Cabeceiras de Basto",
+            "destino": "Ribeira de Pena",
+            "custo": 18.0
+        },
+        {
+            "origem": "Cabeceiras de Basto",
+            "destino": "Mondim de Basto",
+            "custo": 22.0
+        },
+        {
+            "origem": "Celorico de Basto",
+            "destino": "Mondim de Basto",
+            "custo": 15.0
+        },
+        {
+            "origem": "Celorico de Basto",
+            "destino": "Mondim de Basto",
+            "custo": 15.0
+        },
+        {
+            "origem": "Chaves",
+            "destino": "Vinhais",
+            "custo": 25.0
+        },
+        {
+            "origem": "Valpaços",
+            "destino": "Vinhais",
+            "custo": 20.0
+        },
+        {
+            "origem": "Valpaços",
+            "destino": "Mirandela",
+            "custo": 18.0
+        },
+        {
+            "origem": "Murça",
+            "destino": "Mirandela",
+            "custo": 15.0
+        },
+        {
+            "origem": "Murça",
+            "destino": "Carrazeda de Ansiães",
+            "custo": 20.0
+        },
+        {
+            "origem": "Alijó",
+            "destino": "Carrazeda de Ansiães",
+            "custo": 12.0
+        },
+        {
+            "origem": "Carrazeda de Ansiães",
+            "destino": "São João da Pesqueira",
+            "custo": 15.0
+        },
+        {
+            "origem": "Carrazeda de Ansiães",
+            "destino": "Vila Nova de Foz Côa",
+            "custo": 18.0
+        },
+        {
+            "origem": "Torre de Moncorvo",
+            "destino": "Vila Nova de Foz Côa",
+            "custo": 20.0
+        },
+        {
+            "origem": "Freixo de Espada à Cinta",
+            "destino": "Figueira de Castelo Rodrigo",
+            "custo": 22.0
+        },
+        {
+            "origem": "Mesão Frio",
+            "destino": "Resende",
+            "custo": 18.0
+        },
+        {
+            "origem": "Mesão Frio",
+            "destino": "Lamego",
+            "custo": 20.0
+        },
+        {
+            "origem": "Peso da Régua",
+            "destino": "Lamego",
+            "custo": 12.0
+        },
+        {
+            "origem": "Peso da Régua",
+            "destino": "Armamar",
+            "custo": 15.0
+        },
+        {
+            "origem": "Sabrosa",
+            "destino": "Tabuaço",
+            "custo": 20.0
+        },
+        {
+            "origem": "Alijó",
+            "destino": "São João da Pesqueira",
+            "custo": 18.0
+        },
+        {
+            "origem": "Baião",
+            "destino": "Mesão Frio",
+            "custo": 16.0
+        },
+        {
+            "origem": "Baião",
+            "destino": "Santa Marta de Penaguião",
+            "custo": 20.0
+        },
+        {
+            "origem": "Amarante",
+            "destino": "Mondim de Basto",
+            "custo": 18.0
+        },
+        {
+            "origem": "Amarante",
+            "destino": "Vila Real",
+            "custo": 25.0
+        },
+        {
+            "origem": "Baião",
+            "destino": "Resende",
+            "custo": 15.0
+        },
+        {
+            "origem": "Baião",
+            "destino": "Cinfães",
+            "custo": 18.0
+        },
+        {
+            "origem": "Marco de Canaveses",
+            "destino": "Cinfães",
+            "custo": 20.0
+        },
+        {
+            "origem": "Vila Nova de Gaia",
+            "destino": "Espinho",
+            "custo": 12.0
+        },
+        {
+            "origem": "Vila Nova de Gaia",
+            "destino": "Santa Maria da Feira",
+            "custo": 15.0
+        },
+        {
+            "origem": "Santa Maria da Feira",
+            "destino": "Gondomar",
+            "custo": 18.0
+        },
+        {
+            "origem": "Castelo de Paiva",
+            "destino": "Gondomar",
+            "custo": 15.0
+        },
+        {
+            "origem": "Castelo de Paiva",
+            "destino": "Penafiel",
+            "custo": 20.0
+        },
+        {
+            "origem": "Castelo de Paiva",
+            "destino": "Marco de Canaveses",
+            "custo": 25.0
+        },
+        {
+            "origem": "Póvoa de Varzim",
+            "destino": "Esposende",
+            "custo": 10.0
+        },
+        {
+            "origem": "Póvoa de Varzim",
+            "destino": "Barcelos",
+            "custo": 12.0
+        },
+        {
+            "origem": "Póvoa de Varzim",
+            "destino": "Vila Nova de Famalicão",
+            "custo": 15.0
+        },
+        {
+            "origem": "Vila Nova de Famalicão",
+            "destino": "Vila do Conde",
+            "custo": 10.0
+        },
+        {
+            "origem": "Vila Nova de Famalicão",
+            "destino": "Trofa",
+            "custo": 12.0
+        },
+        {
+            "origem": "Vila Nova de Famalicão",
+            "destino": "Santo Tirso",
+            "custo": 14.0
+        },
+        {
+            "origem": "Santo Tirso",
+            "destino": "Vizela",
+            "custo": 12.0
+        },
+        {
+            "origem": "Santo Tirso",
+            "destino": "Guimarães",
+            "custo": 18.0
+        },
+        {
+            "origem": "Vizela",
+            "destino": "Lousada",
+            "custo": 10.0
+        },
+        {
+            "origem": "Vizela",
+            "destino": "Felgueiras",
+            "custo": 15.0
+        },
+        {
+            "origem": "Felgueiras",
+            "destino": "Guimarães",
+            "custo": 14.0
+        },
+        {
+            "origem": "Felgueiras",
+            "destino": "Fafe",
+            "custo": 18.0
+        },
+        {
+            "origem": "Felgueiras",
+            "destino": "Celorico de Basto",
+            "custo": 20.0
+        },
+        {
+            "origem": "Amarante",
+            "destino": "Celorico de Basto",
+            "custo": 16.0
+        },
+        {
+            "origem": "Vagos",
+            "destino": "Mira",
+            "custo": 12.0
+        },
+        {
+            "origem": "Vagos",
+            "destino": "Cantanhede",
+            "custo": 15.0
+        },
+        {
+            "origem": "Cantanhede",
+            "destino": "Anadia",
+            "custo": 12.0
+        },
+        {
+            "origem": "Cantanhede",
+            "destino": "Mealhada",
+            "custo": 14.0
+        },
+        {
+            "origem": "Cantanhede",
+            "destino": "Oliveira do Bairro",
+            "custo": 10.0
+        },
+        {
+            "origem": "Mealhada",
+            "destino": "Coimbra",
+            "custo": 15.0
+        },
+        {
+            "origem": "Mealhada",
+            "destino": "Penacova",
+            "custo": 18.0
+        },
+        {
+            "origem": "Cinfães",
+            "destino": "Castelo de Paiva",
+            "custo": 20.0
+        },
+        {
+            "origem": "Cinfães",
+            "destino": "Arouca",
+            "custo": 22.0
+        },
+        {
+            "origem": "Arouca",
+            "destino": "Castro Daire",
+            "custo": 25.0
+        },
+        {
+            "origem": "Arouca",
+            "destino": "São Pedro do Sul",
+            "custo": 20.0
+        },
+        {
+            "origem": "Vale de Cambra",
+            "destino": "São Pedro do Sul",
+            "custo": 15.0
+        },
+        {
+            "origem": "Vale de Cambra",
+            "destino": "Oliveira de Frades",
+            "custo": 12.0
+        },
+        {
+            "origem": "Sever do Vouga",
+            "destino": "Oliveira de Frades",
+            "custo": 10.0
+        },
+        {
+            "origem": "Águeda",
+            "destino": "Vouzela",
+            "custo": 16.0
+        },
+        {
+            "origem": "Águeda",
+            "destino": "Tondela",
+            "custo": 20.0
+        },
+        {
+            "origem": "Águeda",
+            "destino": "Mortágua",
+            "custo": 22.0
+        },
+        {
+            "origem": "Mortágua",
+            "destino": "Anadia",
+            "custo": 24.0
+        },
+        {
+            "origem": "Mortágua",
+            "destino": "Mealhada",
+            "custo": 20.0
+        },
+        {
+            "origem": "Penacova",
+            "destino": "Mortágua",
+            "custo": 15.0
+        },
+        {
+            "origem": "Penacova",
+            "destino": "Santa Comba Dão",
+            "custo": 18.0
+        },
+        {
+            "origem": "Tábua",
+            "destino": "Santa Comba Dão",
+            "custo": 16.0
+        },
+        {
+            "origem": "Tábua",
+            "destino": "Carregal do Sal",
+            "custo": 14.0
+        },
+        {
+            "origem": "Oliveira do Hospital",
+            "destino": "Carregal do Sal",
+            "custo": 19.0
+        },
+        {
+            "origem": "Oliveira do Hospital",
+            "destino": "Nelas",
+            "custo": 22.0
+        },
+        {
+            "origem": "Vila Nova de Foz Côa",
+            "destino": "São João da Pesqueira",
+            "custo": 18.0
+        },
+        {
+            "origem": "Vila Nova de Foz Côa",
+            "destino": "Penedono",
+            "custo": 20.0
+        },
+        {
+            "origem": "Penedono",
+            "destino": "Mêda",
+            "custo": 22.0
+        },
+        {
+            "origem": "Penedono",
+            "destino": "Trancoso",
+            "custo": 25.0
+        },
+        {
+            "origem": "Sernancelhe",
+            "destino": "Trancoso",
+            "custo": 18.0
+        },
+        {
+            "origem": "Sernancelhe",
+            "destino": "Aguiar da Beira",
+            "custo": 20.0
+        },
+        {
+            "origem": "Aguiar da Beira",
+            "destino": "Sátão",
+            "custo": 15.0
+        },
+        {
+            "origem": "Aguiar da Beira",
+            "destino": "Penalva do Castelo",
+            "custo": 18.0
+        },
+        {
+            "origem": "Fornos de Algodres",
+            "destino": "Penalva do Castelo",
+            "custo": 16.0
+        },
+        {
+            "origem": "Fornos de Algodres",
+            "destino": "Mangualde",
+            "custo": 20.0
+        },
+        {
+            "origem": "Mangualde",
+            "destino": "Gouveia",
+            "custo": 22.0
+        },
+        {
+            "origem": "Mangualde",
+            "destino": "Seia",
+            "custo": 18.0
+        },
+        {
+            "origem": "Seia",
+            "destino": "Nelas",
+            "custo": 16.0
+        },
+        {
+            "origem": "Seia",
+            "destino": "Arganil",
+            "custo": 30.0
+        },
+        {
+            "origem": "Seia",
+            "destino": "Oliveira do Hospital",
+            "custo": 20.0
+        },
+        {
+            "origem": "Covilhã",
+            "destino": "Seia",
+            "custo": 22.0
+        },
+        {
+            "origem": "Covilhã",
+            "destino": "Manteigas",
+            "custo": 18.0
+        },
+        {
+            "origem": "Covilhã",
+            "destino": "Guarda",
+            "custo": 28.0
+        },
+        {
+            "origem": "Belmonte",
+            "destino": "Guarda",
+            "custo": 15.0
+        },
+        {
+            "origem": "Belmonte",
+            "destino": "Sabugal",
+            "custo": 20.0
+        },
+        {
+            "origem": "Sabugal",
+            "destino": "Fundão",
+            "custo": 25.0
+        },
+        {
+            "origem": "Sabugal",
+            "destino": "Penamacor",
+            "custo": 30.0
+        },
+        {
+            "origem": "Pampilhosa da Serra",
+            "destino": "Oleiros",
+            "custo": 25.0
+        },
+        {
+            "origem": "Pampilhosa da Serra",
+            "destino": "Fundão",
+            "custo": 40.0
+        },
+        {
+            "origem": "Pampilhosa da Serra",
+            "destino": "Covilhã",
+            "custo": 45.0
+        },
+        {
+            "origem": "Arganil",
+            "destino": "Covilhã",
+            "custo": 50.0
+        },
+        {
+            "origem": "Pombal",
+            "destino": "Figueira da Foz",
+            "custo": 40.0
+        },
+        {
+            "origem": "Pombal",
+            "destino": "Soure",
+            "custo": 30.0
+        },
+        {
+            "origem": "Ansião",
+            "destino": "Soure",
+            "custo": 25.0
+        },
+        {
+            "origem": "Ansião",
+            "destino": "Penela",
+            "custo": 20.0
+        },
+        {
+            "origem": "Figueiró dos Vinhos",
+            "destino": "Penela",
+            "custo": 30.0
+        },
+        {
+            "origem": "Figueiró dos Vinhos",
+            "destino": "Miranda do Corvo",
+            "custo": 35.0
+        },
+        {
+            "origem": "Figueiró dos Vinhos",
+            "destino": "Lousã",
+            "custo": 40.0
+        },
+        {
+            "origem": "Castanheira de Pera",
+            "destino": "Lousã",
+            "custo": 25.0
+        },
+        {
+            "origem": "Castanheira de Pera",
+            "destino": "Góis",
+            "custo": 30.0
+        },
+        {
+            "origem": "Pedrógão Grande",
+            "destino": "Góis",
+            "custo": 35.0
+        },
+        {
+            "origem": "Pedrógão Grande",
+            "destino": "Pampilhosa da Serra",
+            "custo": 40.0
+        },
+        {
+            "origem": "Nisa",
+            "destino": "Vila Velha de Ródão",
+            "custo": 30.0
+        },
+        {
+            "origem": "Sertã",
+            "destino": "Figueiró dos Vinhos",
+            "custo": 20.0
+        },
+        {
+            "origem": "Sertã",
+            "destino": "Pedrógão Grande",
+            "custo": 25.0
+        },
+        {
+            "origem": "Ferreira do Zêzere",
+            "destino": "Sertã",
+            "custo": 25.0
+        },
+        {
+            "origem": "Ferreira do Zêzere",
+            "destino": "Vila de Rei",
+            "custo": 30.0
+        },
+        {
+            "origem": "Abrantes",
+            "destino": "Vila de Rei",
+            "custo": 20.0
+        },
+        {
+            "origem": "Sardoal",
+            "destino": "Vila de Rei",
+            "custo": 15.0
+        },
+        {
+            "origem": "Mação",
+            "destino": "Vila de Rei",
+            "custo": 18.0
+        },
+        {
+            "origem": "Mação",
+            "destino": "Sertã",
+            "custo": 20.0
+        },
+        {
+            "origem": "Mação",
+            "destino": "Proença-a-Nova",
+            "custo": 25.0
+        },
+        {
+            "origem": "Rio Maior",
+            "destino": "Caldas da Rainha",
+            "custo": 20.0
+        },
+        {
+            "origem": "Rio Maior",
+            "destino": "Alcobaça",
+            "custo": 30.0
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Porto de Mós",
+            "custo": 35.0
+        },
+        {
+            "origem": "Alcanena",
+            "destino": "Porto de Mós",
+            "custo": 25.0
+        },
+        {
+            "origem": "Alcanena",
+            "destino": "Batalha",
+            "custo": 30.0
+        },
+        {
+            "origem": "Ourém",
+            "destino": "Batalha",
+            "custo": 20.0
+        },
+        {
+            "origem": "Ourém",
+            "destino": "Leiria",
+            "custo": 25.0
+        },
+        {
+            "origem": "Ourém",
+            "destino": "Pombal",
+            "custo": 35.0
+        },
+        {
+            "origem": "Ourém",
+            "destino": "Alvaiázere",
+            "custo": 40.0
+        },
+        {
+            "origem": "Ferreira do Zêzere",
+            "destino": "Alvaiázere",
+            "custo": 30.0
+        },
+        {
+            "origem": "Ferreira do Zêzere",
+            "destino": "Figueiró dos Vinhos",
+            "custo": 35.0
+        },
+        {
+            "origem": "Lourinhã",
+            "destino": "Peniche",
+            "custo": 20.0
+        },
+        {
+            "origem": "Lourinhã",
+            "destino": "Óbidos",
+            "custo": 25.0
+        },
+        {
+            "origem": "Lourinhã",
+            "destino": "Bombarral",
+            "custo": 30.0
+        },
+        {
+            "origem": "Cadaval",
+            "destino": "Bombarral",
+            "custo": 18.0
+        },
+        {
+            "origem": "Cadaval",
+            "destino": "Caldas da Rainha",
+            "custo": 35.0
+        },
+        {
+            "origem": "Benavente",
+            "destino": "Vila Franca de Xira",
+            "custo": 20.0
+        },
+        {
+            "origem": "Azambuja",
+            "destino": "Salvaterra de Magos",
+            "custo": 15.0
+        },
+        {
+            "origem": "Azambuja",
+            "destino": "Cartaxo",
+            "custo": 18.0
+        },
+        {
+            "origem": "Azambuja",
+            "destino": "Santarém",
+            "custo": 25.0
+        },
+        {
+            "origem": "Azambuja",
+            "destino": "Rio Maior",
+            "custo": 35.0
+        },
+        {
+            "origem": "Cadaval",
+            "destino": "Rio Maior",
+            "custo": 40.0
+        },
+        {
+            "origem": "Ponte de Sor",
+            "destino": "Coruche",
+            "custo": 50.0
+        },
+        {
+            "origem": "Ponte de Sor",
+            "destino": "Chamusca",
+            "custo": 40.0
+        },
+        {
+            "origem": "Ponte de Sor",
+            "destino": "Abrantes",
+            "custo": 35.0
+        },
+        {
+            "origem": "Gavião",
+            "destino": "Abrantes",
+            "custo": 25.0
+        },
+        {
+            "origem": "Gavião",
+            "destino": "Mação",
+            "custo": 30.0
+        },
+        {
+            "origem": "Lisboa",
+            "destino": "Almada",
+            "custo": 15.0
+        },
+        {
+            "origem": "Alcácer do Sal",
+            "destino": "Viana do Alentejo",
+            "custo": 50.0
+        },
+        {
+            "origem": "Alcácer do Sal",
+            "destino": "Montemor-o-Novo",
+            "custo": 40.0
+        },
+        {
+            "origem": "Alcácer do Sal",
+            "destino": "Vendas Novas",
+            "custo": 35.0
+        },
+        {
+            "origem": "Palmela",
+            "destino": "Vendas Novas",
+            "custo": 30.0
+        },
+        {
+            "origem": "Montijo",
+            "destino": "Montemor-o-Novo",
+            "custo": 45.0
+        },
+        {
+            "origem": "Montijo",
+            "destino": "Vendas Novas",
+            "custo": 40.0
+        },
+        {
+            "origem": "Coruche",
+            "destino": "Montijo",
+            "custo": 45.0
+        },
+        {
+            "origem": "Benavente",
+            "destino": "Montijo",
+            "custo": 25.0
+        },
+        {
+            "origem": "Benavente",
+            "destino": "Palmela",
+            "custo": 30.0
+        },
+        {
+            "origem": "Benavente",
+            "destino": "Alcochete",
+            "custo": 20.0
+        },
+        {
+            "origem": "Coruche",
+            "destino": "Mora",
+            "custo": 40.0
+        },
+        {
+            "origem": "Coruche",
+            "destino": "Arraiolos",
+            "custo": 35.0
+        },
+        {
+            "origem": "Coruche",
+            "destino": "Montemor-o-Novo",
+            "custo": 30.0
+        },
+        {
+            "origem": "Elvas",
+            "destino": "Alandroal",
+            "custo": 30.0
+        },
+        {
+            "origem": "Elvas",
+            "destino": "Vila Viçosa",
+            "custo": 20.0
+        },
+        {
+            "origem": "Elvas",
+            "destino": "Borba",
+            "custo": 25.0
+        },
+        {
+            "origem": "Monforte",
+            "destino": "Borba",
+            "custo": 25.0
+        },
+        {
+            "origem": "Monforte",
+            "destino": "Estremoz",
+            "custo": 20.0
+        },
+        {
+            "origem": "Fronteira",
+            "destino": "Estremoz",
+            "custo": 18.0
+        },
+        {
+            "origem": "Sousel",
+            "destino": "Estremoz",
+            "custo": 15.0
+        },
+        {
+            "origem": "Sousel",
+            "destino": "Arraiolos",
+            "custo": 22.0
+        },
+        {
+            "origem": "Sousel",
+            "destino": "Mora",
+            "custo": 30.0
+        },
+        {
+            "origem": "Avis",
+            "destino": "Mora",
+            "custo": 28.0
+        },
+        {
+            "origem": "Ponte de Sor",
+            "destino": "Mora",
+            "custo": 35.0
+        },
+        {
+            "origem": "Alvito",
+            "destino": "Viana do Alentejo",
+            "custo": 20.0
+        },
+        {
+            "origem": "Portel",
+            "destino": "Cuba",
+            "custo": 15.0
+        },
+        {
+            "origem": "Portel",
+            "destino": "Vidigueira",
+            "custo": 25.0
+        },
+        {
+            "origem": "Portel",
+            "destino": "Moura",
+            "custo": 35.0
+        },
+        {
+            "origem": "Reguengos de Monsaraz",
+            "destino": "Moura",
+            "custo": 30.0
+        },
+        {
+            "origem": "Mourão",
+            "destino": "Moura",
+            "custo": 40.0
+        },
+        {
+            "origem": "Mourão",
+            "destino": "Barrancos",
+            "custo": 50.0
+        },
+        {
+            "origem": "Alvito",
+            "destino": "Alcácer do Sal",
+            "custo": 60.0
+        },
+        {
+            "origem": "Odemira",
+            "destino": "Sines",
+            "custo": 45.0
+        },
+        {
+            "origem": "Odemira",
+            "destino": "Santiago do Cacém",
+            "custo": 50.0
+        },
+        {
+            "origem": "Ourique",
+            "destino": "Santiago do Cacém",
+            "custo": 40.0
+        },
+        {
+            "origem": "Aljustrel",
+            "destino": "Santiago do Cacém",
+            "custo": 35.0
+        },
+        {
+            "origem": "Ferreira do Alentejo",
+            "destino": "Santiago do Cacém",
+            "custo": 40.0
+        },
+        {
+            "origem": "Ferreira do Alentejo",
+            "destino": "Grândola",
+            "custo": 30.0
+        },
+        {
+            "origem": "Ferreira do Alentejo",
+            "destino": "Alcácer do Sal",
+            "custo": 50.0
+        },
+        {
+            "origem": "Odemira",
+            "destino": "Monchique",
+            "custo": 35.0
+        },
+        {
+            "origem": "Odemira",
+            "destino": "Aljezur",
+            "custo": 40.0
+        },
+        {
+            "origem": "Odemira",
+            "destino": "Silves",
+            "custo": 50.0
+        },
+        {
+            "origem": "Ourique",
+            "destino": "Silves",
+            "custo": 45.0
+        },
+        {
+            "origem": "Almodôvar",
+            "destino": "Silves",
+            "custo": 55.0
+        },
+        {
+            "origem": "Almodôvar",
+            "destino": "Loulé",
+            "custo": 60.0
+        },
+        {
+            "origem": "Mértola",
+            "destino": "Alcoutim",
+            "custo": 30.0
+        },
+        {
+            "origem": "Montalegre",
+            "destino": "Chaves",
+            "custo": 35.0
+        },
+        {
+            "origem": "Montalegre",
+            "destino": "Boticas",
+            "custo": 22.0
+        },
+        {
+            "origem": "Ribeira de Pena",
+            "destino": "Boticas",
+            "custo": 18.0
+        },
+        {
+            "origem": "Ribeira de Pena",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 16.0
+        },
+        {
+            "origem": "Ribeira de Pena",
+            "destino": "Vila Real",
+            "custo": 23.0
+        },
+        {
+            "origem": "Ribeira de Pena",
+            "destino": "Mondim de Basto",
+            "custo": 25.0
+        },
+        {
+            "origem": "Chaves",
+            "destino": "Boticas",
+            "custo": 25.0
+        },
+        {
+            "origem": "Chaves",
+            "destino": "Valpaços",
+            "custo": 30.0
+        },
+        {
+            "origem": "Chaves",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 30.0
+        },
+        {
+            "origem": "Valpaços",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 25.0
+        },
+        {
+            "origem": "Valpaços",
+            "destino": "Murça",
+            "custo": 20.0
+        },
+        {
+            "origem": "Murça",
+            "destino": "Alijó",
+            "custo": 15.0
+        },
+        {
+            "origem": "Murça",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 18.0
+        },
+        {
+            "origem": "Sabrosa",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 20.0
+        },
+        {
+            "origem": "Sabrosa",
+            "destino": "Vila Real",
+            "custo": 18.0
+        },
+        {
+            "origem": "Sabrosa",
+            "destino": "Peso da Régua",
+            "custo": 22.0
+        },
+        {
+            "origem": "Peso da Régua",
+            "destino": "Mesão Frio",
+            "custo": 8.0
+        },
+        {
+            "origem": "Peso da Régua",
+            "destino": "Santa Marta de Penaguião",
+            "custo": 12.0
+        },
+        {
+            "origem": "Santa Marta de Penaguião",
+            "destino": "Vila Real",
+            "custo": 15.0
+        },
+        {
+            "origem": "Vila Real",
+            "destino": "Peso da Régua",
+            "custo": 23.0
+        },
+        {
+            "origem": "Vila Real",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 20.0
+        },
+        {
+            "origem": "Vila Real",
+            "destino": "Mondim de Basto",
+            "custo": 25.0
+        },
+        {
+            "origem": "Vila do Bispo",
+            "destino": "Lagos",
+            "custo": 25.0
+        },
+        {
+            "origem": "Vila do Bispo",
+            "destino": "Aljezur",
+            "custo": 35.0
+        },
+        {
+            "origem": "Aljezur",
+            "destino": "Monchique",
+            "custo": 32.0
+        },
+        {
+            "origem": "Aljezur",
+            "destino": "Lagos",
+            "custo": 32.0
+        },
+        {
+            "origem": "Lagos",
+            "destino": "Portimão",
+            "custo": 22.0
+        },
+        {
+            "origem": "Lagos",
+            "destino": "Monchique",
+            "custo": 37.0
+        },
+        {
+            "origem": "Monchique",
+            "destino": "Portimão",
+            "custo": 26.0
+        },
+        {
+            "origem": "Monchique",
+            "destino": "Silves",
+            "custo": 30.0
+        },
+        {
+            "origem": "Portimão",
+            "destino": "Silves",
+            "custo": 20.0
+        },
+        {
+            "origem": "Portimão",
+            "destino": "Lagoa",
+            "custo": 10.0
+        },
+        {
+            "origem": "Silves",
+            "destino": "Lagoa",
+            "custo": 7.4
+        },
+        {
+            "origem": "Silves",
+            "destino": "Albufeira",
+            "custo": 27.0
+        },
+        {
+            "origem": "Silves",
+            "destino": "Loulé",
+            "custo": 49.0
+        },
+        {
+            "origem": "Albufeira",
+            "destino": "Loulé",
+            "custo": 26.0
+        },
+        {
+            "origem": "Loulé",
+            "destino": "Alcoutim",
+            "custo": 87.0
+        },
+        {
+            "origem": "Loulé",
+            "destino": "Tavira",
+            "custo": 83.0
+        },
+        {
+            "origem": "Loulé",
+            "destino": "São Brás de Alportel",
+            "custo": 13.0
+        },
+        {
+            "origem": "Loulé",
+            "destino": "Faro",
+            "custo": 17.0
+        },
+        {
+            "origem": "Faro",
+            "destino": "São Brás de Alportel",
+            "custo": 20.0
+        },
+        {
+            "origem": "Faro",
+            "destino": "Olhão",
+            "custo": 11.0
+        },
+        {
+            "origem": "Olhão",
+            "destino": "São Brás de Alportel",
+            "custo": 19.0
+        },
+        {
+            "origem": "Olhão",
+            "destino": "Tavira",
+            "custo": 23.0
+        },
+        {
+            "origem": "Tavira",
+            "destino": "São Brás de Alportel",
+            "custo": 26.0
+        },
+        {
+            "origem": "Tavira",
+            "destino": "Alcoutim",
+            "custo": 57.0
+        },
+        {
+            "origem": "Tavira",
+            "destino": "Castro Marim",
+            "custo": 26.0
+        },
+        {
+            "origem": "Castro Marim",
+            "destino": "Alcoutim",
+            "custo": 37.0
+        },
+        {
+            "origem": "Castro Marim",
+            "destino": "Vila Real de Santo António",
+            "custo": 4.0
+        },
+        {
+            "origem": "Odemira",
+            "destino": "Ourique",
+            "custo": 49.8
+        },
+        {
+            "origem": "Ourique",
+            "destino": "Aljustrel",
+            "custo": 31.5
+        },
+        {
+            "origem": "Ourique",
+            "destino": "Castro Verde",
+            "custo": 15.2
+        },
+        {
+            "origem": "Ourique",
+            "destino": "Almodôvar",
+            "custo": 29.0
+        },
+        {
+            "origem": "Castro Verde",
+            "destino": "Aljustrel",
+            "custo": 23.0
+        },
+        {
+            "origem": "Castro Verde",
+            "destino": "Beja",
+            "custo": 44.3
+        },
+        {
+            "origem": "Castro Verde",
+            "destino": "Mértola",
+            "custo": 43.1
+        },
+        {
+            "origem": "Castro Verde",
+            "destino": "Almodôvar",
+            "custo": 21.8
+        },
+        {
+            "origem": "Beja",
+            "destino": "Aljustrel",
+            "custo": 36.8
+        },
+        {
+            "origem": "Beja",
+            "destino": "Ferreira do Alentejo",
+            "custo": 24.5
+        },
+        {
+            "origem": "Beja",
+            "destino": "Cuba",
+            "custo": 20.1
+        },
+        {
+            "origem": "Beja",
+            "destino": "Vidigueira",
+            "custo": 26.0
+        },
+        {
+            "origem": "Beja",
+            "destino": "Serpa",
+            "custo": 27.4
+        },
+        {
+            "origem": "Beja",
+            "destino": "Mértola",
+            "custo": 52.5
+        },
+        {
+            "origem": "Mértola",
+            "destino": "Almodôvar",
+            "custo": 41.6
+        },
+        {
+            "origem": "Mértola",
+            "destino": "Serpa",
+            "custo": 56.3
+        },
+        {
+            "origem": "Ferreira do Alentejo",
+            "destino": "Aljustrel",
+            "custo": 27.0
+        },
+        {
+            "origem": "Ferreira do Alentejo",
+            "destino": "Cuba",
+            "custo": 24.1
+        },
+        {
+            "origem": "Ferreira do Alentejo",
+            "destino": "Alvito",
+            "custo": 27.9
+        },
+        {
+            "origem": "Cuba",
+            "destino": "Alvito",
+            "custo": 17.3
+        },
+        {
+            "origem": "Cuba",
+            "destino": "Vidigueira",
+            "custo": 11.0
+        },
+        {
+            "origem": "Vidigueira",
+            "destino": "Serpa",
+            "custo": 43.4
+        },
+        {
+            "origem": "Vidigueira",
+            "destino": "Moura",
+            "custo": 35.8
+        },
+        {
+            "origem": "Moura",
+            "destino": "Serpa",
+            "custo": 30.9
+        },
+        {
+            "origem": "Moura",
+            "destino": "Barrancos",
+            "custo": 49.2
+        },
+        {
+            "origem": "Sines",
+            "destino": "Santiago do Cacém",
+            "custo": 17.3
+        },
+        {
+            "origem": "Santiago do Cacém",
+            "destino": "Grândola",
+            "custo": 30.9
+        },
+        {
+            "origem": "Grândola",
+            "destino": "Alcácer do Sal",
+            "custo": 26.1
+        },
+        {
+            "origem": "Alcácer do Sal",
+            "destino": "Palmela",
+            "custo": 53.4
+        },
+        {
+            "origem": "Palmela",
+            "destino": "Setúbal",
+            "custo": 8.6
+        },
+        {
+            "origem": "Palmela",
+            "destino": "Sesimbra",
+            "custo": 28.3
+        },
+        {
+            "origem": "Palmela",
+            "destino": "Barreiro",
+            "custo": 26.1
+        },
+        {
+            "origem": "Palmela",
+            "destino": "Moita",
+            "custo": 13.0
+        },
+        {
+            "origem": "Palmela",
+            "destino": "Montijo",
+            "custo": 20.7
+        },
+        {
+            "origem": "Palmela",
+            "destino": "Alcochete",
+            "custo": 26.7
+        },
+        {
+            "origem": "Sesimbra",
+            "destino": "Setúbal",
+            "custo": 29.4
+        },
+        {
+            "origem": "Sesimbra",
+            "destino": "Barreiro",
+            "custo": 30.2
+        },
+        {
+            "origem": "Sesimbra",
+            "destino": "Seixal",
+            "custo": 25.5
+        },
+        {
+            "origem": "Sesimbra",
+            "destino": "Almada",
+            "custo": 31.9
+        },
+        {
+            "origem": "Montijo",
+            "destino": "Alcochete",
+            "custo": 6.8
+        },
+        {
+            "origem": "Montijo",
+            "destino": "Moita",
+            "custo": 12.6
+        },
+        {
+            "origem": "Barreiro",
+            "destino": "Moita",
+            "custo": 9.5
+        },
+        {
+            "origem": "Barreiro",
+            "destino": "Seixal",
+            "custo": 15.8
+        },
+        {
+            "origem": "Seixal",
+            "destino": "Almada",
+            "custo": 14.8
+        },
+        {
+            "origem": "Vendas Novas",
+            "destino": "Montemor-o-Novo",
+            "custo": 24.1
+        },
+        {
+            "origem": "Montemor-o-Novo",
+            "destino": "Arraiolos",
+            "custo": 22.0
+        },
+        {
+            "origem": "Montemor-o-Novo",
+            "destino": "Évora",
+            "custo": 30.7
+        },
+        {
+            "origem": "Montemor-o-Novo",
+            "destino": "Viana do Alentejo",
+            "custo": 51.1
+        },
+        {
+            "origem": "Évora",
+            "destino": "Arraiolos",
+            "custo": 22.5
+        },
+        {
+            "origem": "Évora",
+            "destino": "Estremoz",
+            "custo": 47.1
+        },
+        {
+            "origem": "Évora",
+            "destino": "Redondo",
+            "custo": 37.0
+        },
+        {
+            "origem": "Évora",
+            "destino": "Reguengos de Monsaraz",
+            "custo": 38.5
+        },
+        {
+            "origem": "Évora",
+            "destino": "Portel",
+            "custo": 41.3
+        },
+        {
+            "origem": "Évora",
+            "destino": "Viana do Alentejo",
+            "custo": 31.6
+        },
+        {
+            "origem": "Redondo",
+            "destino": "Estremoz",
+            "custo": 27.2
+        },
+        {
+            "origem": "Redondo",
+            "destino": "Borba",
+            "custo": 28.6
+        },
+        {
+            "origem": "Redondo",
+            "destino": "Vila Viçosa",
+            "custo": 25.6
+        },
+        {
+            "origem": "Redondo",
+            "destino": "Alandroal",
+            "custo": 17.9
+        },
+        {
+            "origem": "Redondo",
+            "destino": "Reguengos de Monsaraz",
+            "custo": 28.1
+        },
+        {
+            "origem": "Vila Viçosa",
+            "destino": "Portel",
+            "custo": 74.1
+        },
+        {
+            "origem": "Portel",
+            "destino": "Reguengos de Monsaraz",
+            "custo": 32.6
+        },
+        {
+            "origem": "Reguengos de Monsaraz",
+            "destino": "Alandroal",
+            "custo": 37.5
+        },
+        {
+            "origem": "Reguengos de Monsaraz",
+            "destino": "Mourão",
+            "custo": 21.3
+        },
+        {
+            "origem": "Alandroal",
+            "destino": "Mourão",
+            "custo": 55.7
+        },
+        {
+            "origem": "Alandroal",
+            "destino": "Vila Viçosa",
+            "custo": 8.8
+        },
+        {
+            "origem": "Vila Viçosa",
+            "destino": "Borba",
+            "custo": 7.7
+        },
+        {
+            "origem": "Borba",
+            "destino": "Estremoz",
+            "custo": 12.7
+        },
+        {
+            "origem": "Estremoz",
+            "destino": "Arraiolos",
+            "custo": 42.0
+        },
+        {
+            "origem": "Arraiolos",
+            "destino": "Mora",
+            "custo": 36.1
+        },
+        {
+            "origem": "Alter do Chão",
+            "destino": "Avis",
+            "custo": 10
+        },
+        {
+            "origem": "Alter do Chão",
+            "destino": "Crato",
+            "custo": 15
+        },
+        {
+            "origem": "Alter do Chão",
+            "destino": "Fronteira",
+            "custo": 20
+        },
+        {
+            "origem": "Alter do Chão",
+            "destino": "Ponte de Sor",
+            "custo": 29
+        },
+        {
+            "origem": "Alter do Chão",
+            "destino": "Monforte",
+            "custo": 28
+        },
+        {
+            "origem": "Arronches",
+            "destino": "Campo Maior",
+            "custo": 25
+        },
+        {
+            "origem": "Arronches",
+            "destino": "Elvas",
+            "custo": 30
+        },
+        {
+            "origem": "Arronches",
+            "destino": "Portalegre",
+            "custo": 35
+        },
+        {
+            "origem": "Arronches",
+            "destino": "Monforte",
+            "custo": 30
+        },
+        {
+            "origem": "Avis",
+            "destino": "Fronteira",
+            "custo": 18
+        },
+        {
+            "origem": "Avis",
+            "destino": "Ponte de Sor",
+            "custo": 15
+        },
+        {
+            "origem": "Avis",
+            "destino": "Sousel",
+            "custo": 14
+        },
+        {
+            "origem": "Campo Maior",
+            "destino": "Elvas",
+            "custo": 20
+        },
+        {
+            "origem": "Castelo de Vide",
+            "destino": "Marvão",
+            "custo": 22
+        },
+        {
+            "origem": "Castelo de Vide",
+            "destino": "Portalegre",
+            "custo": 28
+        },
+        {
+            "origem": "Castelo de Vide",
+            "destino": "Crato",
+            "custo": 27
+        },
+        {
+            "origem": "Castelo de Vide",
+            "destino": "Nisa",
+            "custo": 26
+        },
+        {
+            "origem": "Crato",
+            "destino": "Gavião",
+            "custo": 40
+        },
+        {
+            "origem": "Crato",
+            "destino": "Portalegre",
+            "custo": 15
+        },
+        {
+            "origem": "Crato",
+            "destino": "Nisa",
+            "custo": 38
+        },
+        {
+            "origem": "Crato",
+            "destino": "Ponte de Sor",
+            "custo": 35
+        },
+        {
+            "origem": "Crato",
+            "destino": "Monforte",
+            "custo": 42
+        },
+        {
+            "origem": "Elvas",
+            "destino": "Monforte",
+            "custo": 35
+        },
+        {
+            "origem": "Gavião",
+            "destino": "Nisa",
+            "custo": 25
+        },
+        {
+            "origem": "Gavião",
+            "destino": "Ponte de Sor",
+            "custo": 27
+        },
+        {
+            "origem": "Marvão",
+            "destino": "Portalegre",
+            "custo": 23
+        },
+        {
+            "origem": "Monforte",
+            "destino": "Portalegre",
+            "custo": 36
+        },
+        {
+            "origem": "Fronteira",
+            "destino": "Monforte",
+            "custo": 25
+        },
+        {
+            "origem": "Fronteira",
+            "destino": "Avis",
+            "custo": 28
+        },
+        {
+            "origem": "Fronteira",
+            "destino": "Sousel",
+            "custo": 15
+        },
+        {
+            "origem": "Lisboa",
+            "destino": "Amadora",
+            "custo": 7
+        },
+        {
+            "origem": "Lisboa",
+            "destino": "Oeiras",
+            "custo": 15
+        },
+        {
+            "origem": "Lisboa",
+            "destino": "Loures",
+            "custo": 13
+        },
+        {
+            "origem": "Lisboa",
+            "destino": "Odivelas",
+            "custo": 10
+        },
+        {
+            "origem": "Amadora",
+            "destino": "Oeiras",
+            "custo": 10
+        },
+        {
+            "origem": "Amadora",
+            "destino": "Sintra",
+            "custo": 14
+        },
+        {
+            "origem": "Amadora",
+            "destino": "Odivelas",
+            "custo": 9
+        },
+        {
+            "origem": "Oeiras",
+            "destino": "Cascais",
+            "custo": 12
+        },
+        {
+            "origem": "Oeiras",
+            "destino": "Sintra",
+            "custo": 19
+        },
+        {
+            "origem": "Cascais",
+            "destino": "Sintra",
+            "custo": 18
+        },
+        {
+            "origem": "Sintra",
+            "destino": "Mafra",
+            "custo": 20
+        },
+        {
+            "origem": "Sintra",
+            "destino": "Odivelas",
+            "custo": 16
+        },
+        {
+            "origem": "Sintra",
+            "destino": "Loures",
+            "custo": 19
+        },
+        {
+            "origem": "Loures",
+            "destino": "Mafra",
+            "custo": 25
+        },
+        {
+            "origem": "Loures",
+            "destino": "Vila Franca de Xira",
+            "custo": 18
+        },
+        {
+            "origem": "Loures",
+            "destino": "Arruda dos Vinhos",
+            "custo": 16
+        },
+        {
+            "origem": "Loures",
+            "destino": "Odivelas",
+            "custo": 14
+        },
+        {
+            "origem": "Odivelas",
+            "destino": "Amadora",
+            "custo": 7
+        },
+        {
+            "origem": "Vila Franca de Xira",
+            "destino": "Azambuja",
+            "custo": 27
+        },
+        {
+            "origem": "Vila Franca de Xira",
+            "destino": "Arruda dos Vinhos",
+            "custo": 22
+        },
+        {
+            "origem": "Vila Franca de Xira",
+            "destino": "Alenquer",
+            "custo": 28
+        },
+        {
+            "origem": "Sobral de Monte Agraço",
+            "destino": "Alenquer",
+            "custo": 28
+        },
+        {
+            "origem": "Sobral de Monte Agraço",
+            "destino": "Arruda dos Vinhos",
+            "custo": 16
+        },
+        {
+            "origem": "Arruda dos Vinhos",
+            "destino": "Alenquer",
+            "custo": 15
+        },
+        {
+            "origem": "Alenquer",
+            "destino": "Azambuja",
+            "custo": 20
+        },
+        {
+            "origem": "Alenquer",
+            "destino": "Cadaval",
+            "custo": 25
+        },
+        {
+            "origem": "Mafra",
+            "destino": "Sobral de Monte Agraço",
+            "custo": 16
+        },
+        {
+            "origem": "Mafra",
+            "destino": "Torres Vedras",
+            "custo": 19
+        },
+        {
+            "origem": "Mafra",
+            "destino": "Arruda dos Vinhos",
+            "custo": 17
+        },
+        {
+            "origem": "Torres Vedras",
+            "destino": "Cadaval",
+            "custo": 23
+        },
+        {
+            "origem": "Torres Vedras",
+            "destino": "Sobral de Monte Agraço",
+            "custo": 18
+        },
+        {
+            "origem": "Torres Vedras",
+            "destino": "Alenquer",
+            "custo": 22
+        },
+        {
+            "origem": "Torres Vedras",
+            "destino": "Lourinhã",
+            "custo": 25
+        },
+        {
+            "origem": "Cadaval",
+            "destino": "Lourinhã",
+            "custo": 17
+        },
+        {
+            "origem": "Azambuja",
+            "destino": "Cadaval",
+            "custo": 29
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Rio Maior",
+            "custo": 12
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Alcanena",
+            "custo": 11
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Alpiarça",
+            "custo": 10
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Cartaxo",
+            "custo": 15
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Torres Novas",
+            "custo": 20
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Golegã",
+            "custo": 22
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Almeirim",
+            "custo": 19
+        },
+        {
+            "origem": "Santarém",
+            "destino": "Chamusca",
+            "custo": 19
+        },
+        {
+            "origem": "Cartaxo",
+            "destino": "Salvaterra de Magos",
+            "custo": 12
+        },
+        {
+            "origem": "Salvaterra de Magos",
+            "destino": "Benavente",
+            "custo": 11
+        },
+        {
+            "origem": "Salvaterra de Magos",
+            "destino": "Coruche",
+            "custo": 19
+        },
+        {
+            "origem": "Benavente",
+            "destino": "Coruche",
+            "custo": 16
+        },
+        {
+            "origem": "Coruche",
+            "destino": "Chamusca",
+            "custo": 21
+        },
+        {
+            "origem": "Torres Novas",
+            "destino": "Entroncamento",
+            "custo": 10
+        },
+        {
+            "origem": "Torres Novas",
+            "destino": "Alcanena",
+            "custo": 16
+        },
+        {
+            "origem": "Torres Novas",
+            "destino": "Tomar",
+            "custo": 21
+        },
+        {
+            "origem": "Torres Novas",
+            "destino": "Vila Nova da Barquinha",
+            "custo": 12
+        },
+        {
+            "origem": "Torres Novas",
+            "destino": "Golegã",
+            "custo": 14
+        },
+        {
+            "origem": "Torres Novas",
+            "destino": "Ourém",
+            "custo": 24
+        },
+        {
+            "origem": "Entroncamento",
+            "destino": "Vila Nova da Barquinha",
+            "custo": 8
+        },
+        {
+            "origem": "Vila Nova da Barquinha",
+            "destino": "Tomar",
+            "custo": 14
+        },
+        {
+            "origem": "Vila Nova da Barquinha",
+            "destino": "Constância",
+            "custo": 10
+        },
+        {
+            "origem": "Vila Nova da Barquinha",
+            "destino": "Abrantes",
+            "custo": 19
+        },
+        {
+            "origem": "Vila Nova da Barquinha",
+            "destino": "Chamusca",
+            "custo": 18
+        },
+        {
+            "origem": "Tomar",
+            "destino": "Ferreira do Zêzere",
+            "custo": 20
+        },
+        {
+            "origem": "Tomar",
+            "destino": "Ourém",
+            "custo": 22
+        },
+        {
+            "origem": "Ferreira do Zêzere",
+            "destino": "Ourém",
+            "custo": 25
+        },
+        {
+            "origem": "Ferreira do Zêzere",
+            "destino": "Abrantes",
+            "custo": 30
+        },
+        {
+            "origem": "Ourém",
+            "destino": "Alcanena",
+            "custo": 23
+        },
+        {
+            "origem": "Mação",
+            "destino": "Sardoal",
+            "custo": 15
+        },
+        {
+            "origem": "Mação",
+            "destino": "Abrantes",
+            "custo": 22
+        },
+        {
+            "origem": "Sardoal",
+            "destino": "Abrantes",
+            "custo": 8
+        },
+        {
+            "origem": "Abrantes",
+            "destino": "Constância",
+            "custo": 12
+        },
+        {
+            "origem": "Abrantes",
+            "destino": "Chamusca",
+            "custo": 29
+        },
+        {
+            "origem": "Constância",
+            "destino": "Chamusca",
+            "custo": 17
+        },
+        {
+            "origem": "Almeirim",
+            "destino": "Chamusca",
+            "custo": 16
+        },
+        {
+            "origem": "Almeirim",
+            "destino": "Coruche",
+            "custo": 18
+        },
+        {
+            "origem": "Almeirim",
+            "destino": "Salvaterra de Magos",
+            "custo": 13
+        },
+        {
+            "origem": "Almeirim",
+            "destino": "Cartaxo",
+            "custo": 15
+        },
+        {
+            "origem": "Almeirim",
+            "destino": "Alpiarça",
+            "custo": 12
+        },
+        {
+            "origem": "Alpiarça",
+            "destino": "Chamusca",
+            "custo": 15
+        },
+        {
+            "origem": "Coruche",
+            "destino": "Chamusca",
+            "custo": 28
+        },
+        {
+            "origem": "Golegã",
+            "destino": "Entroncamento",
+            "custo": 10
+        },
+        {
+            "origem": "Golegã",
+            "destino": "Vila Nova da Barquinha",
+            "custo": 12
+        },
+        {
+            "origem": "Golegã",
+            "destino": "Chamusca",
+            "custo": 16
+        },
+        {
+            "origem": "Peniche",
+            "destino": "Óbidos",
+            "custo": 20.0
+        },
+        {
+            "origem": "Óbidos",
+            "destino": "Caldas da Rainha",
+            "custo": 10.0
+        },
+        {
+            "origem": "Óbidos",
+            "destino": "Bombarral",
+            "custo": 15.0
+        },
+        {
+            "origem": "Caldas da Rainha",
+            "destino": "Bombarral",
+            "custo": 12.0
+        },
+        {
+            "origem": "Caldas da Rainha",
+            "destino": "Alcobaça",
+            "custo": 18.0
+        },
+        {
+            "origem": "Nazaré",
+            "destino": "Alcobaça",
+            "custo": 12.0
+        },
+        {
+            "origem": "Marinha Grande",
+            "destino": "Alcobaça",
+            "custo": 15.0
+        },
+        {
+            "origem": "Marinha Grande",
+            "destino": "Leiria",
+            "custo": 10.0
+        },
+        {
+            "origem": "Porto de Mós",
+            "destino": "Alcobaça",
+            "custo": 20.0
+        },
+        {
+            "origem": "Porto de Mós",
+            "destino": "Batalha",
+            "custo": 15.0
+        },
+        {
+            "origem": "Porto de Mós",
+            "destino": "Leiria",
+            "custo": 25.0
+        },
+        {
+            "origem": "Batalha",
+            "destino": "Leiria",
+            "custo": 8.0
+        },
+        {
+            "origem": "Leiria",
+            "destino": "Pombal",
+            "custo": 22.0
+        },
+        {
+            "origem": "Pombal",
+            "destino": "Ansião",
+            "custo": 18.0
+        },
+        {
+            "origem": "Pombal",
+            "destino": "Alvaiázere",
+            "custo": 20.0
+        },
+        {
+            "origem": "Ansião",
+            "destino": "Alvaiázere",
+            "custo": 10.0
+        },
+        {
+            "origem": "Figueiró dos Vinhos",
+            "destino": "Ansião",
+            "custo": 12.0
+        },
+        {
+            "origem": "Figueiró dos Vinhos",
+            "destino": "Alvaiázere",
+            "custo": 15.0
+        },
+        {
+            "origem": "Figueiró dos Vinhos",
+            "destino": "Castanheira de Pera",
+            "custo": 8.0
+        },
+        {
+            "origem": "Figueiró dos Vinhos",
+            "destino": "Pedrógão Grande",
+            "custo": 10.0
+        },
+        {
+            "origem": "Pedrógão Grande",
+            "destino": "Castanheira de Pera",
+            "custo": 12.0
+        },
+        {
+            "origem": "Belmonte",
+            "destino": "Covilhã",
+            "custo": 18
+        },
+        {
+            "origem": "Belmonte",
+            "destino": "Fundão",
+            "custo": 30
+        },
+        {
+            "origem": "Castelo Branco",
+            "destino": "Idanha-a-Nova",
+            "custo": 34
+        },
+        {
+            "origem": "Castelo Branco",
+            "destino": "Fundão",
+            "custo": 55
+        },
+        {
+            "origem": "Castelo Branco",
+            "destino": "Oleiros",
+            "custo": 65
+        },
+        {
+            "origem": "Castelo Branco",
+            "destino": "Proença-a-Nova",
+            "custo": 45
+        },
+        {
+            "origem": "Castelo Branco",
+            "destino": "Vila Velha de Ródão",
+            "custo": 35
+        },
+        {
+            "origem": "Covilhã",
+            "destino": "Fundão",
+            "custo": 20
+        },
+        {
+            "origem": "Fundão",
+            "destino": "Oleiros",
+            "custo": 75
+        },
+        {
+            "origem": "Fundão",
+            "destino": "Idanha-a-Nova",
+            "custo": 60
+        },
+        {
+            "origem": "Fundão",
+            "destino": "Penamacor",
+            "custo": 40
+        },
+        {
+            "origem": "Idanha-a-Nova",
+            "destino": "Penamacor",
+            "custo": 35
+        },
+        {
+            "origem": "Oleiros",
+            "destino": "Proença-a-Nova",
+            "custo": 30
+        },
+        {
+            "origem": "Oleiros",
+            "destino": "Sertã",
+            "custo": 40
+        },
+        {
+            "origem": "Proença-a-Nova",
+            "destino": "Vila Velha de Ródão",
+            "custo": 25
+        },
+        {
+            "origem": "Proença-a-Nova",
+            "destino": "Sertã",
+            "custo": 20
+        },
+        {
+            "origem": "Sertã",
+            "destino": "Vila de Rei",
+            "custo": 15
+        },
+        {
+            "origem": "Arganil",
+            "destino": "Góis",
+            "custo": 20
+        },
+        {
+            "origem": "Arganil",
+            "destino": "Oliveira do Hospital",
+            "custo": 25
+        },
+        {
+            "origem": "Cantanhede",
+            "destino": "Coimbra",
+            "custo": 25
+        },
+        {
+            "origem": "Cantanhede",
+            "destino": "Montemor-o-Velho",
+            "custo": 25
+        },
+        {
+            "origem": "Condeixa-a-Nova",
+            "destino": "Montemor-o-Velho",
+            "custo": 22
+        },
+        {
+            "origem": "Cantanhede",
+            "destino": "Figueira da Foz",
+            "custo": 30
+        },
+        {
+            "origem": "Cantanhede",
+            "destino": "Mira",
+            "custo": 20
+        },
+        {
+            "origem": "Coimbra",
+            "destino": "Condeixa-a-Nova",
+            "custo": 15
+        },
+        {
+            "origem": "Soure",
+            "destino": "Figueira da Foz",
+            "custo": 36
+        },
+        {
+            "origem": "Coimbra",
+            "destino": "Miranda do Corvo",
+            "custo": 25
+        },
+        {
+            "origem": "Coimbra",
+            "destino": "Montemor-o-Velho",
+            "custo": 30
+        },
+        {
+            "origem": "Coimbra",
+            "destino": "Penacova",
+            "custo": 20
+        },
+        {
+            "origem": "Arganil",
+            "destino": "Penacova",
+            "custo": 33
+        },
+        {
+            "origem": "Tábua",
+            "destino": "Penacova",
+            "custo": 33
+        },
+        {
+            "origem": "Coimbra",
+            "destino": "Vila Nova de Poiares",
+            "custo": 20
+        },
+        {
+            "origem": "Condeixa-a-Nova",
+            "destino": "Penela",
+            "custo": 20
+        },
+        {
+            "origem": "Figueira da Foz",
+            "destino": "Montemor-o-Velho",
+            "custo": 20
+        },
+        {
+            "origem": "Góis",
+            "destino": "Lousã",
+            "custo": 25
+        },
+        {
+            "origem": "Góis",
+            "destino": "Pampilhosa da Serra",
+            "custo": 38
+        },
+        {
+            "origem": "Lousã",
+            "destino": "Miranda do Corvo",
+            "custo": 15
+        },
+        {
+            "origem": "Lousã",
+            "destino": "Vila Nova de Poiares",
+            "custo": 15
+        },
+        {
+            "origem": "Miranda do Corvo",
+            "destino": "Penela",
+            "custo": 20
+        },
+        {
+            "origem": "Miranda do Corvo",
+            "destino": "Vila Nova de Poiares",
+            "custo": 15
+        },
+        {
+            "origem": "Góis",
+            "destino": "Vila Nova de Poiares",
+            "custo": 19
+        },
+        {
+            "origem": "Arganil",
+            "destino": "Vila Nova de Poiares",
+            "custo": 30
+        },
+        {
+            "origem": "Arganil",
+            "destino": "Pampilhosa da Serra",
+            "custo": 49
+        },
+        {
+            "origem": "Arganil",
+            "destino": "Tábua",
+            "custo": 25
+        },
+        {
+            "origem": "Montemor-o-Velho",
+            "destino": "Soure",
+            "custo": 25
+        },
+        {
+            "origem": "Oliveira do Hospital",
+            "destino": "Tábua",
+            "custo": 20
+        },
+        {
+            "origem": "Penacova",
+            "destino": "Vila Nova de Poiares",
+            "custo": 15
+        },
+        {
+            "origem": "Penela",
+            "destino": "Soure",
+            "custo": 30
+        },
+        {
+            "origem": "Soure",
+            "destino": "Condeixa-a-Nova",
+            "custo": 20
+        },
+        {
+            "origem": "Miranda do Corvo",
+            "destino": "Condeixa-a-Nova",
+            "custo": 20
+        },
+        {
+            "origem": "Aguiar da Beira",
+            "destino": "Fornos de Algodres",
+            "custo": 25
+        },
+        {
+            "origem": "Aguiar da Beira",
+            "destino": "Trancoso",
+            "custo": 35
+        },
+        {
+            "origem": "Almeida",
+            "destino": "Figueira de Castelo Rodrigo",
+            "custo": 30
+        },
+        {
+            "origem": "Almeida",
+            "destino": "Pinhel",
+            "custo": 20
+        },
+        {
+            "origem": "Almeida",
+            "destino": "Guarda",
+            "custo": 25
+        },
+        {
+            "origem": "Almeida",
+            "destino": "Sabugal",
+            "custo": 40
+        },
+        {
+            "origem": "Celorico da Beira",
+            "destino": "Trancoso",
+            "custo": 15
+        },
+        {
+            "origem": "Celorico da Beira",
+            "destino": "Pinhel",
+            "custo": 50
+        },
+        {
+            "origem": "Celorico da Beira",
+            "destino": "Guarda",
+            "custo": 35
+        },
+        {
+            "origem": "Celorico da Beira",
+            "destino": "Gouveia",
+            "custo": 35
+        },
+        {
+            "origem": "Celorico da Beira",
+            "destino": "Fornos de Algodres",
+            "custo": 35
+        },
+        {
+            "origem": "Figueira de Castelo Rodrigo",
+            "destino": "Pinhel",
+            "custo": 35
+        },
+        {
+            "origem": "Figueira de Castelo Rodrigo",
+            "destino": "Vila Nova de Foz Côa",
+            "custo": 35
+        },
+        {
+            "origem": "Pinhel",
+            "destino": "Vila Nova de Foz Côa",
+            "custo": 35
+        },
+        {
+            "origem": "Pinhel",
+            "destino": "Guarda",
+            "custo": 35
+        },
+        {
+            "origem": "Pinhel",
+            "destino": "Trancoso",
+            "custo": 35
+        },
+        {
+            "origem": "Pinhel",
+            "destino": "Mêda",
+            "custo": 35
+        },
+        {
+            "origem": "Mêda",
+            "destino": "Vila Nova de Foz Côa",
+            "custo": 35
+        },
+        {
+            "origem": "Mêda",
+            "destino": "Trancoso",
+            "custo": 35
+        },
+        {
+            "origem": "Trancoso",
+            "destino": "Fornos de Algodres",
+            "custo": 35
+        },
+        {
+            "origem": "Gouveia",
+            "destino": "Fornos de Algodres",
+            "custo": 35
+        },
+        {
+            "origem": "Gouveia",
+            "destino": "Seia",
+            "custo": 35
+        },
+        {
+            "origem": "Gouveia",
+            "destino": "Manteigas",
+            "custo": 35
+        },
+        {
+            "origem": "Gouveia",
+            "destino": "Guarda",
+            "custo": 35
+        },
+        {
+            "origem": "Guarda",
+            "destino": "Sabugal",
+            "custo": 35
+        },
+        {
+            "origem": "Guarda",
+            "destino": "Manteigas",
+            "custo": 35
+        },
+        {
+            "origem": "Manteigas",
+            "destino": "Seia",
+            "custo": 35
+        },
+        {
+            "origem": "Arcos de Valdevez",
+            "destino": "Melgaco",
+            "custo": 50
+        },
+        {
+            "origem": "Arcos de Valdevez",
+            "destino": "Moncao",
+            "custo": 40
+        },
+        {
+            "origem": "Arcos de Valdevez",
+            "destino": "Paredes de Coura",
+            "custo": 30
+        },
+        {
+            "origem": "Arcos de Valdevez",
+            "destino": "Ponte da Barca",
+            "custo": 11
+        },
+        {
+            "origem": "Arcos de Valdevez",
+            "destino": "Ponte de Lima",
+            "custo": 20
+        },
+        {
+            "origem": "Caminha",
+            "destino": "Ponte de Lima",
+            "custo": 50
+        },
+        {
+            "origem": "Caminha",
+            "destino": "Viana do Castelo",
+            "custo": 25
+        },
+        {
+            "origem": "Caminha",
+            "destino": "Vila Nova de Cerveira",
+            "custo": 15
+        },
+        {
+            "origem": "Melgaco",
+            "destino": "Moncao",
+            "custo": 20
+        },
+        {
+            "origem": "Moncao",
+            "destino": "Paredes de Coura",
+            "custo": 35
+        },
+        {
+            "origem": "Moncao",
+            "destino": "Valenca",
+            "custo": 25
+        },
+        {
+            "origem": "Paredes de Coura",
+            "destino": "Ponte de Lima",
+            "custo": 25
+        },
+        {
+            "origem": "Paredes de Coura",
+            "destino": "Valenca",
+            "custo": 20
+        },
+        {
+            "origem": "Paredes de Coura",
+            "destino": "Vila Nova de Cerveira",
+            "custo": 30
+        },
+        {
+            "origem": "Ponte da Barca",
+            "destino": "Ponte de Lima",
+            "custo": 15
+        },
+        {
+            "origem": "Ponte de Lima",
+            "destino": "Viana do Castelo",
+            "custo": 20
+        },
+        {
+            "origem": "Ponte de Lima",
+            "destino": "Vila Nova de Cerveira",
+            "custo": 35
+        },
+        {
+            "origem": "Valenca",
+            "destino": "Vila Nova de Cerveira",
+            "custo": 15
+        },
+        {
+            "origem": "Amares",
+            "destino": "Terras de Bouro",
+            "custo": 15
+        },
+        {
+            "origem": "Amares",
+            "destino": "Braga",
+            "custo": 10
+        },
+        {
+            "origem": "Amares",
+            "destino": "Vila Verde",
+            "custo": 12
+        },
+        {
+            "origem": "Barcelos",
+            "destino": "Esposende",
+            "custo": 15
+        },
+        {
+            "origem": "Barcelos",
+            "destino": "Vila Nova de Famalicão",
+            "custo": 25
+        },
+        {
+            "origem": "Barcelos",
+            "destino": "Vila Verde",
+            "custo": 20
+        },
+        {
+            "origem": "Barcelos",
+            "destino": "Braga",
+            "custo": 20
+        },
+        {
+            "origem": "Braga",
+            "destino": "Vila Nova de Famalicão",
+            "custo": 20
+        },
+        {
+            "origem": "Braga",
+            "destino": "Vila Verde",
+            "custo": 12
+        },
+        {
+            "origem": "Braga",
+            "destino": "Guimarães",
+            "custo": 25
+        },
+        {
+            "origem": "Braga",
+            "destino": "Póvoa de lanhoso",
+            "custo": 18
+        },
+        {
+            "origem": "Cabeceiras de Basto",
+            "destino": "Vieira do Minho",
+            "custo": 25
+        },
+        {
+            "origem": "Cabeceiras de Basto",
+            "destino": "Fafe",
+            "custo": 30
+        },
+        {
+            "origem": "Cabeceiras de Basto",
+            "destino": "Celorico de Basto",
+            "custo": 20
+        },
+        {
+            "origem": "Celorico de Basto",
+            "destino": "Fafe",
+            "custo": 15
+        },
+        {
+            "origem": "Fafe",
+            "destino": "Guimarães",
+            "custo": 14
+        },
+        {
+            "origem": "Fafe",
+            "destino": "Póvoa de lanhoso",
+            "custo": 20
+        },
+        {
+            "origem": "Fafe",
+            "destino": "Vieira do Minho",
+            "custo": 30
+        },
+        {
+            "origem": "Guimarães",
+            "destino": "Vizela",
+            "custo": 10
+        },
+        {
+            "origem": "Guimarães",
+            "destino": "Vila Nova de Famalicão",
+            "custo": 20
+        },
+        {
+            "origem": "Guimarães",
+            "destino": "Póvoa de lanhoso",
+            "custo": 25
+        },
+        {
+            "origem": "Póvoa de lanhoso",
+            "destino": "Vieira do Minho",
+            "custo": 20
+        },
+        {
+            "origem": "Póvoa de lanhoso",
+            "destino": "Terras de Bouro",
+            "custo": 25
+        },
+        {
+            "origem": "Terras de Bouro",
+            "destino": "Vieira do Minho",
+            "custo": 14
+        },
+        {
+            "origem": "Terras de Bouro",
+            "destino": "Vila Verde",
+            "custo": 20
+        },
+        {
+            "origem": "Mesão Frio",
+            "destino": "Peso da Régua",
+            "custo": 8.0
+        },
+        {
+            "origem": "Peso da Régua",
+            "destino": "Santa Marta de Penaguião",
+            "custo": 12.0
+        },
+        {
+            "origem": "Peso da Régua",
+            "destino": "Vila Real",
+            "custo": 23.0
+        },
+        {
+            "origem": "Peso da Régua",
+            "destino": "Sabrosa",
+            "custo": 18.0
+        },
+        {
+            "origem": "Santa Marta de Penaguião",
+            "destino": "Vila Real",
+            "custo": 15.0
+        },
+        {
+            "origem": "Chaves",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 30.0
+        },
+        {
+            "origem": "Chaves",
+            "destino": "Boticas",
+            "custo": 25.0
+        },
+        {
+            "origem": "Chaves",
+            "destino": "Montalegre",
+            "custo": 35.0
+        },
+        {
+            "origem": "Boticas",
+            "destino": "Montalegre",
+            "custo": 22.0
+        },
+        {
+            "origem": "Boticas",
+            "destino": "Ribeira de Pena",
+            "custo": 18.0
+        },
+        {
+            "origem": "Boticas",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 20.0
+        },
+        {
+            "origem": "Ribeira de Pena",
+            "destino": "Vila Pouca de Aguiar",
+            "custo": 16.0
+        },
+        {
+            "origem": "Ribeira de Pena",
+            "destino": "Mondim de Basto",
+            "custo": 25.0
+        },
+        {
+            "origem": "Bragança",
+            "destino": "Vinhais",
+            "custo": 15.0
+        },
+        {
+            "origem": "Bragança",
+            "destino": "Macedo de Cavaleiros",
+            "custo": 25.0
+        },
+        {
+            "origem": "Bragança",
+            "destino": "Vimioso",
+            "custo": 20.0
+        },
+        {
+            "origem": "Vinhais",
+            "destino": "Macedo de Cavaleiros",
+            "custo": 20.0
+        },
+        {
+            "origem": "Vinhais",
+            "destino": "Mirandela",
+            "custo": 30.0
+        },
+        {
+            "origem": "Vimioso",
+            "destino": "Miranda do Douro",
+            "custo": 18.0
+        },
+        {
+            "origem": "Vimioso",
+            "destino": "Macedo de Cavaleiros",
+            "custo": 22.0
+        },
+        {
+            "origem": "Vimioso",
+            "destino": "Mogadouro",
+            "custo": 25.0
+        },
+        {
+            "origem": "Mogadouro",
+            "destino": "Miranda do Douro",
+            "custo": 20.0
+        },
+        {
+            "origem": "Mogadouro",
+            "destino": "Macedo de Cavaleiros",
+            "custo": 30.0
+        },
+        {
+            "origem": "Mogadouro",
+            "destino": "Alfândega da Fé",
+            "custo": 25.0
+        },
+        {
+            "origem": "Mogadouro",
+            "destino": "Torre de Moncorvo",
+            "custo": 18.0
+        },
+        {
+            "origem": "Mogadouro",
+            "destino": "Freixo de Espada à Cinta",
+            "custo": 22.0
+        },
+        {
+            "origem": "Torre de Moncorvo",
+            "destino": "Freixo de Espada à Cinta",
+            "custo": 12.0
+        },
+        {
+            "origem": "Torre de Moncorvo",
+            "destino": "Alfândega da Fé",
+            "custo": 18.0
+        },
+        {
+            "origem": "Torre de Moncorvo",
+            "destino": "Vila Flor",
+            "custo": 20.0
+        },
+        {
+            "origem": "Torre de Moncorvo",
+            "destino": "Carrazeda de Ansiães",
+            "custo": 25.0
+        },
+        {
+            "origem": "Vila Flor",
+            "destino": "Carrazeda de Ansiães",
+            "custo": 15.0
+        },
+        {
+            "origem": "Vila Flor",
+            "destino": "Mirandela",
+            "custo": 20.0
+        },
+        {
+            "origem": "Vila Flor",
+            "destino": "Alfândega da Fé",
+            "custo": 18.0
+        },
+        {
+            "origem": "Mirandela",
+            "destino": "Macedo de Cavaleiros",
+            "custo": 15.0
+        },
+        {
+            "origem": "Mirandela",
+            "destino": "Alfândega da Fé",
+            "custo": 20.0
+        },
+        {
+            "origem": "Mirandela",
+            "destino": "Carrazeda de Ansiães",
+            "custo": 25.0
+        },
+        {
+            "origem": "Macedo de Cavaleiros",
+            "destino": "Alfândega da Fé",
+            "custo": 12.0
+        },
+        {
+            "origem": "Amarante",
+            "destino": "Baião",
+            "custo": 20
+        },
+        {
+            "origem": "Amarante",
+            "destino": "Felgueiras",
+            "custo": 15
+        },
+        {
+            "origem": "Amarante",
+            "destino": "Marco de Canaveses",
+            "custo": 25
+        },
+        {
+            "origem": "Baião",
+            "destino": "Marco de Canaveses",
+            "custo": 15
+        },
+        {
+            "origem": "Felgueiras",
+            "destino": "Lousada",
+            "custo": 10
+        },
+        {
+            "origem": "Gondomar",
+            "destino": "Porto",
+            "custo": 10
+        },
+        {
+            "origem": "Gondomar",
+            "destino": "Paredes",
+            "custo": 28
+        },
+        {
+            "origem": "Gondomar",
+            "destino": "Penafiel",
+            "custo": 34
+        },
+        {
+            "origem": "Amarante",
+            "destino": "Penafiel",
+            "custo": 26
+        },
+        {
+            "origem": "Lousada",
+            "destino": "Penafiel",
+            "custo": 10
+        },
+        {
+            "origem": "Lousada",
+            "destino": "Amarante",
+            "custo": 28
+        },
+        {
+            "origem": "Gondomar",
+            "destino": "Valongo",
+            "custo": 15
+        },
+        {
+            "origem": "Gondomar",
+            "destino": "Vila Nova de Gaia",
+            "custo": 12
+        },
+        {
+            "origem": "Lousada",
+            "destino": "Paços de Ferreira",
+            "custo": 12
+        },
+        {
+            "origem": "Lousada",
+            "destino": "Paredes",
+            "custo": 15
+        },
+        {
+            "origem": "Maia",
+            "destino": "Matosinhos",
+            "custo": 10
+        },
+        {
+            "origem": "Maia",
+            "destino": "Gondomar",
+            "custo": 19
+        },
+        {
+            "origem": "Maia",
+            "destino": "Trofa",
+            "custo": 16
+        },
+        {
+            "origem": "Vila do Conde",
+            "destino": "Matosinhos",
+            "custo": 27
+        },
+        {
+            "origem": "Maia",
+            "destino": "Porto",
+            "custo": 12
+        },
+        {
+            "origem": "Maia",
+            "destino": "Santo Tirso",
+            "custo": 15
+        },
+        {
+            "origem": "Maia",
+            "destino": "Valongo",
+            "custo": 10
+        },
+        {
+            "origem": "Maia",
+            "destino": "Vila do Conde",
+            "custo": 20
+        },
+        {
+            "origem": "Marco de Canaveses",
+            "destino": "Penafiel",
+            "custo": 20
+        },
+        {
+            "origem": "Paços de Ferreira",
+            "destino": "Paredes",
+            "custo": 10
+        },
+        {
+            "origem": "Paredes",
+            "destino": "Penafiel",
+            "custo": 12
+        },
+        {
+            "origem": "Porto",
+            "destino": "Matosinhos",
+            "custo": 8
+        },
+        {
+            "origem": "Porto",
+            "destino": "Vila Nova de Gaia",
+            "custo": 5
+        },
+        {
+            "origem": "Póvoa de Varzim",
+            "destino": "Vila do Conde",
+            "custo": 5
+        },
+        {
+            "origem": "Santo Tirso",
+            "destino": "Trofa",
+            "custo": 10
+        },
+        {
+            "origem": "Santo Tirso",
+            "destino": "Valongo",
+            "custo": 20
+        },
+        {
+            "origem": "Santo Tirso",
+            "destino": "Paços de Ferreira",
+            "custo": 17
+        },
+        {
+            "origem": "Santo Tirso",
+            "destino": "Lousada",
+            "custo": 27
+        },
+        {
+            "origem": "Trofa",
+            "destino": "Vila do Conde",
+            "custo": 15
+        },
+        {
+            "origem": "Valongo",
+            "destino": "Paredes",
+            "custo": 10
+        },
+        {
+            "origem": "Valongo",
+            "destino": "Paços de Ferreira",
+            "custo": 23
+        },
+        {
+            "origem": "Águeda",
+            "destino": "Albergaria-a-Velha",
+            "custo": 20
+        },
+        {
+            "origem": "Águeda",
+            "destino": "Anadia",
+            "custo": 18
+        },
+        {
+            "origem": "Águeda",
+            "destino": "Aveiro",
+            "custo": 22
+        },
+        {
+            "origem": "Águeda",
+            "destino": "Oliveira do Bairro",
+            "custo": 25
+        },
+        {
+            "origem": "Vagos",
+            "destino": "Oliveira do Bairro",
+            "custo": 20
+        },
+        {
+            "origem": "Águeda",
+            "destino": "Sever do Vouga",
+            "custo": 15
+        },
+        {
+            "origem": "Albergaria-a-Velha",
+            "destino": "Aveiro",
+            "custo": 15
+        },
+        {
+            "origem": "Albergaria-a-Velha",
+            "destino": "Estarreja",
+            "custo": 20
+        },
+        {
+            "origem": "Albergaria-a-Velha",
+            "destino": "Sever do Vouga",
+            "custo": 18
+        },
+        {
+            "origem": "Albergaria-a-Velha",
+            "destino": "Oliveira de Azeméis",
+            "custo": 18
+        },
+        {
+            "origem": "Anadia",
+            "destino": "Oliveira do Bairro",
+            "custo": 10
+        },
+        {
+            "origem": "Anadia",
+            "destino": "Mealhada",
+            "custo": 12
+        },
+        {
+            "origem": "Arouca",
+            "destino": "Vale de Cambra",
+            "custo": 25
+        },
+        {
+            "origem": "Arouca",
+            "destino": "Oliveira de Azeméis",
+            "custo": 30
+        },
+        {
+            "origem": "Arouca",
+            "destino": "Santa Maria da Feira",
+            "custo": 34
+        },
+        {
+            "origem": "Arouca",
+            "destino": "Castelo de Paiva",
+            "custo": 30
+        },
+        {
+            "origem": "Aveiro",
+            "destino": "Ílhavo",
+            "custo": 10
+        },
+        {
+            "origem": "Aveiro",
+            "destino": "Oliveira do Bairro",
+            "custo": 26
+        },
+        {
+            "origem": "Aveiro",
+            "destino": "Vagos",
+            "custo": 16
+        },
+        {
+            "origem": "Aveiro",
+            "destino": "Murtosa",
+            "custo": 26
+        },
+        {
+            "origem": "Espinho",
+            "destino": "Santa Maria da Feira",
+            "custo": 10
+        },
+        {
+            "origem": "Espinho",
+            "destino": "Ovar",
+            "custo": 12
+        },
+        {
+            "origem": "Estarreja",
+            "destino": "Murtosa",
+            "custo": 10
+        },
+        {
+            "origem": "Estarreja",
+            "destino": "Ovar",
+            "custo": 15
+        },
+        {
+            "origem": "Ílhavo",
+            "destino": "Vagos",
+            "custo": 15
+        },
+        {
+            "origem": "Oliveira de Azeméis",
+            "destino": "Estarreja",
+            "custo": 16
+        },
+        {
+            "origem": "Murtosa",
+            "destino": "Ovar",
+            "custo": 20
+        },
+        {
+            "origem": "Oliveira de Azeméis",
+            "destino": "Santa Maria da Feira",
+            "custo": 18
+        },
+        {
+            "origem": "Oliveira de Azeméis",
+            "destino": "Vale de Cambra",
+            "custo": 12
+        },
+        {
+            "origem": "Oliveira de Azeméis",
+            "destino": "Ovar",
+            "custo": 15
+        },
+        {
+            "origem": "Ovar",
+            "destino": "Santa Maria da Feira",
+            "custo": 10
+        },
+        {
+            "origem": "Santa Maria da Feira",
+            "destino": "São João da Madeira",
+            "custo": 8
+        },
+        {
+            "origem": "São João da Madeira",
+            "destino": "Oliveira de Azeméis",
+            "custo": 5
+        },
+        {
+            "origem": "Sever do Vouga",
+            "destino": "Vale de Cambra",
+            "custo": 20
+        },
+        {
+            "origem": "Sever do Vouga",
+            "destino": "Oliveira de Azeméis",
+            "custo": 28
+        },
+        {
+            "origem": "Mortágua",
+            "destino": "Tondela",
+            "custo": 15.0
+        },
+        {
+            "origem": "Mortágua",
+            "destino": "Santa Comba Dão",
+            "custo": 10.0
+        },
+        {
+            "origem": "Santa Comba Dão",
+            "destino": "Tondela",
+            "custo": 12.0
+        },
+        {
+            "origem": "Santa Comba Dão",
+            "destino": "Carregal do Sal",
+            "custo": 8.0
+        },
+        {
+            "origem": "Carregal do Sal",
+            "destino": "Tondela",
+            "custo": 10.0
+        },
+        {
+            "origem": "Carregal do Sal",
+            "destino": "Viseu",
+            "custo": 18.0
+        },
+        {
+            "origem": "Carregal do Sal",
+            "destino": "Nelas",
+            "custo": 12.0
+        },
+        {
+            "origem": "Nelas",
+            "destino": "Mangualde",
+            "custo": 10.0
+        },
+        {
+            "origem": "Mangualde",
+            "destino": "Viseu",
+            "custo": 15.0
+        },
+        {
+            "origem": "Mangualde",
+            "destino": "Penalva do Castelo",
+            "custo": 12.0
+        },
+        {
+            "origem": "Penalva do Castelo",
+            "destino": "Viseu",
+            "custo": 10.0
+        },
+        {
+            "origem": "Penalva do Castelo",
+            "destino": "Sátão",
+            "custo": 14.0
+        },
+        {
+            "origem": "Sátão",
+            "destino": "Viseu",
+            "custo": 12.0
+        },
+        {
+            "origem": "Sátão",
+            "destino": "Vila Nova de Paiva",
+            "custo": 15.0
+        },
+        {
+            "origem": "Sátão",
+            "destino": "Moimenta da Beira",
+            "custo": 20.0
+        },
+        {
+            "origem": "Sátão",
+            "destino": "Sernancelhe",
+            "custo": 18.0
+        },
+        {
+            "origem": "São João da Pesqueira",
+            "destino": "Penedono",
+            "custo": 12.0
+        },
+        {
+            "origem": "São João da Pesqueira",
+            "destino": "Tabuaço",
+            "custo": 10.0
+        },
+        {
+            "origem": "Tabuaço",
+            "destino": "Moimenta da Beira",
+            "custo": 15.0
+        },
+        {
+            "origem": "Tabuaço",
+            "destino": "Armamar",
+            "custo": 20.0
+        },
+        {
+            "origem": "Sernancelhe",
+            "destino": "Moimenta da Beira",
+            "custo": 10.0
+        },
+        {
+            "origem": "Sernancelhe",
+            "destino": "Penedono",
+            "custo": 12.0
+        },
+        {
+            "origem": "Sernancelhe",
+            "destino": "São João da Pesqueira",
+            "custo": 18.0
+        },
+        {
+            "origem": "Sernancelhe",
+            "destino": "Tabuaço",
+            "custo": 16.0
+        },
+        {
+            "origem": "Armamar",
+            "destino": "Moimenta da Beira",
+            "custo": 15.0
+        },
+        {
+            "origem": "Armamar",
+            "destino": "Tarouca",
+            "custo": 12.0
+        },
+        {
+            "origem": "Armamar",
+            "destino": "Lamego",
+            "custo": 10.0
+        },
+        {
+            "origem": "Lamego",
+            "destino": "Tarouca",
+            "custo": 15.0
+        },
+        {
+            "origem": "Lamego",
+            "destino": "Castro Daire",
+            "custo": 18.0
+        },
+        {
+            "origem": "Lamego",
+            "destino": "Resende",
+            "custo": 12.0
+        },
+        {
+            "origem": "Resende",
+            "destino": "Castro Daire",
+            "custo": 14.0
+        },
+        {
+            "origem": "Resende",
+            "destino": "Cinfães",
+            "custo": 16.0
+        },
+        {
+            "origem": "Castro Daire",
+            "destino": "Cinfães",
+            "custo": 12.0
+        },
+        {
+            "origem": "Castro Daire",
+            "destino": "São Pedro do Sul",
+            "custo": 18.0
+        },
+        {
+            "origem": "Castro Daire",
+            "destino": "Tarouca",
+            "custo": 15.0
+        },
+        {
+            "origem": "Castro Daire",
+            "destino": "Viseu",
+            "custo": 20.0
+        },
+        {
+            "origem": "Castro Daire",
+            "destino": "Vila Nova de Paiva",
+            "custo": 22.0
+        },
+        {
+            "origem": "São Pedro do Sul",
+            "destino": "Viseu",
+            "custo": 14.0
+        },
+        {
+            "origem": "São Pedro do Sul",
+            "destino": "Vouzela",
+            "custo": 10.0
+        },
+        {
+            "origem": "São Pedro do Sul",
+            "destino": "Oliveira de Frades",
+            "custo": 12.0
+        },
+        {
+            "origem": "Oliveira de Frades",
+            "destino": "Vouzela",
+            "custo": 8.0
+        },
+        {
+            "origem": "Oliveira de Frades",
+            "destino": "Tondela",
+            "custo": 15.0
+        },
+        {
+            "origem": "Vouzela",
+            "destino": "Viseu",
+            "custo": 10.0
+        },
+        {
+            "origem": "Vouzela",
+            "destino": "Tondela",
+            "custo": 12.0
+        },
+        {
+            "origem": "Tondela",
+            "destino": "Viseu",
+            "custo": 10.0
+        },
+        {
+            "origem": "Nelas",
+            "destino": "Viseu",
+            "custo": 12.0
+        },
+        {
+            "origem": "Viseu",
+            "destino": "Vila Nova de Paiva",
+            "custo": 14.0
+        },
+        {
+            "origem": "Vila Nova de Paiva",
+            "destino": "Tarouca",
+            "custo": 18.0
+        },
+        {
+            "origem": "Vila Nova de Paiva",
+            "destino": "Moimenta da Beira",
+            "custo": 15.0
+        },
+        {
+            "origem": "Tarouca",
+            "destino": "Moimenta da Beira",
+            "custo": 10.0
+        }
+    ]
+}

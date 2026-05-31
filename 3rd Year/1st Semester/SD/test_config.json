@@ -1,0 +1,31 @@
+{
+  "username": "testUser",
+  "password": "testPassword",
+  "action": "register",
+  "requests": [
+    {
+      "type": "put",
+      "key": "key1",
+      "value": "value1"
+    },
+    {
+      "type": "get",
+      "key": "key1"
+    },
+    {
+      "type": "multiPut",
+      "pairs": {
+        "key2": "value2",
+        "key3": "value3"
+      }
+    },
+    {
+      "type": "multiGet",
+      "keys": [
+        "key1",
+        "key2",
+        "key3"
+      ]
+    }
+  ]
+}

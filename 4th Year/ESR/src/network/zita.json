@@ -1,0 +1,6 @@
+{
+      "id": "Zita",
+      "role": "client",
+      "neighbors": ["10.0.15.1"],
+      "streams": []
+}

@@ -1,0 +1,8 @@
+{
+	"id": "Palma",
+	"role": "transport",
+	"neighbors": ["10.0.23.2",
+	"10.0.18.1"
+	],
+	"streams": []
+}

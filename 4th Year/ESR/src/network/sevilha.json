@@ -1,0 +1,9 @@
+{
+	"id": "Sevilha",
+	"role": "transport",
+	"neighbors": ["10.0.4.1",
+	"10.0.18.2",
+	"10.0.20.2"
+	],
+	"streams": []
+}
